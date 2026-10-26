@@ -1,57 +1,57 @@
-# 产品表达：让任务、证据与感受一起成立
+# Product expression: making task, evidence and feeling hold together at once
 
-先从真实任务选主线，再决定如何表现。默认以一份计划推进，复杂镜头才展开 [镜头任务模板](../templates/product-shot.md)；它是设计笔记，不是新增必填流程。
+Pick the through-line (main line) from a real task first, then decide how to show it. Default to advancing on a single plan, and unpack the [shot task template](../templates/product-shot.md) only for complex shots; it is a design note, not a new mandatory step.
 
-## 按问题选入口
+## Pick the entry point by problem
 
-| 当前问题 | 入口 | 何时省略 |
+| Current problem | Entry point | When to skip |
 | --- | --- | --- |
-| 怎样把功能变成有用的产品故事 | `product-task-proof` | 只做单个局部动效时，直接写初态/触发/终态 |
-| 旧方法为什么不够 | 配方分支 `problem-reframe-opening` | 旧方案已经足够；无法证明限制 |
-| 多个能力怎样证明，而不只列标题 | 配方分支 `claim-evidence-chapters` | 单项证据足够；固定外框使内容变小 |
-| 声音/视觉增强究竟改变了什么 | `sensory-before-after` | 无可比基线、无素材授权或无法实际看听 |
-| 处理中与已完成怎样分清 | `visual.scan-resolve` | 直接切到真实结果更清楚；不存在需要说明的处理阶段 |
-| 整条30秒级发布片的情绪弧（钩子→痛点→转折→自证→行动→落款） | `launch-film-arc`，元素与推算见 [发布片语法](launch-film-grammar.md) | 单功能8–15秒片只取一两个元素；观众已知痛点就从调用开始 |
-| 三四个功能怎样用同一句式逐章证明 | `feature-chapter-reel` | 只有一个功能；固定句式反而让内容变小 |
+| How to turn a feature into a useful product story | `product-task-proof` | For a single local motion effect, write initial state/trigger/end state directly |
+| Why the old approach is not enough | recipe branch `problem-reframe-opening` | The old approach is already adequate; the limitation cannot be proven |
+| How to prove several capabilities without just listing headlines | recipe branch `claim-evidence-chapters` | One piece of evidence is enough; a fixed frame shrinks the content |
+| What the sound/visual enhancement actually changed | `sensory-before-after` | No comparable baseline, no asset rights, or no way to actually watch and listen |
+| How to keep in-progress and done apart | `visual.scan-resolve` | Cutting straight to the real result is clearer; there is no processing stage worth explaining |
+| The emotional arc of a whole 30-second launch film (hook → pain → turn → self-proof → action → sign-off) | `launch-film-arc`, elements and derivation in [launch-film grammar](launch-film-grammar.md) | An 8–15 second single-feature film takes only one or two elements; if the audience already knows the pain, start at the call |
+| How to prove three or four features chapter by chapter with one sentence pattern | `feature-chapter-reel` | Only one feature; the fixed pattern shrinks the content instead |
 
-递进困难只用足够的层数。每层新增一种具体摩擦，不是把同一困难重复说大。参考片的镜头数量、开头/结果比例、快速打字速度和品牌美学都不是默认值。
+Escalate difficulty with only as many layers as the content needs. Each layer adds a specific friction; it does not restate the same difficulty louder. The reference film's shot count, opening/result ratio, fast-typing speed and brand aesthetic are not defaults.
 
-## 每项主张给出对应证据
+## Give every claim its evidence
 
-把镜头材料标成 input、intermediate 或 result，说明它证明什么。输入图片板、正在处理的终端、占位格、成功文字都不能自动证明完整任务已完成。真实组件/录屏、手工重建、流程示意和概念设计明确区分；示意画面不伪装实际运行耗时。
+Tag the shot's material as input, intermediate or result and say what it proves. A prompt image board, a terminal mid-run, a placeholder cell or success text does not by itself prove the whole task completed. Keep real components/screen recording, hand-built reconstruction, process diagram and concept design clearly apart; a diagrammatic frame does not fake the actual runtime.
 
-一段只设一个主焦点。标题负责命名本段，画面负责证明；相机落定后留够读取时间。稳定舞台可以承接代码、流程、评审和结果，但播放器外框不是必需。小屏读不清就取消外壳、放大重点或拆镜，不靠更多框线救场。
+One section carries one main focus. The headline names the section, the picture proves it, and the camera leaves enough reading time after it settles. A stable stage can carry code, process, review and result, but a player chrome is not required. If it is unreadable on a small screen, drop the shell, enlarge the key point or split the shot — do not rescue it with more rules and borders.
 
-processing状态来自实际来源或明确演示定义。未知进度不填精确百分比。success、partial、failure分别保留正确结果；失败时给可辨认后果，不能仍用成功庆祝。对象内扫描只说明正在关注的位置；查 `visual.scan-resolve` 的目标边界、状态绑定和结果停留。
+The processing state comes from a real source or an explicitly defined demonstration. Unknown progress gets no precise percentage. success, partial and failure each keep their correct outcome; on failure show a recognisable consequence, never the success celebration. A scan inside an object only shows where attention sits; check `visual.scan-resolve` for its target boundary, state binding and result dwell.
 
-## 镜头接力与模板适配
+## Shot handoff and template adaptation
 
-- 先给跨镜对象身份，再选链接→页面、卡片→结果或文字→构图的锚点。同形不是同物，语义相连也不必强做形变。
-- 接缝记录出入承载对象、方向、轴、切点与锁定理由。方向一致不是速度已相等，镜头匹配仍需实际观看。
-- 换模板先换产品自己的输入、处理、产出和行动入口，再换颜色/字体/品牌。保留有效运动关系，长中文、不同图片与画幅改变后重排几何。
-- 拖动把抓点与物体放在同一状态关系中；物体出入容器处理遮挡，文字按需独立反旋转。视觉预备可以重叠，真实提交/支付/删除等确认不能提前成功。
-- 知识讲解可把重要短语对应到画面元素，先读再具象化；这是设计映射，不宣称任意文字能自动编译场景。
+- Establish cross-shot object identity first, then choose the anchor: link → page, card → result, or text → composition. Same shape is not the same object, and a semantic link does not force a morph.
+- A seam records the outgoing and incoming carrier object, direction, axis, cut point and the reason for locking. Consistent direction does not mean the speeds already match; shot matching still needs an actual viewing.
+- When retargeting a template, swap in the product's own input, processing, output and action entry first, then colour/type/brand. Keep the motion relationships that work, and re-flow the geometry once the long Chinese copy, different images and aspect ratio change.
+- A drag puts the grab point and the object into the same state relationship; an object entering or leaving a container handles occlusion, and text counter-rotates on its own where needed. Visual preparation may overlap; a real submit/payment/delete confirmation must not succeed early.
+- A knowledge explainer can map key phrases onto on-screen elements — read first, then concretise; this is a design mapping, not a claim that arbitrary text compiles itself into scenes.
 
-## 声音先按职责，再按素材
+## Sound: responsibility first, assets second
 
-主声与音乐负责理解和段落，少量同族动作音负责操作确认、空间移动、段落转折、状态落定或品牌收束。每次位移不必whoosh，每个字不必click。产品轻快、愉悦和科技感来自节奏、精确反馈与合适音色，不必用持续尖音或低音轰炸。
+The lead sound and the music carry comprehension and sectioning; a few same-family action sounds carry operation confirmation, spatial movement, section turns, state settling or brand sign-off. Not every displacement needs a whoosh, not every character a click. A product's lightness, pleasure and technical feel come from rhythm, precise feedback and apt timbre — not from continuous high-pitched tones or bass bombardment.
 
-先写事件与可见触发帧，再选实际文件、源入出点、成片时刻、起音偏移、增益和尾音。文件起点不一定等于听到起音。原混音片段只能作参考，不能标成可独立叠加的干净音效。选音乐继续按 [音乐导演](music-direction.md) 检索情绪与关键片段，不把整首参考音轨当默认背景。
+Write the event and its visible trigger frame first, then choose the actual file, source in/out points, film time, onset offset, gain and tail. A file's start is not necessarily the onset you hear. A stem pulled from an existing mix can only serve as reference, never be labelled a clean effect you can layer on its own. For music selection keep searching moods and key passages per [music direction](music-direction.md); do not use the whole reference track as the default bed.
 
-音效多时，把事件写进一份 [事件表](../templates/audio-event-map.json)：排程时刻 = 动作时刻 + 起音偏移，由同一份数据生成，时间重排后重新生成；渲染后用 `audio_event_audit.py` 以排程为锚核对实际起音。参考片开场声明的音效曾比画面动作晚 +0.56 到 +1.82 秒（有一条声明甚至超出了本场景长度），对照的发送音则对得上；偏差更像是开场重排后音效没跟着更新，这是推断，没有制作记录可证。转折与接缝的声音分工见 [发布片语法](launch-film-grammar.md#三声音先写事件表再排时间线)。
+When there are many effects, write the events into one [event map](../templates/audio-event-map.json): scheduled time = action time + onset offset, generated from that same data and regenerated after any retiming; after render, `audio_event_audit.py` checks the actual onsets against the schedule as anchor. In the reference film the effects declared for the opening ran +0.56 to +1.82 seconds behind the picture action (one declaration even exceeded the length of its own scene), while the send sound in the comparison lined up; the drift looks like effects that were not updated after the opening was retimed — that is an inference, with no production record to prove it. The sound division at turns and seams: see [launch-film grammar](launch-film-grammar.md#3-sound-write-the-event-map-first-then-lay-out-the-timeline).
 
-需要比较时：先固定素材区间、速度、裁切、基础音量与播放条件；只改变一个声层或视觉层。可做无音效/少量柔和反馈/过密反馈，或基线/加音效/再加音乐。保留相同基础声层，另记录响度差异，防止更响造成偏好错觉；不预设层越多越好。不同区间重放可用于叙事，但不能称严格A/B。当前宿主无法回听时保持未听审，别用波形、标签、soft文件名或峰值代替听感。
+When you need a comparison: fix the asset interval, speed, crop, base loudness and playback conditions first; change only one sound layer or one visual layer. You can run no effects / a few soft feedbacks / over-dense feedback, or baseline / add effects / add music. Keep the base layer identical and record the loudness difference separately so louder does not pass for better; do not assume more layers are better. Replaying different intervals can serve the narrative but is not a strict A/B. When the current host cannot listen back, keep it un-auditioned — do not let a waveform, a label, a soft filename or a peak level stand in for hearing.
 
-## 内外时钟与结尾
+## Inner and outer clocks, and the ending
 
-计划仍使用整片绝对秒。内嵌媒体单独记录源入出点、成片起止、速率和重放；内播放器显示的时间不是外片事件时间。匀速正放有效窗口内：
+The plan still uses absolute seconds of the whole film. Embedded media records its own source in/out points, film start and end, rate and replay; the time an in-film player shows is not the outer film's event time. Within a constant-speed forward-play window:
 
 `source_time = source_in + (film_time - timeline_start) * playback_rate`
 
-换速、停帧、循环或分段重映射要分段记录；转场重叠不意味着源媒体从零播放。分别核父场景长度、子动画末尾、音轨实际末尾和尾音。执行器支持随机seek时再测跳转一致性；否则用顺序播放/受控录屏，不扩大可用性声明。
+A speed change, freeze, loop or piecewise remapping must be recorded per segment; a transition overlap does not mean the source media plays from zero. Check the parent scene length, the child animation's end, the audio track's real end and the tail separately. Test seek consistency only where the executor supports random seek; otherwise use sequential playback / controlled screen recording, and do not widen the availability claim.
 
-## 最小验证
+## Minimum verification
 
-先试8–12秒最难关系或一段真实任务证据，时长按内容调整。核四种任务终态、标题/证据对应、小屏可读、声音起音/尾音与接缝。再做一次长中文/产品素材替换，检查局部可改性；需要声层对照则实际听审对齐版本。结构示例在 [任务计划](../examples/product-task-proof.plan.json) 和 [前后对照计划](../examples/sensory-before-after.plan.json)，都不是已渲染作品。
+Start with 8–12 seconds of the hardest relationship or one piece of real task evidence, adjusting duration to the content. Check the four task end states, headline/evidence pairs, small-screen readability, sound onsets/tails and seams. Then do one substitution with long Chinese copy/product assets and check local editability; when you need a sound-layer comparison, actually audition the aligned versions. The structural examples are in [task plan](../examples/product-task-proof.plan.json) and [before-and-after plan](../examples/sensory-before-after.plan.json); neither is a rendered piece.
 
-逐项记录设计、实现、关键帧观看、连续播放、听审与观众反馈。结构检查不能证明真实任务完成、审美、舒适度或理解收益。参考范围与权属见 [sources.md](sources.md)。
+Record design, implementation, keyframe viewing, continuous playback, listening pass and audience feedback item by item. A structural check cannot prove a real task completed, nor taste, comfort or comprehension benefit. Reference scope and ownership: see [sources.md](sources.md).

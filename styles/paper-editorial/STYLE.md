@@ -1,22 +1,22 @@
 # 纸面编辑
 
-承载解释、来源与阅读。
+Carry explanation, sources and reading.
 
-## 风格规则
+## Style rules
 
-- 中文字体单独确认，不凭fallback判断加载。
-- 来源不放不可读脚注。
+- Confirm the Chinese typeface separately; never judge loading by the fallback.
+- Sources do not go into unreadable footnotes.
 
-## 运动与节奏
+## Motion and rhythm
 
-- 段落推进，留阅读空间
-- 轻缓减速
-- 每次突出一个语义焦点
+- Sections advance, leaving room to read
+- Light, slow deceleration
+- One semantic focus at a time
 
-## 调整与回退
+## Adjustment and fallback
 
-纯色纸底与清晰字体，取消纹理。
+Plain paper ground and clear type; drop the texture.
 
-避免：装饰性长英文标签；纹理盖过细字。
+Avoid: decorative long English labels; texture overrunning fine type.
 
-颜色、字形与尺寸见本包 style.json；按真实品牌、画幅与中文阅读检查后使用。
+Colour, letterforms and sizes are in this pack's style.json; check them against the real brand, the aspect ratio and Chinese reading before use.

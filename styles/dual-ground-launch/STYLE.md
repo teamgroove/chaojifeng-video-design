@@ -1,23 +1,23 @@
 # 双底色发布片
 
-用两块底色分别承担问题与解答，只有一个强调色，三种字体声线各管一类内容。
+Two ground colours carry problem and answer respectively, with one accent only and three type voices each owning one class of content.
 
-## 风格规则
+## Style rules
 
-- 产品原tokens优先，包装不改写真实UI。
-- 底色翻转只发生一次；强调色只有一个。
-- 成功/错误色只作界面语义，不用来装饰。
+- The product's own tokens come first; the wrapper does not rewrite the real UI.
+- The ground flip happens once only; there is one accent only.
+- Success/error colours are interface semantics only, never decoration.
 
-## 运动与节奏
+## Motion and rhythm
 
-- 问题段短促，解答段稳定；转折前留短静默。
-- 快入慢落；转折与出画处加速。
-- 每次突出一个语义焦点，强调色只落在关键名词。
+- The problem section is terse, the answer section steady; leave a short silence before the turn.
+- Fast in, slow out; accelerate at the turn and where things leave frame.
+- One semantic focus at a time; the accent lands only on the key noun.
 
-## 调整与回退
+## Adjustment and fallback
 
-单一底色，用留白与密度区分问题和解答。
+Use a single ground colour and separate problem from answer by white space and density.
 
-避免：两块底色来回切换超过两次；强调色多于一个；直接沿用来源片的品牌色、字体或吉祥物；成功/错误色用作装饰。
+Avoid: flipping the two grounds back and forth more than twice; more than one accent; carrying over the source film's brand colours, type or mascot; using success/error colours as decoration.
 
-颜色、字形与尺寸见本包 style.json；按真实品牌、画幅与中文阅读检查后使用。
+Colour, letterforms and sizes are in this pack's style.json; check them against the real brand, the aspect ratio and Chinese reading before use.

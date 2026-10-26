@@ -1,24 +1,24 @@
-# 从内容到画面
+# From content to visuals
 
-先确定观众、看完应知道/相信/会做什么、哪些事实支持、什么证据必须上镜。将“科技感、电影感”翻译为产品适合的材质、层级、运动与声音选择，不能只堆蓝光粒子，也不固定每片采用同一美学。
+First fix the audience, what they should know/believe/do after watching, which facts support that, and which evidence must appear on screen. Translate “tech feel” or “cinematic feel” into the materials, layering, motion and sound choices the product actually suits — do not just pile on blue light particles, and do not lock every film into the same aesthetic.
 
-| 内容关系 | 可以怎样呈现 | 易误导的做法 |
+| Content relationship | How it can be presented | What misleads |
 | --- | --- | --- |
-| 步骤/任务 | 同一对象按触发与结果推进 | 同时播放多窗口却要求顺序理解 |
-| 因果/分支 | 命名节点、方向、条件和反例 | 把相关画成因果或省掉条件 |
-| 对比/前后 | 同尺度与主体，突出变化 | 换尺度、遮基准、面积夸大 |
-| 数量/比例 | 真实标注、一致单位、适量插值 | 无数据却画貌似真实统计图 |
-| 功能状态 | 初态→触发→变化→终态 | 产品并无能力却用动效造结果 |
-| 故事情绪 | 主体、目标、阻碍、转折连续 | 漂亮镜头拼接后事件失联 |
+| Steps/tasks | the same object advances through trigger and result | playing several windows at once yet demanding sequential understanding |
+| Cause/branching | name the nodes, the direction, the conditions and the counter-examples | drawing correlation as causation, or dropping the conditions |
+| Comparison/before-after | same scale and same subject, make the change stand out | switching scale, hiding the baseline, exaggerating area |
+| Quantity/ratio | real labels, consistent units, modest interpolation | drawing a plausible-looking statistical chart with no data behind it |
+| Feature state | initial state → trigger → change → end state | using motion to fake a result the product cannot produce |
+| Story emotion | subject, goal, obstacle and turn stay continuous | beautiful shots spliced together until the events lose each other |
 
-截图承担界面证据，图示承担关系，照片承担对象或情境。生成图不冒充真实功能、人物或事件照片。联网素材保留原链接、作者/许可可得信息和用途，不能编事实填空。
+Screenshots carry interface evidence, diagrams carry relationships, photographs carry the object or the situation. Generated images do not pass as photographs of real features, people or events. Material pulled from the web keeps its original link, whatever author/license information is available, and its intended use; never invent facts to fill a gap.
 
-界面操作、结果或关键数据需要强化时，读 [视觉强调](visual-emphasis.md)。先确认完整目标与必须保护的内容，再选框、短标签、引线、局部放大或错时强调；不把每个镜头都变成教学标注图。保留真实前后状态，标注跟随画面映射，单点免多余编号，样式按本片品牌决定。
+When interface actions, results or key data need emphasis, read [visual emphasis](visual-emphasis.md). Confirm the complete target and what must stay protected first, then choose boxes, short labels, leader lines, local zoom or staggered emphasis; do not turn every shot into an instructional annotation diagram. Keep the real before and after states, make annotations follow the frame mapping, skip redundant numbering for a single point, and decide style by this film's brand.
 
-分开决定叙事、风格、布局、镜头和动效。叙事安排理解顺序；风格安排颜色/字体/材质/运动气质；布局表达空间关系；镜头安排焦点与停留；动效执行具体变化。品牌覆盖默认token，横竖屏和长中文可能要换布局，不只缩字。
+Decide narrative, style, layout, shot and motion separately. Narrative sets the order of understanding; style sets the colour/type/material/motion character; layout expresses spatial relationships; shot sets focus and dwell; motion executes the concrete change. Brand overrides the default tokens. Landscape versus portrait and long Chinese copy may need a different layout — not just smaller type.
 
-品牌形象片可由视觉母题、情境和声音建立感受，但愿景须与现有能力分开。音乐／视觉表演可由动机、段落与变奏组成，不必有角色或论证。两者都需要可辨的段落变化与收束。先读导演方法，按需使用表达与配方目录；不要强迫所有片型走同一结构。
+A brand film can build feeling from a visual motif, a situation and sound, but the vision has to be kept apart from existing capability. A music/visual performance can be made of motifs, sections and variations, with no characters or argument required. Both need distinguishable section change and an ending. Read the director method first, then use the expression and recipe catalogs as needed; do not force every film type through the same structure.
 
-每个画面写 viewer takeaway、焦点对象、变换、文案/声音、停留/退出。运动应能说明帮助注意或解释什么；复杂知识允许少动、拆镜或延长。recipe是起点，compose处理局部，free处理独特任务；自由不免检查。不要因为目录存在就强迫套用，也不因模型版本强就免验。
+For every frame, write the viewer takeaway, the focal object, the transformation, the copy/sound, and the dwell/exit. Motion should be able to say what it helps you notice or explain; complex knowledge is allowed less motion, more shots or more time. recipe is a starting point, compose handles the local work, free handles unique tasks; free does not mean unchecked. Do not force a catalog entry just because it exists, and do not waive verification because a model version is strong.
 
-用户未要求先评方向时，低风险选择自行决定并继续。简单任务不生产大量独立文档。examples三份计划是原创结构样例，不代表已渲染、已观看或理解提升，替换事实与素材后重核时间和能力。
+When the user has not asked to review direction first, decide the low-risk choices yourself and keep going. Simple tasks do not produce piles of separate documents. The three plans under examples are original structural samples; they do not mean rendered, watched or improved comprehension. After replacing facts and assets, re-check timing and capability.

@@ -1,3 +1,3 @@
-# 项目经验
+# Project learnings
 
-公开版不附带私人运行记录。仅在实际任务完成后记录可核验的结果；未观看、未听审或未做观众测试的项目保持未验证。不要保存密钥、私人素材或原始长对话。
+The public edition ships without private run logs. Record only verifiable results, and only after an actual task has finished; projects that were not watched, not listened to, or not audience-tested stay marked unverified. Do not store keys, private assets or raw long conversations.

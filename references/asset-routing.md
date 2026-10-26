@@ -1,81 +1,81 @@
-# 素材选择：先决定它需要证明或表演什么
+# Asset selection: decide first what it must prove or perform
 
-每个镜头先写观众新增什么，再选择已有素材、采集、生成或程序构建。一个镜头可以混合多类素材；来源可靠、允许使用、可编辑和适合本镜是不同判断。素材独立移动时再读 [素材表演与调度](asset-motion-direction.md)。
+For every shot, write what the viewer gains first, then choose existing assets, capture, generation or programmatic construction. A shot can mix several asset types; a reliable source, permitted use, editability and fitness for this shot are separate judgments. Read [Asset motion and routing](asset-motion-direction.md) when assets move independently.
 
-## 按镜头使命选择来源
+## Choose the source by the shot's mission
 
-| 素材承担的任务 | 优先找哪里 | 生成与构建的边界 |
+| What the asset has to do | Where to look first | Boundary of generation and construction |
 | --- | --- | --- |
-| 证明产品能力 | 当前产品的可运行入口、真实截图/受控录屏、实际输出；源码核对当前行为与限制 | 生成UI、旧截图和本地化字符串不单独证明当前能力；重建不能造功能 |
-| 呈现真实事件 | 当事方原始发布、官方影像/档案、用户授权现场材料；核对原始时间、地点和上下文 | 生成画面只作解释性重现或背景，不能当事件发生过的影像证据 |
-| 理解用户语境 | 获准查看的笔记、评论、访谈、用户资料与已有研究 | 提炼任务和说法；看过参考不等于获准用于宣传，读取失败保留缺口 |
-| 建立生活与品牌世界 | 用户/项目资产、本机素材库、用途与许可匹配的素材来源 | 缺少匹配资产时生成虚构人物、环境、纹理、物件和装饰；不冒充客户反馈 |
-| 承担可编辑表演 | 可编辑源、独立主体、完整背景、遮罩及运动余量 | 需要时生成缺失部件；程序层控制精确文字、坐标、状态、遮挡与时间 |
-| 叙述与声音 | 已获准音轨、干净声音参考、实际旁白、音乐片段及原创音效 | 按实际能力生成所缺部分；文件就绪、读法正确与听感通过分开 |
+| Prove product capability | A runnable entry point of the current product, real screenshots / controlled screen recording, actual output; check current behaviour and limits in the source | Generated UI, old screenshots and localized strings do not on their own prove current capability; a rebuild cannot invent features |
+| Show a real event | The party's own original release, official footage / archives, on-site material the user has cleared; verify original time, place and context | Generated imagery is explanatory re-creation or background only; it cannot stand as visual evidence that the event happened |
+| Understand the user's context | Notes, comments, interviews, user material and existing research you are cleared to read | Extract tasks and phrasing; having seen a reference is not clearance to use it in promotion, and a failed read leaves the gap open |
+| Build a life and brand world | User / project assets, the local asset library, sources whose use and license match | When no matching asset exists, generate fictional people, environments, textures, objects and decoration; do not pass them off as customer feedback |
+| Carry an editable performance | Editable source, detached subject, complete background, mattes and motion headroom | Generate the missing parts when needed; the programmatic layer controls exact text, coordinates, state, occlusion and timing |
+| Narration and sound | Cleared audio tracks, clean sound references, actual voiceover, music excerpts and original SFX | Generate what is missing within actual capability; file ready, read correctly and passes the ear are separate |
 
-对真实事件先找一手来源；存在多个候选时同时看相关性、创建/修改时间与来源可信度，可得互动数据只作同口径辅助。来源时间或统计未知就记未知，不填0。片内标时间时使用事件发生时间，不能拿上传时间替代。
+For real events, find a first-hand source first; when several candidates exist, weigh relevance, creation / modification time and source credibility together, and use available engagement data only as same-metric support. If a source's time or statistics are unknown, record unknown — do not fill in 0. When you put a time on screen, use the time the event happened; upload time cannot stand in for it.
 
-## 成品资产优先，按缺口制作
+## Finished assets first, build only the gaps
 
-在建模、绑定、做动作或绘制纹理前，按镜头任务依次查项目／用户现有资产与缓存、用途和许可匹配的成品资产库，优先调整已有模型、骨架、动作与材质，只为缺口生成或手工制作。不能仅因“自己能建”就跳过检索，也不为了迁就某个资产改变已确认故事。事实证据仍走下一节的真实来源路线，创作资产不能补造历史现场。
+Before modelling, rigging, animating or painting textures, check in shot-task order the project / user's existing assets and cache, then finished-asset libraries whose use and license match; prefer adapting existing models, rigs, motion and materials, and generate or hand-build only for the gap. Do not skip the search just because you could build it yourself, and do not change a confirmed story to suit some asset. Factual evidence still takes the real-source route in the next section; creative assets cannot backfill a historical scene.
 
-角色检查比例、骨架、蒙皮、表情控制与编辑性；动作检查重定向、脚底、手部／道具接触及节奏；环境与材质检查尺度、UV／贴图、引擎兼容、反射与实际镜头表现。按 [工具合同](production-tool-contract.md) 的assets行记录候选、选用／排除理由、源到派生、scene引用、许可、实际文件哈希；从零制作或生成时明确实际检索及未满足的部分。检索受阻如实记录，不无限换库重试。
+For characters check proportions, rig, skinning, facial control and editability; for motion check retargeting, foot contact, hand / prop contact and rhythm; for environments and materials check scale, UV / maps, engine compatibility, reflections and how they read in the actual shot. In the assets row of the [tool contract](production-tool-contract.md) record candidates, reasons for choosing / rejecting, the source-to-derivative chain, scene references, license and the actual file hash; when building or generating from scratch, state what you actually searched and what remains unmet. Record a blocked search honestly; do not retry library after library.
 
-Poly Haven可先查HDRI、纹理和道具模型；Blender MCP有该库的集成时先核状态，再检索预览和规格、选用并导入；MCP不可用可按宿主能力查公开元信息，但不能把后者写成MCP导入成功。Mixamo等动作来源按实际许可与适配另核，不将环境库视为完整角色动作库。
+Poly Haven: check HDRI, textures and prop models first; if the Blender MCP has an integration for that library, verify its state first, then search previews and specs, select and import; if the MCP is unavailable you may check public metadata within host capability, but do not write that up as MCP import. Motion sources such as Mixamo are checked separately for actual license and fit; an environment library is not a complete character-motion library.
 
-## 事实画面默认先检索
+## Factual imagery: search first by default
 
-这是一项主动执行规则：人物、事件、地点、历史档案、产品行为和统计需要具象画面时，先复用用户／项目已有真实资料，再查询原始发布、官方档案、可信报道与用途匹配的素材库；不能未经检索就默认生图。网站搜索、访问与采集使用宿主指定的浏览器路线；本机当前规则为任务专用 @Chrome，复用已有会话，失败不擅换其他浏览器或桌面能力。
+This is an actively enforced rule: when people, events, places, historical archives, product behaviour or statistics need concrete imagery, reuse the user / project's existing real material first, then look up original releases, official archives, credible reporting and asset libraries whose use matches. Do not default to generating an image without searching. Use the host's designated browser route for site search, access and capture; on this machine the current rule is a task-dedicated @Chrome reusing an existing session — on failure do not switch to another browser or desktop capability on your own.
 
-在现有素材清单或项目研究笔记中记：claim／scene ID、查询词与实际覆盖来源、候选原始入口、事件时间和发布时间、上下文、权利与可用范围、分辨率／裁切条件、选用或排除理由。可得的创建／修改及同口径互动信号辅助比较；未知不填0。缩略图、转载和搜索预览只作线索，公开可见不代表可下载或可复用。
+Record in the existing asset list or the project research notes: claim / scene ID, query terms and the sources actually covered, candidate original entry points, event time and publication time, context, rights and permitted scope, resolution / crop conditions, reasons for choosing or rejecting. Use available creation / modification times and same-metric engagement signals to support the comparison; unknown stays unknown, do not fill 0. Thumbnails, reposts and search previews are leads only; being publicly visible does not mean downloadable or reusable.
 
-按本镜必要信息与资源预算设置停止条件：已取得可核且可用的候选即停止扩搜；来源不存在、受限或候选均不适合时记录实际缺口，不承诺“全网搜完”。可改用已核事实驱动的图表、时间线、地图或文字；需要环境、物件与情绪载体时再生成非证据画面。不能以生成的人物参与、现场照片或产品截图补造发生过的事实。没有诚实可行的表达时换镜头或缩小主张。
+Set a stopping condition from this shot's necessary information and resource budget: once you have a verifiable, usable candidate, stop widening the search; when the source does not exist, is restricted, or no candidate fits, record the actual gap — do not promise you "searched the whole web". You may switch to charts, timelines, maps or text driven by verified facts; generate non-evidence imagery only when you need environment, objects and an emotional carrier. Do not use generated people, on-site photos or product screenshots to backfill facts that did happen. When there is no honest viable expression, change the shot or narrow the claim.
 
-## 来源与表演分别决策
+## Decide source and performance separately
 
-检索／生成决定素材从哪里来，动效决定它怎样表演；两者可以同时使用。每镜确定主体、精确文字／数据层、背景、主动作、落定与下一镜接力，再按空间需求、可控程度、已有实现、编辑成本和资源选执行器。可复用现有工程就复用，不为堆效果同时引入多个引擎。
+Search / generation decides where the asset comes from; motion decides how it performs; the two can be used together. For each shot fix the subject, the exact text / data layer, background, main action, settle and handoff to the next shot, then choose an executor by spatial need, degree of control, existing implementation, editing cost and resources. Reuse an existing project when you can; do not pull in several engines at once to pile up effects.
 
-Remotion、Blender、Three.js、HyperFrames或既有编辑器只作为可用实现候选；不在本方法里承诺某版本API或未实测能力。具体使用前核当前文档与最难动作。转场用主体、形状、方向、尺度、因果状态或声音承接；关键结果先落定，再切走。主动作与粒子、歌词、相机等辅助动作错开，不靠每拍全屏变化营造沉浸。
+Remotion, Blender, Three.js, HyperFrames or an existing editor are implementation candidates only; this method does not promise any version's API or untested capability. Before using one, check the current docs and the hardest motion. Cut on subject, shape, direction, scale, causal state or sound; land the key result first, then cut away. Stagger the main action against supporting motion — particles, lyrics, camera; do not rely on full-frame change on every beat for immersion.
 
-需要角色、三维场景、世界照明／反射及跨工具合成时，按 [场景与工具组合](scene-tool-composition.md) 选择职责。Poly Haven等提供环境与资产，实际灯光、材质、摄像机和表演仍需设计；真实事实素材的优先级不因三维路线而改变。
+When you need characters, 3D scenes, world lighting / reflection and cross-tool compositing, assign responsibilities per [Scene and tool composition](scene-tool-composition.md). Poly Haven and the like supply environments and assets; lighting, materials, camera and performance still have to be designed; the priority of real factual material does not change because the route is 3D.
 
-## 先检查可表演性，再生成素材
+## Check performability before generating assets
 
-“卡片飞出手机”需要可独立移动的卡片、可恢复的手机/背景及文字层；“主体绕行”需要检查最大位移的露底和遮挡。先沿镜头进入态、主动作、退出态和下一镜接力规划部件，避免先生成一张把主体、文字和背景烙在一起的海报，再承诺任意运动。
+"A card flies out of the phone" needs a card that can move on its own, a phone / background that can be restored, and a text layer; "the subject orbits" needs a check of what shows underneath and what occludes at maximum displacement. Plan the parts along the shot's entry state, main action, exit state and handoff to the next shot, instead of first generating a poster with subject, text and background fused together and then promising arbitrary motion.
 
-对身份、构图、风格和动作分别说明参考职责，沿 [镜头生产统筹](shot-production.md) 保留固定项与可变项。已有完整素材足够就直接使用，不强制每图拆层。生成静态图再做视差或透视，应按实际实现描述，不能称已经生成了连续人物表演或真实三维。
+State each reference's job separately for identity, composition, style and motion, and keep fixed and variable items per [Shot production](shot-production.md). When a complete existing asset is enough, use it directly; do not force every image to be split into layers. When you generate a still and then add parallax or perspective, describe it by what was actually implemented; do not claim you generated continuous character performance or true 3D.
 
-## 用通用工件连接可用能力
+## Connect capabilities through general artifacts
 
-| 可用能力举例 | 导演层给它什么 | 应取得什么 |
+| Example capability | What the director layer gives it | What it should return |
 | --- | --- | --- |
-| 本机资产检索，如Eagle | 镜头使命、身份与风格条件 | 候选本地文件、来源/权利信息、素材ID |
-| 平台采集类能力 | 具体受众问题、主题与实际可访问范围 | 原始入口、原话、时间与候选；无结果时有明确缺口 |
-| 素材解析/复用能力，如media-use | 素材职责、音色或画面条件 | 可读取文件、元信息与来源账本 |
-| 宿主图像生成能力 | 主体/背景任务、参考职责、固定项、画幅、留白与运动余量 | 实际原图、必要透明层、生成记录与派生关系 |
-| 旁白/歌曲生成能力 | 已核稿件、读法、声音职责与小样目标 | 真实音频、可得分轨和量时依据，不虚构分轨 |
-| 场景与媒体执行器，如HyperFrames或既有编辑器 | 对象、状态、时间、文字和接缝约定 | 可编辑源、预览与实际视频 |
-| 动效研究能力 | 需要解决的可观察动作与对照目标 | 中性运动规律、原创实现与失败条件 |
-| 媒体处理能力，如FFmpeg | 精确源入出点、目标格式与声音关系 | 实际派生文件、参数与验证记录 |
+| Local asset search, e.g. Eagle | Shot mission, identity and style conditions | Candidate local files, source / rights information, asset ID |
+| Platform capture capability | The specific audience question, topic and actually accessible scope | Original entry points, verbatim quotes, times and candidates; an explicit gap when nothing turns up |
+| Asset parsing / reuse capability, e.g. media-use | Asset responsibility, timbre or picture conditions | Readable files, metadata and a source ledger |
+| Host image generation | Subject / background task, reference roles, fixed items, aspect ratio, negative space and motion headroom | The actual generated image, necessary alpha layers, generation record and derivative relations |
+| Voiceover / song generation | Checked script, read, sound's job and demo target | Real audio, obtainable stems and a basis for timing — do not invent stems |
+| Scene and media executor, e.g. HyperFrames or an existing editor | Objects, states, time, text and seam agreements | Editable source, preview and actual video |
+| Motion research capability | The observable motion to solve and a comparison target | Neutral motion principles, an original implementation and failure conditions |
+| Media processing capability, e.g. FFmpeg | Exact source in / out points, target format and relation to sound | Actual derivative files, parameters and verification record |
 
-这些是可选职责接口，不要求安装同名Skill或固定供应商；按宿主当前说明探测能力和授权。通过素材清单、脚本、真实音频、时间表与工程组合，不写死个人绝对路径，不继承其他Skill的默认写入目标、费用或发布权限。
+These are optional responsibility interfaces; they do not require installing a Skill of the same name or a fixed vendor. Probe capability and authorization per the host's current documentation. Connect through asset lists, scripts, real audio, schedules and the project — do not hardcode personal absolute paths, and do not inherit another Skill's default write targets, fees or publishing permissions.
 
-普通图像任务遵循宿主默认生成入口；在Codex中优先内置生图，用户明确选择CLI时再核实该路线。程序原生的文字、标注、几何和状态优先保留可编辑性；模型、参考和实际工具按真实记录披露。先复用环境，媒体生成、识别、渲染按资源条件串行，不为批量资产无限并发。
+Ordinary image tasks follow the host's default generation entry point; in Codex prefer the built-in image generation and verify that route only when the user explicitly chooses the CLI. Keep program-native text, annotation, geometry and state editable where you can; disclose models, references and actual tools as they are actually recorded. Reuse the environment first; run media generation, recognition and rendering serially per resource conditions, not with unlimited concurrency for a batch of assets.
 
-## 沿现有合同记录来源
+## Record sources along the existing contract
 
-资产继续用 plan.assets 的 id、source、rights、status、path 和可选sha256；镜头笔记按需补用途、事实时间/版本、身份约束、使用scene/element、源到派生关系与允许修改范围。纯程序对象记实现，不伪造图片行。原始文件、被接受的提示词/参数与派生关系保存在项目持久目录，不只放临时目录或全局生成缓存。
+Assets keep using plan.assets' id, source, rights, status, path and optional sha256; shot notes add as needed purpose, fact time / version, identity constraints, the scene / element used, source-to-derivative relations and the permitted range of modification. Record purely programmatic objects as implementation; do not fake an image row. Keep original files, accepted prompts / parameters and derivative relations in the project's persistent directory, not only in a temp dir or the global generation cache.
 
-来源记录说明资产从哪里来，证据角色说明它能证明什么。素材收集成功、模型生成成功与上镜合适分别验收；文件ready不代表可公开分发。
+The source record says where an asset came from; the evidence role says what it can prove. Asset collection success, model generation success and fitness on screen are accepted separately; file ready does not mean distributable.
 
-## 重建与说明怎样进入观看画面
+## How re-creation and explanation enter the picture
 
-用户2026-10-21确认的长期规则：先在独立内部记录中区分真实录屏、手工重建、流程示意、创作比喻与生成素材，来源记录不自动进入公开交付。对外画面、字幕、口播、业务提示词、文件名、图注及附件直接呈现业务内容，不添加演示、测试、模拟、重建、仅供展示等制作身份说明，也不写基于某思路创作的自述；不得换同义词或挪位置保留。
+Long-standing rule confirmed by the user on 2026-10-21: first distinguish, in a separate internal record, between real screen recording, manual re-creation, process diagram, creative metaphor and generated material; the source record does not automatically enter the public delivery. Outward picture, subtitles, voiceover, business prompts, file names, captions and attachments present business content directly — do not add production-identity labels such as demo, test, simulation, re-creation, for-display-only, and do not write a self-description that the work was made from some approach; do not keep them by swapping in synonyms or moving them elsewhere.
 
-Bad：“界面为重建示意”“本视频基于某框架创作”“图中仅为演示数据”。Good：删除纯制作角标，直接呈现核对成立的任务、动作与结果；业务输入叫“7月渠道销售表”，来源性质留在内部。正常的“演示如何创建任务”“本轮测试发现导出失败”可保留，判断对象是制作身份而非孤立单词。
+Bad: "the interface is a re-creation", "this video was made with framework X", "the figures shown are demo data only". Good: delete the pure production markers and present the task, action and result as verified; call the business input "July channel sales table" and keep the nature of the source internal. A normal "demo of how to create a task" or "this round of testing found the export fails" may stay — what you judge is production identity, not an isolated word.
 
-生成前检查输入和任务窗口，生成后检查文字及可复制提示词，导出后检查实际画面、字幕与声音。上游标签入镜时修正输入并重做相关采集或导出，不用遮字代替源头修复，不用文字检查冒充像素或听审通过。目录或旧参考要求“画面披露示意”时，制作性质记入内部disclosure，不渲染为作品标签；事实条件和真实模型边界仍用准确内容表达。
+Before generating, check the input and the task window; after generating, check the text and copyable prompts; after export, check the actual picture, subtitles and sound. When an upstream label lands in frame, fix the input and redo the related capture or export — do not cover the words instead of fixing the source, and do not pass a text check off as a pixel or listening pass. When a catalog or old reference demands that the picture disclose it is illustrative, record the production nature in the internal disclosure and do not render it as a label on the work; factual conditions and real model limits are still expressed with accurate content.
 
-若画面造成虚假能力或事件暗示，优先换真实证据、缩小主张或改镜头。交付说明、片内说明与平台声明承担不同职责，不能互相冒充已完成。渠道规则只有在核实对应平台、形式和时间后才能作为规则输出；一次用户限制不能推成全平台禁令。
+If the picture implies a false capability or a false event, prefer swapping in real evidence, narrowing the claim or changing the shot. Delivery notes, in-film notes and platform statements carry different jobs and cannot stand in for one another as done. Channel rules become rules only after you verify the specific platform, form and time; one user restriction does not generalize into a ban on every platform.
 
-具体方法来源与未验证范围见 [sources.md](sources.md#产品音乐叙事与创作过程研究)。
+Method sources and untested scope: see [sources.md](sources.md#product-music-narrative-and-a-study-of-the-creative-process).

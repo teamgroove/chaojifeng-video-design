@@ -1,65 +1,65 @@
-# 嘻哈知识科普：让歌词、证据与画面共同推进
+# Hip-hop knowledge explainer: lyrics, evidence and picture advance together
 
-用户要用Rap、嘻哈或说唱讲知识、历史、机制、产业变化或社会议题时，自动选 `knowledge-rap-explainer`。配方属于既有知识讲解／音乐表演场景，资讯题材另守资讯核验；不新增引擎或作曲能力。只有背景音乐的科普继续用 [概念知识科普](knowledge-music-direction.md)，产品能力宣传按主要目标用 [产品音乐叙事](product-music-story.md)。
+When the user wants to teach knowledge, history, mechanism, industry change or a social issue through rap or hip-hop, select `knowledge-rap-explainer` automatically. The recipe belongs to the existing knowledge explainer / music performance scenes; news subjects additionally keep news verification; it adds no engine or composition capability. An explainer with only background music keeps using [Conceptual knowledge explainer](knowledge-music-direction.md); product capability promotion follows the main goal and uses [Product music story](product-music-story.md).
 
-## 先写知识，再把知识写得能唱
+## Write the knowledge first, then make it singable
 
-1. 定一句观众听后应能复述的关系，识别已有认识、陌生术语与必要条件。按 [知识形象化](knowledge-visualization.md) 建真值账本，按行业共识统一术语；历史与资讯核事件时间、原始来源、统计口径及未知，不把评论唱成事实。
-2. 将每句中的事实、判断、情绪或比喻分别落到依据。准确的数字、单位、名称、否定和成立条件先保留，押韵与断句随后适配。强表达来自具体矛盾、代价和后果；不编观众误解，不用侮辱填冲突，不把陌生人的自报收入改成普遍事实。
-3. 按真实演唱窗口核每行音节与阅读负荷。缩短修饰、拆意群或跨乐句；不加快到听不清，也不为凑片长删掉机制。知识解释可在间奏或少动段落补充，必要时保留旁白分支，不强加主持人。
+1. Fix one relation the audience should be able to repeat after listening; identify what they already know, unfamiliar terms and necessary conditions. Build the truth ledger per [Knowledge visualization](knowledge-visualization.md) and unify terminology to industry consensus; for history and news verify event time, original sources, statistical definitions and unknowns, and do not rap a comment into a fact.
+2. Land the fact, judgment, emotion or metaphor in each line on its own basis. Keep accurate numbers, units, names, negation and conditions of validity first; fit rhyme and line breaks afterwards. Strong expression comes from concrete contradiction, cost and consequence; do not invent audience misconceptions, do not fill conflict with insults, and do not turn a stranger's self-reported income into a general fact.
+3. Check each line's syllables and reading load against the real singing window. Shorten modifiers, split thought groups or run across phrases; do not speed up until it is unintelligible, and do not cut the mechanism to hit a runtime. Knowledge explanation can go in the interlude or a low-motion section; keep a voiceover branch when needed, but do not force a host in.
 
-可在现有知识包的主张与术语记录中保留歌词关联，无需给所有旧计划新增字段。歌词稿与实际唱词是两个对象：识别只辅助找候选问题，不能由字幕正确证明演唱正确。
+You may keep lyric associations in the knowledge pack's claim and terminology records; there is no need to add fields to every old plan. The lyric draft and the actual sung words are two objects: recognition only helps find candidate problems, and correct subtitles cannot prove the singing is correct.
 
-## 结构用职责组织，不套固定曲式
+## Organize by responsibility, not a fixed song form
 
-| 可选段落 | 知识与情绪任务 | 画面与声音 |
+| Optional section | Knowledge and emotion job | Picture and sound |
 | --- | --- | --- |
-| 冷开场 | 立即认出对象与观看价值 | 首句已有具体内容，首帧进入主题，前三秒由画面兑现；不等长前奏 |
-| 主歌推进 | 解释时间、因果、对照或机制 | 真实资料与图形逐层增加关系，歌词重音与可见变化相接 |
-| 副歌回收 | 记住本片核心认识 | 短句与视觉母题回收重点，必要时重复；下一次增加新用途、代价或关系 |
-| 桥段／间奏 | 转向反例、条件或新证据 | 留阅读与消化空间，能量与视觉密度有起落，不只加响度 |
-| 结尾 | 回收开场并保留成立边界 | 落在知识所得或真实下一步，完整收束尾音，不默认导流 |
+| Cold open | Recognise the subject and why it is worth watching, immediately | The first line already carries something concrete, the first frame enters the topic, the first three seconds are paid off by picture; no waiting through a long intro |
+| Verse development | Explain time, causality, contrast or mechanism | Real material and graphics add relations layer by layer; lyric stress meets a visible change |
+| Chorus return | Remember the film's core insight | Short lines and the visual motif bring the point back, repeated if needed; the next pass adds a new use, cost or relation |
+| Bridge / interlude | Turn to a counter-example, a condition or new evidence | Leave room to read and digest; energy and visual density rise and fall, and it is not just louder |
+| Ending | Bring back the opening and keep the boundary of what holds | Land on what the knowledge gained or a real next step, close the final syllable fully, and do not default to a call to action |
 
-按主题合并或删除段落；没有新内容的副歌不保留。理想与骨感只适合相应题材，三幕、时长、BPM、色彩、副歌次数均不固定。
+Merge or delete sections by subject; drop a chorus that brings nothing new. Ideal and gritty suit only their matching subjects; three-act, duration, BPM, colour and the number of choruses are all unfixed.
 
-## 声音先得到可用内容，再建立有效排程
+## Get usable content into the sound first, then build a real schedule
 
-先复用获准的音轨；需要创作时，在实际能力、资源与授权内试最难事实词、专有名词和主要转折。内部短段检查不自动增加用户确认，direct连续完成，staged只按用户要求等待。未指定工具时按宿主能力选择，不自动启用付费服务；已指定引擎、原伴奏或正确片段则保留其约束。
+Reuse cleared audio tracks first; when you must create, test the hardest factual words, proper nouns and main turns within actual capability, resources and authorization. An internal short-segment check does not automatically add a user confirmation: direct runs straight through, staged waits only where the user asks. If no tool is specified, choose per host capability and do not enable paid services on your own; if an engine, the original instrumental or a correct segment is specified, keep its constraints.
 
-| 分项 | 检查什么 | 不能用什么替代 |
+| Item | What to check | What cannot stand in for it |
 | --- | --- | --- |
-| 唱词与读音 | 每句确实唱出，词义、数字与专有名词正确 | 正确的歌词文本、总ASR分数 |
-| 声线 | 音色方向、段落一致，参考授权匹配 | 识别命中率、短段接受覆盖全片 |
-| 节奏与旋律 | 重音、切分、疏密、换气与乐段起伏 | 只有BPM、响度或更密的音效 |
-| 连续性与混音 | 上下句、伴奏、呼吸、尾音、掩蔽及转场 | 单词读对、包络相关或无削波 |
+| Sung words and pronunciation | Every line is actually sung, meaning, numbers and proper nouns correct | Correct lyric text, aggregate ASR score |
+| Vocal timbre | Direction of the timbre, consistency across sections, reference license matching | Recognition hit rate, one accepted short segment covering the whole film |
+| Rhythm and melody | Stress, syncopation, density, breaths and the arc of the section | Only BPM, loudness or denser SFX |
+| Continuity and mix | Adjacent lines, instrumental, breath, tails, masking and transitions | Isolated words read correctly, envelope correlation or no clipping |
 
-局部修字持续出现音色跳变、卡顿或拼接感时，停止同种补字重试，扩大到完整乐句或乐段并检查两端；一体性成为主要问题且约束允许时可整首重做。用户锁定原伴奏时先在该范围内处理，不自动重做伴奏；用户后续明确允许整体重做时采用最新约束。每次保留已接受版本、失败条件及资源上限，不能无限生成。
+When patching words locally keeps producing timbre jumps, stutter or a spliced feel, stop retrying the same patch — widen to the full phrase or section and check both ends; when coherence is the main problem and constraints allow it, redo the whole song. When the user has locked the original instrumental, work inside that scope first and do not redo the instrumental on your own; when the user later explicitly permits a full redo, take the latest constraints. Keep the accepted version, failure conditions and resource ceiling each time; do not generate without limit.
 
-工作音轨选定后绑定文件哈希和实际唱词，测句／乐句、重音与段落，及时固定可编辑排程。还没确定的音轨可做粗剪，但不能把旧时间写成新音轨的实测时间。整首重生、删前奏、变速或重排后，重新核歌词覆盖、源到成片映射、字幕、主动作、音效及下游镜头；不能只替换音轨后原样复用SRT。
+Once the working track is chosen, bind the file hash and the actual sung words, measure lines / phrases, stress and sections, and fix an editable schedule promptly. A track that is not settled can carry a rough cut, but do not write old times as measured times for a new track. After a full regeneration, cutting the intro, a tempo change or a reorder, re-check lyric coverage, source-to-cut mapping, subtitles, main action, SFX and downstream shots; do not swap the track and reuse the SRT unchanged.
 
-## 每句都有声画任务，时间只用一个依据
+## Every line has a sound-and-image job, and timing has one basis
 
-使用现有 [声画笔记](../templates/music-shot-score.md)，简单任务可直接记入主计划。Rap逐句至少落实：claim／lyric ID、实际音轨及量时粒度、镜头与asset ID、关键词／重音、主动作的可见落定、阅读窗、跨镜接力与检查范围。执行时间从现有计划派生，不让笔记成为第二套手工时间线。
+Use the existing [sound-image notes](../templates/music-shot-score.md); a simple task can go straight into the main plan. For rap, land at minimum per line: claim / lyric ID, actual track and timing granularity, shot and asset ID, keyword / stress, the visible settle of the main action, reading window, cross-shot handoff and check scope. Execution time derives from the existing plan — do not let the notes become a second hand-made timeline.
 
-| 同步层次 | 让什么相接 | 验法 |
+| Sync layer | What has to meet what | How to verify |
 | --- | --- | --- |
-| 语义／词句 | 唱到事件、变量或后果时，有对应证据或动作 | 逐句核实际唱词与画面含义；不能只对鼓点 |
-| 拍点／重音 | 命中、变化成立、关键词完整可读 | 动画可提前启动，在锚点落定；有意偏移记理由与容差 |
-| 乐句 | 一个完整解释、对照或过程 | 查开始、发展、落定与阅读时间，不随每拍乱切 |
-| 段落 | 话题、关系或情绪转向 | 用主体、方向、形状、尺度、因果状态或声音接桥 |
+| Semantic / line | When the line sings an event, variable or consequence, matching evidence or action is there | Check the actual sung words against what the picture means, line by line; do not sync to the drums alone |
+| Beat / stress | The hit lands, the change reads, the keyword is fully readable | Animation may start early and settle on the anchor; record the reason and tolerance for a deliberate offset |
+| Phrase | One complete explanation, contrast or process | Check start, development, settle and reading time; do not cut on every beat |
+| Section | A turn of topic, relation or emotion | Bridge with subject, direction, shape, scale, causal state or sound |
 
-实测、人工标记、识别、插值与估时分别记录。BPM不包含起拍信息；能量峰不自动等于小节首拍；句级ASR均分不能称字级实测。逐字真值不足时用句／短语级字幕。每行字幕与对应图示分别核阅读，不能以段平均掩盖过密行；可双行延续或缩短意群，保留数字与因果条件。
+Record measured, manually marked, recognised, interpolated and estimated time separately. BPM does not carry the downbeat; an energy peak is not automatically the first beat of the bar; evenly divided sentence-level ASR cannot be called character-level measurement. When per-character truth is insufficient, use sentence / phrase-level subtitles. Check the reading of each subtitle line and its graphic separately; let no section average hide an over-dense line; you may run two lines or shorten the thought group, keeping numbers and causal conditions.
 
-## 素材与动效服务同一件事
+## Assets and motion serve one thing
 
-事实镜头默认按 [素材选择](asset-routing.md) 查已有图片、录像、档案和数据；检索缺口有依据后再补图表或生成非证据画面。准确文字、读数、图形尺度和可编辑动作由可控层负责，不能让生成海报烙死全部文字后承诺自由运动。
+Factual shots check existing photos, footage, archives and data by default per [Asset selection](asset-routing.md); only once a search gap is established, add charts or generate non-evidence imagery. Exact text, readings, graphic scale and editable action belong to the controllable layer; do not let a generated poster fuse all the text and then promise free motion.
 
-真实资料、图表、生成环境和程序对象可在同一镜头共用，不要求每片全部采用。按镜头空间、动作和成本复用现有实现；Remotion、Blender、Three.js等仅为候选，具体API、能力和兼容性用到时另核当前文档与最小动作，不为“高级感”强装多引擎。重点留给一个主动作，辅助响应错开；转场先写谁接住什么，再选实现。
+Real material, charts, generated environments and programmatic objects can share one shot; not every film has to use all of them. Reuse existing implementations per the shot's space, action and cost; Remotion, Blender, Three.js and the like are candidates only — check current docs and a minimal motion for the specific API, capability and compatibility when you use it, and do not bolt on several engines for a "premium" feel. Give one main action the emphasis and stagger the supporting responses; for a transition, write first who catches what, then choose the implementation.
 
-## 按实际产物验收与返修
+## Accept and rework against the actual artifact
 
-沿 [审片与修改](review-and-revision.md) 核首帧与前三秒、逐句事实和唱词、字幕／主动作同步、密集段阅读、乐段发展、镜头接缝、声音连续性及实际导出。核心词漏唱、明显错位、与任务不符的长等待或用户已否定的声音未解决时，版本保留候选／未通过，不以“已导出并披露”代替完成。
+Per [Review and revision](review-and-revision.md), check the first frame and first three seconds, line-by-line facts and sung words, subtitle / main-action sync, reading in dense sections, section development, shot seams, sound continuity and the actual export. When a core word goes unsung, a sync is clearly off, there is a long wait that does not fit the task, or a sound the user already rejected is unresolved, keep the version as candidate / not passed; do not substitute "exported and disclosed" for done.
 
-机器测量、导演自检、实际连续观看、听审、用户接受和理解／传播分别记账。无法回听时如实交代已有候选与声音未验证范围，继续可做的修复；不虚构听审或强迫用户逐片批准。新音轨、新镜头与新主题各自复验，不能继承旧版接受状态。
+Account separately for machine measurement, director self-check, actual continuous viewing, listening pass, user acceptance and comprehension / spread. When you cannot listen back, state honestly which candidates you have and what scope of sound is unverified, and continue the repairs you can make; do not invent a listening pass or force the user to approve film after film. A new track, new shots and a new subject are each re-verified; they do not inherit the old version's accepted state.
 
-该配方是一次作品制作与多轮返修的指导归纳，经用户2026-10-25确认实施；尚无独立跨题材成片或观众实验。私人对话、原曲、人物音色和项目工程不随Skill分发，来源与边界见 [sources.md](sources.md#说唱科普与成品反馈)。
+This recipe distils one production and several rounds of rework, confirmed for implementation by the user on 2026-10-25; there is not yet an independent cross-subject finished film or audience experiment. Private conversations, the original song, a person's timbre and project files do not ship with the Skill; sources and boundaries: see [sources.md](sources.md#rap-explainer-and-feedback-on-the-finished-piece).

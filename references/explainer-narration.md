@@ -1,63 +1,63 @@
-# 让讲解、声音与画面共同完成理解
+# Let narration, sound and image finish the understanding together
 
-需要讲解或旁白时按需读取；知识、产品、资讯、故事和品牌片都可使用。只做无声动效或锁定原声的任务无需启动配音。通过通用稿件、实际音频与时间记录组合能力，不要求安装个人分身口播Skill或固定云服务。
+Read this when narration or voiceover is needed; it applies to knowledge explainers, product demos, news briefs, stories and brand films. A task that is only silent motion design, or that keeps its original audio, needs no voiceover work. The capability comes from combining a general script, actual audio and timing records — it does not require installing a personal-avatar to-camera Skill or a fixed cloud service.
 
-## 先安排观众如何理解
+## First arrange how the audience will understand
 
-1. 写明观众起点、这次要理解的一个关系，以及结束时能辨认或完成什么。用已有事实、例子、界面或资料证明；按内容选择问题→过程→结果、对比或因果，不机械套统一三幕。
-2. 按完整意思写短段讲解。单独记术语读音、数字、缩写、强调词与停顿；区分事实与比喻。先说听众需要知道的事，画面文字补关键关系或结果，不逐字堆满旁白。
-3. 为每段安排证据和注意力：先呈现对象，再揭示变化，最后给结果停留。图表关系、操作反馈与真实资料优先于装饰。字幕、资料、视觉强调、可选人物分别成层。
-4. 取得真实旁白后测分句时间，再映射至现有scene、beat与audio cue。开头、重要因果、动作结果和结尾分别检查；估时不标为实测。无需另建手工维护的第二条时间轴。
-5. 讲解专业领域、协议、机制或资讯时，先按 [行业规范先行](domain-standards.md) 登记标准与术语，再用受控表达写稿：一句一事、一词一义、外文词登记读音。按 [逐层递进](layered-reveal.md) 分层，每层只加一个新东西。用 `controlled_lint.py` 查句长与术语，`--emit-speech` 把读音表应用到稿件再交配音；检查通过不代表读对了或讲清了，仍要实际听。
+1. State the audience's starting point, the one relationship to be understood this time, and what they can recognise or do at the end. Prove it with existing facts, examples, the interface or source material; choose question → process → result, contrast, or cause and effect to suit the content — do not mechanically impose a uniform three-act.
+2. Write short narration passages, one complete thought each. Record separately the pronunciation of terms, numbers, abbreviations, stressed words and pauses; keep fact and metaphor apart. Say what the listener needs to know first; on-screen text adds the key relationship or the result instead of piling up the voiceover word for word.
+3. Give each passage its evidence and its share of attention: show the object first, then reveal the change, then hold on the result. Charted relationships, operation feedback and real material come before decoration. Captions, source material, visual emphasis and an optional presenter are separate layers.
+4. Once the real voiceover exists, measure the clause timings, then map them onto the existing scene, beat and audio cue. Check the opening, the important causal steps, the action results and the ending separately; an estimate is not a measurement. No second, hand-maintained timeline is needed.
+5. When explaining a professional field, a protocol, a mechanism or a news item, register the standards and terminology per [Domain standards first](domain-standards.md) first, then write to controlled expression: one sentence one thing, one word one meaning, pronunciation recorded for non-native words. Layer per [Layered reveal](layered-reveal.md), one new thing per layer. Use `controlled_lint.py` to check sentence length and terminology, and `--emit-speech` to apply the pronunciation table to the script before it goes to voiceover; a passing check does not mean it is read correctly or explained clearly — you still have to listen.
 
-在现有计划旁按需记录：段落ID、稿件与发音备注、事实来源、要理解的关系、画面证据、音频文件／哈希、源入出点、主片时间、揭示与停留、验收状态。简单片可直接写在镜头备注，不强制额外表格。
+Record alongside the existing plan, as needed: passage ID, script and pronunciation notes, fact sources, the relationship to be understood, on-screen evidence, audio file / hash, source in and out points, time in the main film, reveal and dwell, acceptance status. A simple film can put this in the shot notes directly; no extra table is required.
 
-## 准备可追溯的声音参考
+## Prepare a traceable voice reference
 
-使用用户已授权声音。没有指定本人讲解时不自动套用内置音色。原始样本与派生音频分别保留，记录来源、用途、哈希、格式和实际听审；参考已存在不等于复刻模型已训练或身份已验证。
+Use a voice the user has licensed. Do not automatically apply a built-in timbre when the user has not asked for this particular person to narrate. Keep the original sample and the derived audio separately, recording source, purpose, hash, format and the actual listening pass; a reference existing does not mean a clone model is trained or an identity is verified.
 
-公开版不附带声音样本。使用者在项目内准备获准参考，建立声音清单，记录原始文件、处理派生、SHA256、格式、使用范围与实际听审状态。参考通过不代表语音引擎或后续旁白已通过。
+The public version ships no voice samples. Users prepare a licensed reference inside their own project, build a voice manifest, and record the original file, the processed derivation, SHA256, format, scope of use and actual listening-pass status. A reference passing does not mean the speech engine or the later narration has passed.
 
-导出工程只包含本次交付获准的文件；声音参考需要另行核对接收对象与分发范围。
+An exported project contains only the files licensed for this delivery; a voice reference needs its recipient and distribution scope checked separately.
 
-## 背景降噪先保人声
+## In background noise cleanup, protect the voice first
 
-- 先辨认稳定底噪、低频振动、混响、背景音乐或其他人声，处理方法按真实问题选择。普通FFT降噪不等于去混响或分离背景音乐。
-- 保留原件，另存处理版。仅对需要的低频干扰使用低切；先做轻度降噪，不一开始叠加硬门限、强压缩、强低通、变调或提亮。不要为了追求完全安静损伤辅音、轻声、呼吸、句尾与本人声音纹理。
-- 比较同一句话与同一停顿，匹配主观音量，检查水声、金属感、抽吸、齿音、断尾和音色变薄。波形、频谱和静段数值只定位问题，无法代替听审或声纹相似度。
-- 处理后核对采样率、声道、完整时长、开头／结尾、峰值和解码。滤镜可能有尾部延迟；用本次真实样本长度校验与必要的前置尾垫冲刷，不能直接裁掉尚未输出的人声。
-- 轻降噪仍不能满足要求时，可在已有能力与授权范围内尝试语音增强。分别试听嘴音、轻声与音色，不承诺分离任意说话人或伴奏。更换参考后重新检查，旧候选的验收状态不能转移到新文件。
+- Identify first: steady noise floor, low-frequency vibration, reverb, background music or other voices — choose the treatment from the actual problem. Ordinary FFT noise reduction is not dereverberation and does not separate background music.
+- Keep the original, save a processed copy separately. Use a low cut only on low-frequency interference that needs it; start with light noise reduction, and do not open by stacking a hard gate, heavy compression, a strong low-pass, pitch shifting or brightening. Do not damage consonants, soft speech, breath, sentence endings or the speaker's own vocal texture in pursuit of complete silence.
+- Compare the same sentence and the same pause at matched perceived level, and listen for swirling water, metallic edge, pumping, sibilance, clipped tails and a thinned timbre. Waveform, spectrum and silence-section numbers only locate the problem; they cannot replace a listening pass or a voice-similarity judgement.
+- After processing, verify sample rate, channels, full duration, head and tail, peaks and decoding. A filter may have tail latency; validate against the real sample length for this job, with the pre-roll and tail pad flush it needs — do not simply trim away voice that has not been output yet.
+- When light noise reduction is still not enough, speech enhancement may be tried within existing capability and licence. Audition mouth noise, soft speech and timbre separately, and promise no separation of arbitrary speakers or accompaniment. Re-check after changing the reference; an old candidate's acceptance status does not transfer to the new file.
 
-若工具无法听音频，保留 `not_checked`，交原声与处理版试听；不要用响度下降冒充真实降噪量或清晰度收益。
+If the tool cannot listen to audio, keep `not_checked` and hand over the original and the processed version for a listening pass; do not pass a drop in loudness off as the real amount of noise removed or as a clarity gain.
 
-## 区分参考、引擎与验收
+## Separate reference, engine and acceptance
 
-| 状态 | 所需证据 |
+| Status | Evidence required |
 | --- | --- |
-| reference_ready | 文件可解码、来源／授权与哈希一致；降噪另有派生记录 |
-| engine_ready | 当前引擎与所需模型可实际生成，记录版本、资源和收费路径 |
-| text_verified | 按新稿件核对漏字、加词、数字与发音；转写仅作辅助 |
-| voice_verified | 与授权参考对照听审，记录相似度和自然度；不由文件存在或模型自评推出 |
-| narration_ready | 选定实际旁白已验收，测量时长并绑定到本片时间与版本 |
+| reference_ready | The file decodes, and source / licence match the hash; noise reduction has its own derivation record |
+| engine_ready | The current engine and the required model can actually generate; record version, resources and billing path |
+| text_verified | Check the new script for dropped words, added words, numbers and pronunciation; a transcript is an aid only |
+| voice_verified | A listening pass against the licensed reference, recording similarity and naturalness; never inferred from a file existing or from the model's own assessment |
+| narration_ready | The chosen actual narration has passed acceptance, its duration measured and bound to this film's timing and version |
 
-TTS指文字转语音，既可本地也可云端；不将名称等同于收费。云服务使用当前套餐／报价与已授权预算，不沿用旧聊天单价。优先用户要求的本地路线；本地失败不悄悄更换收费接口、系统声线或其他人的声音。涉及现有云端音色时，单独确认它与本地参考的关系，不谎称本地WAV就是其训练样本。凭证通过宿主的保险库接口按需读取，不写入Skill或项目。
+TTS means text-to-speech and can be local or cloud; do not equate the name with cost. For a cloud service use the current plan / quote and the authorised budget, not a unit price carried over from an older chat. Prefer the local route the user asked for; if it fails, do not quietly switch to a paid API, a system voice or someone else's voice. Where an existing cloud timbre is involved, establish separately how it relates to the local reference, and do not claim a local WAV is its training sample. Read credentials on demand through the host's vault interface; never write them into the Skill or the project.
 
-## ACE音色参考讲解：实验分支
+## Narration from an ACE voice reference: experimental branch
 
-ACE-Step官方支持参考音频的全局音色条件与 `[spoken word]`；社区有将新稿件格式化为歌词并加入参考音色的TTS-like路线。这些机制值得实测，不能保证逐字准确、无伴奏、无唱腔或稳定身份。官方音乐能力、社区XL示例和本机普通Turbo能力分开记录。
+ACE-Step officially supports a global timbre condition from reference audio plus `[spoken word]`; the community has a TTS-like route that formats a new script as lyrics and adds a reference timbre. These mechanisms are worth measuring; none guarantees word accuracy, no accompaniment, no singing or a stable identity. Record official music capability, community XL examples and this machine's plain Turbo capability separately.
 
-先查本机环境、模型与运行进程，复用已有资源。用一段新稿件与固定种子，串行比较无参考与授权声音参考；不以原样重放参考当作复刻。普通话干声讲解可试验朗诵标签与关闭音乐语义规划，具体参数以已核对本机代码／文档为准，不照搬其他变体节点。一次初始化复用多次短试验，不先训练、批量长片或自动下载大模型。
+Check the local environment, models and running processes first, and reuse what is already there. With one new script passage and a fixed seed, compare no reference against the licensed voice reference serially; replaying the reference as-is does not count as cloning. For dry Mandarin narration you can experiment with recitation tags and with music semantic planning switched off; take the actual parameters from local code / docs you have verified, and do not transplant another variant's nodes. Initialise once and reuse it across several short trials; do not train first, batch long films or auto-download large models.
 
-先验文本、说话／唱腔、背景乐、停顿与完整句尾，再听本人相似度、自然度与疲劳感。对照原始／降噪参考的影响时，固定其他条件；没有实测的维度保持未知。通过后才作为本项目旁白候选；失败保留音频、参数和原因，调整最相关因素，或在用户已授权范围内选择专用本地语音路线。不能把一次小样外推成整个模型都能或都不能讲解。
+Check text, speech versus singing, background music, pauses and complete sentence endings first, then judge similarity to the person, naturalness and listening fatigue. When comparing the effect of the original versus the denoised reference, hold everything else fixed; a dimension you have not measured stays unknown. Only a pass makes it a narration candidate for this project; on failure keep the audio, the parameters and the reason, adjust the most relevant factor, or choose a dedicated local voice route within what the user has licensed. Do not extrapolate from one sample to "this model can or cannot narrate".
 
-实验脚本和样片留在本次项目输出，不把依赖路径、模型权重或未验收音轨塞入通用Skill。ACE配乐与讲解分别验收，音乐好听不证明它能准确讲稿。
+Keep experimental scripts and sample clips in this project's output; do not stuff dependency paths, model weights or unaccepted audio tracks into the general Skill. Accept ACE score and ACE narration separately; music sounding good does not prove it reads a script accurately.
 
-## 可选主持人与口型
+## Optional presenter and lip sync
 
-先判断主持人是否帮助理解。需要时将人物、嘴部、眼睛与资料独立成层，固定身份与接缝；普通讲解可仅用资料和旁白。不要把人物整体摆动当作说话。
+Decide first whether a presenter helps understanding. When one is needed, put the figure, the mouth, the eyes and the source material on separate layers and fix identity and seams; an ordinary explainer can run on material and voiceover alone. Do not treat a whole-body sway as speaking.
 
-音量驱动的有限嘴形开合只能称幅度驱动；音素级口型需要实际对齐证据。停顿闭口、嘴部贴合、眨眼和连续性分别核对，镜头切换继续使用整段旁白的全局时间。音频变化后重建依赖轨，不沿用旧嘴形或字幕的已通过状态。
+Limited volume-driven mouth opening may only be called amplitude-driven; phoneme-level lip sync needs actual alignment evidence. Check mouth closure on pauses, mouth fit, blinking and continuity separately, and keep shot changes on the global time of the whole voiceover. Rebuild dependent tracks after the audio changes; do not carry over the passed status of the old mouth shapes or captions.
 
-## 收尾
+## Closing
 
-按 [声音与节奏](sound-and-rhythm.md) 让配乐和音效给旁白留空间。交付真实旁白、必要字幕／时间与编辑源、实际工具和验证边界；未听审不写清晰自然或已像本人。记录哪些文件是原始、降噪参考、生成候选和最终旁白，不相互冒充。
+Per [Sound and rhythm](sound-and-rhythm.md), let score and SFX leave room for the voiceover. Deliver the real voiceover, the necessary captions / timing and edit sources, the tools actually used and the limits of what was verified; without a listening pass, do not write that it is clear, natural or sounds like the person. Record which files are original, denoised reference, generated candidate and final narration, and never let them stand in for one another.

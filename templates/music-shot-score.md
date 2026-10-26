@@ -1,48 +1,48 @@
-# 音乐叙事与说唱科普声画笔记
+# Music narrative and rap-explainer sound-image notes
 
-按需展开当前难段；简单任务直接写进现有 plan。此表是设计笔记，现有校验脚本不执行这些文字，也不检查主张、歌词正确性或听感。不新增计划必填字段。
+Expand the current hard section as needed; on a simple task write straight into the existing plan. This sheet is a design note: the existing check scripts do not run this text and do not check claims, lyric correctness or how it sounds. It adds no mandatory plan fields.
 
-说唱科普逐句落实下面的关联；产品任务按需要填写。时间只引用主计划或由其派生，不另写一份竞争时间线。
+For a rap explainer work through the relationships below line by line; fill in as needed for product work. Times are quoted from the master plan or derived from it only — never keep a second, competing timeline.
 
-## 本片判断
+## Judgement for this film
 
-- 观众起点 → 观看后所得：
-- 真实任务、产品版本/行为证据、不能承诺的内容：
-- 主导者及理由：任务 / 旁白 / 歌词 / 乐段；切换位置与原因：
-- 贯穿主体、固定身份、重复时新增的意义：
-- 声音气质、真实音轨、权利与用户限制：
-- 开场事件、声音职责、正文兑现位置；实际渠道与结尾约束：
-- 小样要解决的风险、资源上限与失败回退：
-- 本片配方、事实／术语依据、歌词与实际唱词版本；当前音轨哈希：
-- 事实画面检索范围、候选原始入口、权利、选用／排除理由与生成缺口：
-- 三维／角色镜头在创建对象前写：表情与姿势起终态、景别构图、运镜与落定、主光／环境反射、字幕留白：
-- 所选工具各承担什么、跨工具媒体的帧率／色彩／alpha／源区间、可编辑工程与资产引用：
-- production-job工件／回执：工具任务选择、现有资产与库检索、适配／补缺理由、当前plan哈希：
-- HDRI同镜头基线／候选证据及光向、曝光、轮廓、反射、接地、动态连续性与成本的实际发现：
-- 日语旁白需要时的模型使用依据、实际style、真实音频哈希、连接方式与句间听审状态：
+- Where the audience starts → what they gain from watching:
+- The real task, the product version / behaviour evidence, what cannot be promised:
+- What leads the beat and why: task / narration / lyrics / musical section; where it switches and why:
+- The spine subject, its fixed identity, the meaning each repetition adds:
+- Sound character, the real audio track, rights and the user's constraints:
+- The opening event, sound's job, where the body delivers it; the actual channel and the ending constraint:
+- The risk the sample has to settle, the resource cap and the fallback on failure:
+- This film's recipe, the factual / terminology grounds, the lyric and the actually-sung-text version; current audio track hash:
+- Search scope for factual picture, candidate original entry points, rights, why each was chosen / excluded and where generation has to fill a gap:
+- For 3D / character shots, write before creating the object: start and end state of expression and pose, shot size and composition, camera move and settle, key light / environment reflection, subtitle safe space:
+- What each chosen tool is responsible for; frame rate / colour / alpha / source ranges of media crossing tools; editable project and asset references:
+- production-job artefacts / receipts: the tool task chosen, existing assets and library lookup, the reason for adapting or filling a gap, the current plan hash:
+- HDRI in-shot baseline / candidate evidence, and what was actually found on light direction, exposure, silhouette, reflection, grounding, motion continuity and cost:
+- Where Japanese narration is needed: the grounds for using a model, the actual style, the real audio hash, how it is joined, and the listening status between sentences:
 
-## 当前段声画对应
+## Sound-image mapping for the current section
 
-| scene / element / beat ID | 观众新增什么 | 产品主张／知识claim／比喻及依据 | lyric ID、定稿／实际唱词与读法 | 音轨哈希、源区间及量时粒度 | 进入→触发→落定→退出；关键词／重音 | asset、来源角色与必要图层 | 下一镜接力与验法 |
+| scene / element / beat ID | What the audience gains | Product claim / knowledge claim / metaphor and its grounds | lyric ID, final / actually-sung text and how it is read | Audio track hash, source range and timing granularity | Enter → trigger → settle → exit; key words / stresses | asset, source role and required layers | Handoff to the next shot and how it is checked |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 沿原ID填写 | 每句／乐句一项主要任务 | 引事实ID或当前行为／产出；比喻另记 | 不为押韵改数字、单位、条件；实际唱词另核 | 实测 / 人工标记 / 识别 / 插值 / 估计 | 指主动作的可见落定beat、次级响应与逐行阅读 | 真实素材 / 生成 / 程序构建；可改范围 | 同对象、形状、方向、尺度、因果或声音；实际看听范围 |
+| Fill in along the original IDs | One main task per sentence / musical phrase | Cite the fact ID or the current behaviour / output; note a metaphor separately | Never change a number, unit or condition for rhyme; check the actually-sung text separately | measured / manual mark / detection / interpolation / estimate | Point to the visible settle beat of the main action, the secondary response and the line-by-line reading | real footage / generated / built in code; what may be changed | Same object, shape, direction, scale, causality or sound; the range actually watched and heard |
 
-## 时间只从一个有效依据派生
+## Timing derives from one effective basis only
 
-- 项目唯一有效计划/事件表及版本：
-- 原音乐源区间 → 成片区间；偏移/速率/分段重排：
-- 镜头、歌词、声音事件与分轨由何处生成；非派生注记是否仍与当前版本对应：
-- 有意领先/滞后、真实起音偏移、帧率和容差：
-- 重复副歌各新增什么；必要阅读窗在哪里：
-- 首个有效信息、首句人声及前三秒画面兑现的beat；开场裁剪后的源映射：
-- 新音轨／删前奏／变速后，哪些字幕、动作、音效及旧检查已失效并重新派生：
+- The project's single effective plan / event map and its version:
+- Original music source range → delivered range; offset / rate / segmented re-arrangement:
+- Where shots, lyrics, audio events and stems are generated from; whether non-derived notes still match the current version:
+- Deliberate lead / lag, the real onset offset, frame rate and tolerance:
+- What each repeated chorus adds; where the necessary reading windows are:
+- The beat where the first useful information, the first vocal line and the first three seconds of picture pay off; the source mapping after the opening trim:
+- After a new track / a cut intro / a speed change, which subtitles, actions, sound effects and old checks are invalidated and re-derived:
 
-源音乐时间单独记录，执行字段继续使用现有 scenes.start/end、beats.time、motions 与 audio_cues 的整片秒。句级识别不能标成词/字级实测；均分点亮记插值。表内时间只引用或由有效排程派生，不再手工维护第二套时间表。
+Record source-music time separately; execution fields keep using whole-film seconds of the existing scenes.start/end, beats.time, motions and audio_cues. Sentence-level detection cannot be logged as word- or character-level measurement; evenly spaced light-ups are logged as interpolation. Times in this sheet are quoted or derived from the effective schedule only — do not hand-maintain a second timing table.
 
-## 修改与验收
+## Revision and acceptance
 
-- 改动的主张/歌词/资产/镜头、受影响演唱窗口和下游时间：
-- 实际可得分轨、局部替换方式、窗口外保持情况和窗口内听审：
-- 新旧版本、被接受的小样、字幕/音效/动作与接缝的复验范围：
-- 结构 / 事实 / 画面 / 连续播放 / 声音 / 理解 / 传播：分别记录已做、证据与未验证项：
-- 词音 / 声线 / 节奏旋律 / 混音接缝分别记录；必要要求未通过时的候选状态、返修与停止依据：
+- The claim / lyric / asset / shot changed, the sung windows affected and the downstream timing:
+- The stems actually available, how the local replacement was made, what stays unchanged outside the window and the listening pass inside it:
+- Old and new version, the accepted sample, the re-check scope for subtitles / sound effects / actions and the seams:
+- Structure / facts / picture / continuous playback / sound / comprehension / reach: record separately what was done, the evidence and what is unverified:
+- Word-to-sound fit / vocal line / rhythm and melody / mix seams recorded separately; where a required condition fails: the candidate's status, the rework and the grounds for stopping:

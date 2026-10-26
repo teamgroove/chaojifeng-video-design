@@ -1,138 +1,138 @@
-# 方法归因与使用边界
+# Method attribution and bounds of use
 
-合同、目录、工具与示意为独立实现。此页仅保留方法归因与使用边界，不作为运行依赖或当前成片的验收记录。
+The contracts, catalog, tooling and illustrations are independent implementations. This page keeps only method attribution and bounds of use; it is not a runtime dependency and not an acceptance record for the current cut.
 
-| 原始来源与锁定版本 | 借鉴 | 边界 |
+| Original source and pinned version | What was borrowed | Boundary |
 | --- | --- | --- |
-| [huashu-design](https://github.com/alchaincyf/huashu-design/tree/798c4235ebff03d5c45e3c8affdf5e9d18f9dfa7) | 方向、分镜、关键帧与声音审查 | 方法不等于执行器已安装，依片型调整深度 |
-| [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill/tree/c91369c449d34755d320a8b81d0734000d99d1ab) | 内容槽位、风格/布局与合同 | 交互演示不自动是确定性视频 |
-| [OpenDesign](https://github.com/nexu-io/open-design/tree/78d5637cb49da07e81314d1544b5fc6d37c95084) | viewer takeaway、焦点、变换/停留、寻址 | daemon/编辑器/权限/播放器是宿主能力 |
-| [guizang-social-card-skill](https://github.com/op7418/guizang-social-card-skill/tree/cf4b810fac1c73fb65a2bb31d8c9278d82cbc4c5) | 内容/证据→空间、品牌例外、首帧与短动态 | 短Live Photo非长故事；密度不证可读/理解 |
-| [guizang-product-video-skill](https://github.com/op7418/guizang-product-video-skill/tree/18842e0f49a9eb2b8c00cc065ec37b314e235aaa) | 产品推方向、真实组件、实测旁白、mark与一致性 | 具体引擎、分支、素材许可和方向数量不泛化 |
+| [huashu-design](https://github.com/alchaincyf/huashu-design/tree/798c4235ebff03d5c45e3c8affdf5e9d18f9dfa7) | direction, storyboard, keyframes and sound review | the method does not mean the executor is installed; adjust depth by film type |
+| [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill/tree/c91369c449d34755d320a8b81d0734000d99d1ab) | content slots, style/layout and contracts | an interactive demo is not automatically a deterministic video |
+| [OpenDesign](https://github.com/nexu-io/open-design/tree/78d5637cb49da07e81314d1544b5fc6d37c95084) | viewer takeaway, focus, transform/dwell, addressing | the daemon/editor/permissions/player are host capabilities |
+| [guizang-social-card-skill](https://github.com/op7418/guizang-social-card-skill/tree/cf4b810fac1c73fb65a2bb31d8c9278d82cbc4c5) | content/evidence → space, brand exceptions, first frame and short motion | a short Live Photo is not a long story; density does not prove readability/comprehension |
+| [guizang-product-video-skill](https://github.com/op7418/guizang-product-video-skill/tree/18842e0f49a9eb2b8c00cc065ec37b314e235aaa) | product push direction, real components, measured narration, mark and consistency | specific engines, branches, asset licences and direction counts do not generalise |
 
-来源版本沿用已有记录，未在本次文字整理中重新核验。各根许可证与素材许可不同；复制实现/素材、分发工程与成片用途按具体内容核对，此处不做通用法律结论。表现力、修改效率与理解收益待真实任务验证，不排名模型。
+Source versions follow existing records and were not re-verified in this text pass. Root licences and asset licences differ; copying an implementation/asset, distributing a project and using a cut are checked against the specific content, and no general legal conclusion is drawn here. Expressiveness, revision efficiency and comprehension benefit await verification on real tasks; no model is ranked.
 
-## 导演方法与效果研究增量
+## Increment: directing method and effect studies
 
-- [awesome-opus5-5-videos，固定版本](https://github.com/yihui-dev/awesome-opus5-5-videos/tree/92aee2f586ac0715cb3cbcb6384834f98a33383d)：借鉴提示词与作品描述的表达关系，未逐条播放、试听或复现。37项表达和8类配方是原创归纳，source_relation逐项标明。来源不证明单轮生成、模型因果或当前执行器支持，不分发原长提示词、成片或素材库。
-- [DiDi_OK 现场分享转录](https://www.ifanr.com/1660654)、[完整问答](https://www.nfpeople.com/index.php/article/14095)：借鉴表达、观众形式、可行性、景别与筛选判断。媒体编辑转录未逐字对音，费用与周期存在口径冲突；个人经历、低饱和度偏好、作息和模型观点不写成通用规则。
-- [FoST《Candy》](https://www.xiaoyuzhoufm.com/episode/6abe4228e742e36efcbd7eaa)、[《牌子》](https://www.xiaoyuzhoufm.com/episode/69d75763b977fb2c477da25d)：发布方摘要提供探索、草图转场和声画并行线索，摘要不能当逐字原话。研究转录与回听范围单独留档，不借此宣称本Skill已验证相关效果。
-- [Gabe Michael 第一人称制作复盘](https://runway.com/customers/48-hours-to-generate-a-film)：镜头表、粗剪、困难镜头拆步；限时个案不代表通用工时。
-- [Philippe Rosco 幕后公开Transcript](https://www.linkedin.com/posts/runwayml_go-behind-the-scenes-to-learn-more-about-activity-7466127958697594880-KsHw)：相机揭示次序、镜头意图与表演选择。无时间码、疑似转录错字、未回听，不能作审定字幕。
-- [Paul Trillo 客座制作说明](https://ars.electronica.art/aeblog/en/2024/06/17/a-fall-down-memory-lane/)：记忆主题与生成／剪辑往返；全文访问受限，只取得原文检索段落，证据为partial。
-- [Sasha Kasiuha 原始访谈](https://runway.com/customers/inside-creative-campaigns-with-creative-director-sasha-kasiuha)：意图指导筛选、补叙事连接与停止。供应商访谈有宣传选择偏差，不是独立观众研究。
+- [awesome-opus5-5-videos, pinned version](https://github.com/yihui-dev/awesome-opus5-5-videos/tree/92aee2f586ac0715cb3cbcb6384834f98a33383d): borrowed the expressive relationship between prompts and work descriptions; nothing was played, auditioned or reproduced item by item. The 37 expressions and 8 recipe classes are an original distillation, with source_relation marked for each. The source does not prove single-pass generation, model causality or support in the current executor, and the original long prompts, cuts or asset libraries are not distributed.
+- [DiDi_OK on-stage talk transcript](https://www.ifanr.com/1660654), [full Q&A](https://www.nfpeople.com/index.php/article/14095): borrowed expression, audience formats, feasibility, shot size and screening judgement. The media-edited transcript was not checked word for word against the audio, and cost and cycle figures conflict between accounts; personal experience, low-saturation preference, daily routine and model opinions are not written up as general rules.
+- [FoST 《Candy》](https://www.xiaoyuzhoufm.com/episode/6abe4228e742e36efcbd7eaa), [《牌子》](https://www.xiaoyuzhoufm.com/episode/69d75763b977fb2c477da25d): the publisher summaries supply leads on exploration, sketch transitions and running sound and image in parallel; a summary cannot be quoted as verbatim speech. The research transcript and the scope of the re-listen are filed separately, and none of this claims the Skill has verified the related effects.
+- [Gabe Michael first-person production retrospective](https://runway.com/customers/48-hours-to-generate-a-film): shot list, rough cut, breaking the hard shots into steps; a time-boxed single case does not represent general effort.
+- [Philippe Rosco public behind-the-scenes transcript](https://www.linkedin.com/posts/runwayml_go-behind-the-scenes-to-learn-more-about-activity-7466127958697594880-KsHw): camera reveal order, shot intent and performance choices. No timecodes, suspected transcription typos, no re-listen — it cannot serve as checked subtitles.
+- [Paul Trillo guest production notes](https://ars.electronica.art/aeblog/en/2024/06/17/a-fall-down-memory-lane/): memory as theme and the round trip between generation and editing; full-text access was restricted, only retrieved passages of the original were obtained, so the evidence is partial.
+- [Sasha Kasiuha original interview](https://runway.com/customers/inside-creative-campaigns-with-creative-director-sasha-kasiuha): intent guiding selection, patching narrative connections, and stopping. A vendor interview carries promotional selection bias; it is not independent audience research.
 
-导演字段、场景边界与验收问题为本Skill的设计归纳，不冒称任何创作者原话。
+The directing fields, scene boundaries and acceptance questions are this Skill's own design distillation; they do not pose as any creator's words.
 
-## 本机截图方法的视觉强调适配
+## Adapting visual emphasis from the local screenshot method
 
-视觉强调借鉴本机 screenshot-annotator 的完整视觉单元、保护区域、动作/结果标签、语义编号与最小返修方法；不复制其批量流程、脱敏算法或素材，不要求安装源Skill。
+Visual emphasis borrows the complete visual unit, protected regions, action/result labels, semantic numbering and minimal-rework approach of the local screenshot-annotator; it does not copy that tool's batch pipeline, redaction algorithm or assets, and does not require installing the source Skill.
 
-visual.target-callout为新增指导，camera.focus-frame/text.semantic-emphasis/text.read-then-move沿用原ID并补约束。视频时间、源到屏幕映射、跟随与遮挡检查属于本Skill的适配；静态标注引擎不因此成为视频跟踪器。模板和采样检查不证明实际视觉效果，不要求使用者安装源Skill。方法合同见 [visual-emphasis.md](visual-emphasis.md)。
+visual.target-callout is new guidance; camera.focus-frame/text.semantic-emphasis/text.read-then-move keep their original IDs with added constraints. Video time, source-to-screen mapping, follow and occlusion checks are this Skill's adaptation; a static annotation engine does not thereby become a video tracker. Templates and sample checks do not prove the actual visual result, and users are not required to install the source Skill. Method contract: see [visual-emphasis.md](visual-emphasis.md).
 
-## 产品发布片与声音对照增量
+## Increment: product launch films and sound comparison
 
-产品表达借鉴 [HyperFrames launches固定源码](https://github.com/heygen-com/hyperframes-launches/tree/d7ac35069d74a3a437780579b3b7fe2f3eeace5f) 的任务证明与声画编排。大媒体、品牌、商业字体与第三方软件不随代码许可自动可用；本Skill不打包其资产或实现源码。
+Product expression borrows the task proof and sound-image arrangement of the [HyperFrames launches pinned source](https://github.com/heygen-com/hyperframes-launches/tree/d7ac35069d74a3a437780579b3b7fe2f3eeace5f). Large media, brands, commercial fonts and third-party software are not automatically usable under the code licence; this Skill bundles neither their assets nor their implementation source.
 
-- [PR主入口](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/index.html#L24-L41)：任务/章节的时序，不证明实际PR运行或生成耗时。
-- [SFX主入口](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/sfx-music-launch/index.html#L48-L112)：已有33.8秒整片混音，NO AUDIO旧注释失效；两次源入点1.3/1.1、时长3.0/2.1，仅支持同素材渐增叙事。严格对齐A/B是本Skill新增设计，不是来源已经完成的受控实验；分轨过程与听审未知。
-- [01接缝台账](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/heygen-apple-motion/01-ui-sting/ledger.json#L1-L98)、[04操控](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/heygen-apple-motion/04-generate-reel/index.html#L250-L456)：语义槽、字宽、抓点、容器遮挡；台账的方向不证明速度连续。
-- [文字到构图](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/frame-md-launch-storyboard/compositions/scene-06-text-to-frame.html#L333-L417)：短语/元素的手工对应，不是任意文档编译器。Inspector拥塞属于阅读节奏/直接操作，不补证对象边界扫描；variables只是参数声明演示，不证明通用联动引擎。
+- [PR main entry](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/index.html#L24-L41): the timing of tasks/chapters, which does not prove an actual PR run or the generation time.
+- [SFX main entry](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/sfx-music-launch/index.html#L48-L112): a 33.8-second full-film mix already exists, so the old NO AUDIO comment is void; the two source in-points are 1.3/1.1 with durations 3.0/2.1, which only supports a build-up narrative from the same material. The strictly aligned A/B is a new design in this Skill, not a controlled experiment the source already ran; the stem process and the listening pass are unknown.
+- [01 seam ledger](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/heygen-apple-motion/01-ui-sting/ledger.json#L1-L98), [04 manipulation](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/heygen-apple-motion/04-generate-reel/index.html#L250-L456): semantic slots, glyph width, grab point, container occlusion; the ledger's direction does not prove continuous velocity.
+- [text to composition](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/frame-md-launch-storyboard/compositions/scene-06-text-to-frame.html#L333-L417): a hand mapping of phrases/elements, not a compiler for arbitrary documents. Inspector congestion belongs to reading rhythm/direct manipulation and does not evidence object-boundary scanning; variables are only a parameter-declaration demo, not proof of a general linking engine.
 
-配方、状态边界、失败回退和看听验收均为原创适配，保持guidance；设计审查、结构校验与来源观察不能证明实际渲染、听感或理解收益。
+Recipes, state boundaries, failure fallback and watch-and-listen acceptance are all original adaptations and stay guidance; design review, structural validation and source observation cannot prove actual rendering, sound feel or comprehension benefit.
 
-## 发布片整片研究增量（2026-10-19）
+## Increment: study of a full launch film (2026-10-19)
 
-用户提供了一部本机成片 `full-film.mp4`，要求抽出编排与呈现方法。它是上一节「PR主入口」所指项目的成片：片内场景起点与固定提交源码的 `data-start`（0、5.2、8.4、9.3、12.3、16.1、18.5、21.0、23.0、25.6 秒）逐一吻合，因此是同一项目的同源材料，不是第二个独立样本。
+The user supplied a local cut, `full-film.mp4`, and asked for the editing and presentation method to be extracted. It is the cut of the project named under "PR main entry" in the previous section: the scene start points inside the film match the `data-start` values of the pinned commit source one for one (0, 5.2, 8.4, 9.3, 12.3, 16.1, 18.5, 21.0, 23.0, 25.6 seconds), so it is same-origin material from the same project, not a second independent sample.
 
-- 取证分四级：源码是观察（E1），成片抽帧、切点与调色板是观察（E2），响度、能量谷与起音由仪器测量（E3，没有听过），其余归纳是推断（E4）。分级与方法见 [参考片研究](reference-film-study.md)，十四个元素的观察依据、迁移写法与失败信号见 [发布片语法](launch-film-grammar.md)。
-- 固定源码入口：[主入口](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/index.html)、[开场](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/compositions/opener.html)、[PR滚动](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/compositions/pr-scroll.html)、[判决牌](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/compositions/hard-read.html)、[总结](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/compositions/summarize.html)、[调用](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/compositions/use-skill.html)、[行动](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/compositions/cta.html)，章节见同目录 feature-*.html。
-- 边界：没有听过成片，没有观众实验。转折区的能量曲线（9.8秒起抬升，约11.9秒落入谷底，约12.05秒回升，早于12.3秒的画面翻转）像音乐的铺垫、断拍与落拍；来源里转折区能查到的音效只有打字、点击与一声轻扫，所以“转折由音乐剪辑承担”是推断，不是听出来的。参考片的时长、比例、速度、层数与字号只是起点，不是默认值。本Skill不分发其视频、素材、品牌、字体或配乐，也不暗示与来源有任何合作。
-- `film_probe.py` 与 `audio_event_audit.py` 是本Skill原创的纯标准库实现，只测镜头切点、响度、能量谷与起音时刻，不能判断好看、好听或有效；用到真实成片时仍要看帧、听声。
+- Evidence is graded in four levels: source code counts as observation (E1); frames pulled from the cut, cut points and palette count as observation (E2); loudness, energy troughs and onsets are instrument measurements (E3 — never heard); the rest is inference (E4). Grading and method: see [reference film study](reference-film-study.md); the observation basis, transfer writing and failure signals for the fourteen elements: see [launch-film grammar](launch-film-grammar.md).
+- Pinned source entry points: [main entry](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/index.html), [opener](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/compositions/opener.html), [PR scroll](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/compositions/pr-scroll.html), [verdict card](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/compositions/hard-read.html), [summary](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/compositions/summarize.html), [invocation](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/compositions/use-skill.html), [call to action](https://github.com/heygen-com/hyperframes-launches/blob/d7ac35069d74a3a437780579b3b7fe2f3eeace5f/pr-to-video-launch/compositions/cta.html); the chapters are the feature-*.html files in the same directory.
+- Boundary: the cut was never heard and no audience experiment was run. The energy curve in the turn region (rising from 9.8s, dropping to a trough around 11.9s, recovering around 12.05s, before the 12.3s picture flip) resembles a musical build, break and landing; the only effects findable in the source for the turn region are typing, clicks and a single light swipe, so "the turn is carried by the music edit" is inference, not something heard. The reference film's duration, ratio, speed, layer count and type size are only starting points, not defaults. This Skill distributes none of its video, assets, brand, fonts or score, and implies no collaboration with the source.
+- `film_probe.py` and `audio_event_audit.py` are this Skill's original pure-standard-library implementations; they measure only shot cut points, loudness, energy troughs and onset times, and cannot judge whether something looks good, sounds good or works; on a real cut you still watch the frames and hear the sound.
 
-## 创意导演提示词适配
+## Adapting a creative-direction prompt
 
-创意导演方法吸收用户提供的提示词中的参考对照、关键事件、主次运动与声画领拍思路，见 [创意导演](creative-direction.md)。作者与公开入口未知，不分发原文，不沿用固定数值或效果保证。
+The creative-direction method absorbs the reference comparisons, key events, primary and secondary motion and sound-leading-image thinking of a prompt the user supplied; see [creative direction](creative-direction.md). The author and public entry point are unknown, the original text is not distributed, and no fixed numbers or effect guarantees are carried over.
 
-## 从MV提示词提炼通用创作方法
+## Distilling a general creative method from an MV prompt
 
-镜头统筹吸收用户提供MV提示词中的能力试验、参考职责、生成前统筹与表达兑现思路，见 [镜头生产统筹](shot-production.md)。作者与公开入口未知，不复制原文；原声、歌词与口型按任务启用，固定工具、多模型与无限预算不作为默认要求。
+Shot planning absorbs the capability trials, reference responsibilities, pre-generation planning and promise-keeping thinking of an MV prompt the user supplied; see [shot production planning](shot-production.md). The author and public entry point are unknown and the original text is not copied; original sound, lyrics and lip-sync are enabled per task, and fixed tools, multiple models and unlimited budget are not default requirements.
 
-## 素材表演与调度的独立实现
+## An independent implementation of asset performance and routing
 
-素材表演方法借鉴 [lemo-wake固定版本](https://github.com/lemomo-ai/lemo-wake/tree/f070df8bdf891d792012aabc054582b16e04f759) 的素材准备与动作编排思路，独立适配为坐标、遮挡、动作范围与复验指导。未本机复现、连续播放或试听，不继承对方运行结果与能力声明。
+The asset performance method borrows the asset preparation and motion staging ideas of the [lemo-wake pinned version](https://github.com/lemomo-ai/lemo-wake/tree/f070df8bdf891d792012aabc054582b16e04f759), adapted independently into guidance on coordinates, occlusion, motion range and re-verification. It was not reproduced locally, played continuously or auditioned, and it inherits none of the other project's run results or capability claims.
 
-方法见 [素材表演与调度](asset-motion-direction.md)。不纳入对方代码、原文、模板、成片、字体或模型；引入具体实现或资产时另核使用条件。
+Method: see [asset performance and routing](asset-motion-direction.md). The other project's code, original text, templates, cuts, fonts or models are not included; when you bring in a specific implementation or asset, check its terms of use separately.
 
-## 讲解导演、本人声音与降噪
+## Explainer direction, the user's own voice, and noise reduction
 
-讲解导演借鉴本机 ai-avatar-narration 的真实旁白先行、资料/人物/嘴眼/字幕分层与音频绑定方法，见 [讲解导演与声音参考](explainer-narration.md)。不继承固定形象、课堂或WAN流程，不要求安装该Skill。本人声音的授权、哈希和听审状态见 使用者本机的 `assets/voice/manifest.json` 声音清单；授权不扩展为公开分发。
+Explainer direction borrows the local ai-avatar-narration approach of real narration first, layered material/person/mouth-and-eyes/subtitles and audio binding; see [explainer direction and sound reference](explainer-narration.md). It does not inherit a fixed avatar, classroom or WAN pipeline, and does not require installing that Skill. The authorisation, hashes and listening-pass status of the user's own voice are in the user's local `assets/voice/manifest.json` voice manifest; the authorisation does not extend to public distribution.
 
-[ACE-Step官方教程](https://github.com/ace-step/ACE-Step-1.5/blob/main/.claude/skills/acestep-docs/getting-started/Tutorial.md) 提供参考音色条件及spoken word标签；[社区TTS-like路线](https://github.com/starsFriday/ComfyUI-ACEStep#tts-like-reference-voice) 与 [节点源码](https://github.com/starsFriday/ComfyUI-ACEStep/blob/main/nodes.py) 提供稿件转歌词、参考音色潜变量条件的研究线索，作者说明措辞、读音和旋律可偏移。社区仓库DeepWiki未索引后回退源码，不复制其节点或XL模型。普通Turbo本机试验与社区XL分开记录，机制不等于讲解质量。
+The [ACE-Step official tutorial](https://github.com/ace-step/ACE-Step-1.5/blob/main/.claude/skills/acestep-docs/getting-started/Tutorial.md) supplies reference-timbre conditioning and the spoken word tag; the [community TTS-like route](https://github.com/starsFriday/ComfyUI-ACEStep#tts-like-reference-voice) and the [node source](https://github.com/starsFriday/ComfyUI-ACEStep/blob/main/nodes.py) give research leads on turning a script into lyrics and on reference-timbre latent conditioning, with the author noting that wording, pronunciation and melody can drift. DeepWiki had not indexed the community repository, so we fell back to the source, whose nodes and XL models are not copied. The ordinary Turbo local experiment and the community XL run are recorded separately; a mechanism is not explainer quality.
 
-轻降噪依据 [FFmpeg afftdn说明](https://ffmpeg.org/ffmpeg-all.html#afftdn)。处理参数不代表实测改善量，转写通过不证明音色未损伤。
+Light noise reduction follows the [FFmpeg afftdn documentation](https://ffmpeg.org/ffmpeg-all.html#afftdn). The processing parameters do not represent a measured improvement, and a passing transcript does not prove the timbre was undamaged.
 
-人声增强使用已有 [DeepFilterNet v0.5.6](https://github.com/Rikorose/DeepFilterNet/tree/978576aa8400552a4ce9730838c635aa30db5e61) 与内嵌DeepFilterNet3；模型和二进制不纳入Skill。环境噪声抑制不等于通用多源分离或风声全部移除，具体听感以声音清单与实际听审为准。
+Voice enhancement uses the existing [DeepFilterNet v0.5.6](https://github.com/Rikorose/DeepFilterNet/tree/978576aa8400552a4ce9730838c635aa30db5e61) with embedded DeepFilterNet3; the model and binaries are not included in the Skill. Ambient noise suppression is not general multi-source separation and does not remove all wind noise; the actual sound is judged by the voice manifest and the real listening pass.
 
-## 知识形象化、逐层递进与行业规范先行
+## Visualising knowledge, layered progression, and industry standards first
 
-知识讲解方法的归因如下。用户提供的公众号文章与评论只作需求线索，不当作实验证据。
+The knowledge explainer method is attributed as follows. The WeChat article and comments the user supplied serve only as demand leads, not as experimental evidence.
 
-| 来源与版本 | 借鉴 | 边界 |
+| Source and version | What was borrowed | Boundary |
 | --- | --- | --- |
-| [Anatomy，固定版本](https://github.com/wheresryan22/anatomy/tree/1482e8469b0a9e0d8cc18ea2740a01423d29ae80)（MIT，提交于2026-10-18） | 物即解释、两种失败（太抽象、太平）、先立真值再造物、色调层级与一个亮点、落地标签、分解与装回规则、运动落定、读数同源、像评论家一样核查 | 原作是交互式等距图，不是视频；毫秒、零件数、档位只作起点，需按本片重测。只借鉴方法，不引入其交互、发布或三维实现。不复制其代码、示例和图，不继承其验证状态；作者案例不是观众实验 |
-| [ASD-STE100 Issue 9](https://www.asd-ste100.org/assets/files/ASD-STE100_ISSUE9.pdf)（2025-01-15） | 受控语言的规则编号与思路：一句一事、主动语态、一词一义、先查词表 | 已读官方 PDF 文本核对规则号与适用边界。官方说明它只为技术文档开发、不能单独使用、不规定缩写与单位。本 Skill 的 STE-zh 是自定中文改编，数字阈值不是 ASD 数字，不得声称“符合 ASD-STE100” |
-| [RFC 9293](https://www.rfc-editor.org/rfc/rfc9293.html)（STD 7，2022年8月） | TCP 三次握手示例的事实：§3.5、图 6、图 8 | 2026-10-19 核对；只用于结构示例。示例中的“对账台”是本 Skill 设计的示意载体，不是 RFC 内容 |
-| ISO 24495-1:2023 简明语言 | 清晰表达原则的旁证 | 只核对了编号与主题，未读全文，不引用条款 |
-| Karpathy 的“文本→图→网页→视频”阶梯 | 受控语言之后逐级升级媒介的线索 | 只见二手转述，没有取得原始出处，不当原话引用 |
-| 公众号文章与评论区（用户提供） | 新手四问、桥接、读音词典、长片分块、模型边界与延伸阅读、事实核查需求 | 无公开链接；评论是个人经验，不作统计结论 |
+| [Anatomy, pinned version](https://github.com/wheresryan22/anatomy/tree/1482e8469b0a9e0d8cc18ea2740a01423d29ae80) (MIT, committed 2026-10-18) | the object is the explanation; the two failures (too abstract, too flat); establish the truth first, then build the object; tonal hierarchy with one highlight; grounded labels; explode-and-reassemble rules; motion settling; readings from one source; checking like a critic | the original is an interactive isometric diagram, not a video; milliseconds, part counts and levels are only starting points and must be re-measured for this film. Only the method is borrowed — not its interaction, publishing or 3D implementation. Its code, examples and images are not copied and its verification status is not inherited; the author's case is not an audience experiment |
+| [ASD-STE100 Issue 9](https://www.asd-ste100.org/assets/files/ASD-STE100_ISSUE9.pdf) (2025-01-15) | the controlled-language rule numbering and approach: one idea per sentence, active voice, one meaning per word, check the dictionary first | the official PDF text was read to verify rule numbers and scope. The official note says it was developed for technical documentation only, cannot be used on its own, and does not regulate abbreviations or units. This Skill's STE-zh is a self-defined Chinese adaptation; its numeric thresholds are not ASD numbers, and no claim of "compliance with ASD-STE100" may be made |
+| [RFC 9293](https://www.rfc-editor.org/rfc/rfc9293.html) (STD 7, August 2022) | the facts of the TCP three-way handshake example: §3.5, figure 6, figure 8 | verified 2026-10-19; used only as a structural example. The "reconciliation desk" in the example is an illustrative carrier designed by this Skill, not RFC content |
+| ISO 24495-1:2023 plain language | corroboration for the principle of clear expression | only the number and subject were checked; the full text was not read and no clauses are cited |
+| Karpathy's "text → diagram → web page → video" ladder | a lead for stepping up the medium after controlled language | seen only as a second-hand paraphrase; the original source was not obtained and it is not quoted as his words |
+| WeChat article and comment thread (user-supplied) | the four beginner questions, bridging, a pronunciation dictionary, chunking long films, model boundaries and further reading, and the need for fact-checking | no public link; the comments are personal experience and are not used for statistical conclusions |
 
-领域起点表中标“种子”的来源没有读过原文；用到时先核版本、条款与现行状态，再把 `status` 改为 `verified`。七层结构、分档时长、关系类型与载体原型表、证据板、真值账本分类与检查码都是本 Skill 的归纳或设计，没有经过观众实验。目录里 `knowledge.*` 的验证状态保持 guidance/authored，不能因为示例通过结构检查而升级。
+Sources marked "seed" in the domain starting-point table have not been read in the original; before use, check version, clauses and current status, then change `status` to `verified`. The seven-layer structure, tiered durations, relationship-type and carrier-archetype tables, evidence board, truth-ledger categories and check codes are all this Skill's distillation or design and have not been through an audience experiment. The verification status of `knowledge.*` in the catalog stays guidance/authored and must not be upgraded because an example passed a structural check.
 
-## 音乐推进知识科普
+## Music-driven knowledge explainer
 
-后续用户确认配方显示名为“概念知识科普”，沿用`knowledge-music-explainer`稳定ID。当前神曲作为配方内初始默认，候选与默认可扩展、更换；用户指定优先，按所选新曲反推编排，不把初始默认曲硬绑为全局默认。默认选曲不重复询问，单次选择、加入候选、更换默认分别处理；原音源与未验证状态保持，选择工具不冒充测拍或听审。
+The user later confirmed the recipe display name "概念知识科普", keeping the stable ID `knowledge-music-explainer`. The current 神曲 track serves as the recipe's initial default; candidates and the default can be extended and replaced; a user-nominated track wins, and the arrangement is derived backwards from the newly chosen track, so the initial default is not hard-bound as a global default. The default is not re-asked each time: a single selection, adding a candidate and changing the default are handled separately; the original audio source and its unverified status stay as they are, and the selection tool does not pose as beat detection or a listening pass.
 
-2026-10-21，用户提供本机《Vibe知识大赏保姆级教程》并确认扩展，随后明确要求支持“一次性完成，不需要先试片”。[科普编排](knowledge-music-direction.md)和`knowledge-music-explainer`将片内“定规格、音乐卡点、关键词乐器音效、先试片再分段修改”适配为字幕／旁白双分支、分层同步和可选交付节奏。一次性交付不设置试片确认门禁，最终检查与必要返修仍完成。
+On 2026-10-21 the user supplied the local 《Vibe知识大赏保姆级教程》 and confirmed the extension, then explicitly required support for "done in one pass, without a test cut first". [Knowledge explainer direction](knowledge-music-direction.md) and `knowledge-music-explainer` adapt the in-film "set the spec, cut to the music, keyword instrument effects, test cut first then revise in segments" into subtitle/voiceover branching, layered sync and an optional delivery rhythm. One-pass delivery sets no test-cut confirmation gate; the final check and any necessary rework are still done.
 
-观察来自205.056秒文件的联系表、关键帧与片内字幕，未完成整片连续视听；作者模型、成本、流量自述未独立核验。音乐地图、可选任务表、时序校验与效果闭环为原创设计，不把113 BPM、固定10秒或某模型升为默认。参考[AudioLabs速度与拍点](https://www.audiolabs-erlangen.de/resources/MIR/FMP/C6/C6S2_TempoBeat.html)和[Cambridge多媒体学习原则](https://www.cambridge.org/core/books/abs/cambridge-handbook-of-multimedia-learning/principles-for-reducing-extraneous-processing-in-multimedia-learning/F29A19FCD34C542806F736E0661C05F5)补充边界；页面摘要与检索内容支持原则，不宣称已复现实验或证明平台留存提升。原片、私有对话和音乐文件不分发；配方预览、导出、听审与观众效果仍分别记实际状态。
+The observations come from the contact sheet, keyframes and in-film subtitles of a 205.056-second file; no continuous audiovisual pass over the whole film was completed, and the author's own statements about models, cost and traffic were not independently verified. The music map, optional task table, timing checks and effect closed loop are original design; 113 BPM, a fixed 10 seconds or any particular model are not raised to defaults. Boundaries are supplemented by [AudioLabs on tempo and beat](https://www.audiolabs-erlangen.de/resources/MIR/FMP/C6/C6S2_TempoBeat.html) and the [Cambridge multimedia learning principles](https://www.cambridge.org/core/books/abs/cambridge-handbook-of-multimedia-learning/principles-for-reducing-extraneous-processing-in-multimedia-learning/F29A19FCD34C542806F736E0661C05F5); the page summaries and retrieved content support the principle, without claiming the experiment was reproduced or that platform retention improves. The original film, private conversations and music files are not distributed; recipe preview, export, listening pass and audience effect are still recorded as their actual states.
 
-## 产品音乐叙事与创作过程研究
+## Product music narrative and a study of the creative process
 
-用户于2026-10-20确认，将一部产品音乐短片的过程研究提炼为 [产品音乐叙事](product-music-story.md)、[素材选择](asset-routing.md)、[开场设计](opening-design.md) 和可选声画镜头笔记。研究对照了三次实质创作指令、早晚版本、分镜、真实素材清单、歌曲与事件表、关键场景代码及交付更正；抽看最终关键帧与全片采样，最终文件哈希与交付记录一致。完整私有研究留在用户项目，本Skill不分发聊天、个人路径、人物图像、歌词、声音或项目工程。
+On 2026-10-20 the user confirmed distilling the process study of a product music short into [product music narrative](product-music-story.md), [asset selection](asset-routing.md), [opening design](opening-design.md) and optional sound-image shot notes. The study compared three substantive creative instructions, early and late versions, the storyboard, the real asset list, the song and event map, key scene code and delivery corrections; it spot-checked the final keyframes and sampled the whole film, and the final file hash matches the delivery record. The full private study stays in the user's project; this Skill distributes no chat, personal paths, images of people, lyrics, audio or project files.
 
-一部作品提供了做法与失败条件，未证明跨产品适用或传播提升。案例存在平台笔记读取失败、部分逐字时间由句级识别插值、歌曲局部重绘未听审、抽样口径改变导致运动量数字不同等限制；不把声音事件表、ASR无词、图册预览或结构校验当作听感/审美通过。目录配方保持guidance，新预览与导出状态为not_run，不继承原工程测量或旧版截图的验收。
+One work supplies practice and failure conditions; it does not prove cross-product applicability or a distribution lift. The case carries limitations: reading the platform notes failed, some word-level timings are interpolated from sentence-level recognition, a local redraw of the song was never auditioned, and a change in sampling convention produced different motion-volume figures; a sound event map, an ASR with no words, a gallery preview or a structural check are not taken as a pass on sound feel/aesthetics. The catalog recipe stays guidance, the new preview and export status is not_run, and the original project's measurements or the older screenshots' acceptance are not inherited.
 
-素材与执行接口参考了本机Eagle、平台图片采集、media-use、imagegen、HyperFrames、ai-avatar-narration、motion-effect-distiller和媒体处理Skill的相关说明，只抽取职责与通用工件，不复制其实现、资产、固定默认值、安装或供应商依赖。未在本轮逐项运行这些能力；宿主用到时按当前说明与授权确认实际可用性。内置生图与CLI选择服从宿主规则，不把一个工具写成通用前提。
+The asset and execution interfaces referenced the local notes on Eagle, platform image capture, media-use, imagegen, HyperFrames, ai-avatar-narration, motion-effect-distiller and the media-handling Skill, extracting only responsibilities and generic artifacts; their implementations, assets, fixed defaults, installations and vendor dependencies are not copied. These capabilities were not run item by item this round; when the host uses them, confirm actual availability against the current notes and authorisation. Built-in image generation and CLI choice follow host rules, and no single tool is written up as a universal precondition.
 
-外部旁证：
+External corroboration:
 
-- [TikTok Creative Codes](https://ads.tiktok.com/business/en/blog/creative-best-practices-top-performing-ads)：结构、声音、早期价值表达与编辑刺激的官方广告建议；2026-10-20读到页面，底层研究主要来自2020～2022年。
-- [TikTok 2025小企业创意手册](https://ads.tiktok.com/business/library/TikTok_SMB_Creative_Playbook_2025.pdf)：前3～6秒与创意组织的背景材料；2026-10-20读取。只作为该平台广告语境的参考，不证明其他渠道、片长、色彩或开场问句有效。
+- [TikTok Creative Codes](https://ads.tiktok.com/business/en/blog/creative-best-practices-top-performing-ads): official ad guidance on structure, sound, early value expression and editorial stimulation; page read 2026-10-20, underlying research mainly from 2020–2022.
+- [TikTok 2025 small-business creative playbook](https://ads.tiktok.com/business/library/TikTok_SMB_Creative_Playbook_2025.pdf): background material on the first 3–6 seconds and creative organisation; read 2026-10-20. Only a reference for that platform's ad context; it does not prove other channels, durations, colours or opening questions work.
 
-相关性来自产品宣传与开场任务，时效性按上述版本和底层研究时间判断，权威性来自原始创作材料与官方指南的职责范围。访问人数、访问次数、点赞与评论数未知，不填0；未取得正文的其他检索结果不用于支撑方法。适配判断、声画分工和失败回退为本Skill原创归纳，仍需本次项目实际验证。
+Relevance comes from the product-promo and opening task; timeliness is judged by the versions above and the dates of the underlying research; authority comes from the remit of the original creative material and the official guidance. Views, visit counts, likes and comments are unknown and are not filled with 0; other search results whose text was not obtained are not used to support the method. The adaptation judgements, sound-image division and failure fallback are this Skill's original distillation and still need verification on this project.
 
-## 说唱科普与成品反馈
+## Rap explainer and feedback on the finished piece
 
-用户于2026-10-25确认，将指定Cursor制作与Codex返修过程归纳为 [嘻哈知识科普](knowledge-rap-direction.md)，并强化通用素材检索、首帧／前三秒、逐句声画编排、音轨变更后的重验与候选交付判断。研究读取用户原始任务、实质纠正、原工程自查与当前状态；模型思考和结果自述不作为用户确认。两段会话属于同一作品链，不能当作两个独立成功案例。
+On 2026-10-25 the user confirmed distilling the specified Cursor production and Codex rework into [hip-hop knowledge explainer](knowledge-rap-direction.md), and strengthening general asset search, first frame/first three seconds, line-by-line sound-image arrangement, re-verification after audio-track changes and candidate delivery judgement. The study read the user's original task, substantive corrections, the original project's self-checks and its current state; model reasoning and self-reported results do not count as user confirmation. The two sessions belong to one work chain and cannot be taken as two independent success cases.
 
-原任务要求全面采集事实素材、准确而有力度的歌词、沉浸声画和强开场；返修反馈包括前奏过长、词与字幕不符、旋律平、局部修字声线和接缝突兀。上述反馈支持建立失败检查，不证明某种引擎、整首生成或某参数必然改善效果。短试听认可不覆盖全片，自动测量不覆盖听感，新候选导出不等于被接受。
+The original task asked for thorough collection of factual material, accurate and forceful lyrics, immersive sound and image, and a strong opening; the rework feedback covered an over-long intro, lyrics that did not match the subtitles, a flat melody, local vocal retouching and abrupt seams. That feedback supports building failure checks; it does not prove that a particular engine, whole-song generation or any parameter necessarily improves the result. Approval of a short audition does not cover the whole film, automatic measurement does not cover how it sounds, and exporting a new candidate is not acceptance.
 
-方法为本Skill原创适配，经确认实施；新配方保持guidance，预览／导出与观众效果分别登记，不继承旧工程的测量或接受状态。本Skill不分发原始私有对话、完整歌词、人物声音、曲目与项目素材；详细证据与执行记录只保存在用户项目。访问与互动指标未知，不填0。
+The method is this Skill's original adaptation, implemented after confirmation; the new recipe stays guidance, preview/export and audience effect are registered separately, and the old project's measurement or acceptance state is not inherited. This Skill distributes no original private conversation, complete lyrics, voices of people, tracks or project assets; detailed evidence and execution records are kept only in the user's project. Views and engagement metrics are unknown and are not filled with 0.
 
-初轮提案未取得三维与合成工具文档；用户随后补充指定仓库，已完成结构与针对性问答，并回读相关一手源码，详见 [场景与工具组合及来源](scene-tool-composition.md#一手来源与范围)。场景分工、镜头先行、Poly Haven资产许可、MCP边界、官方Remotion指导和真实MP4验收据此补充；未安装、运行或验证具体三维成片，不能把引擎名称和文档研究当作已验证实现。
+The first proposal had no 3D or compositing tool documentation; the user then supplied the specified repositories, the structure and targeted Q&A were completed, and the relevant first-hand source was read back — see [scene and tool composition, with sources](scene-tool-composition.md#first-hand-sources-and-scope). Scene division, shot-first design, Poly Haven asset licensing, MCP boundaries, official Remotion guidance and real-MP4 acceptance were supplemented on that basis; no specific 3D cut was installed, run or verified, and an engine name plus documentation research cannot pass for a verified implementation.
 
 
-## 资产优先与制作工具工件
+## Asset-first and production-tool artifacts
 
-2026-10-25，用户确认将资产优先、Poly Haven视觉提升、日语旁白与场景组合工程化。新增 [制作工具合同](production-tool-contract.md)、职责清单、只读探测／元信息检索与项目声明校验器。流程与缓存时长是本Skill设计，不是服务端配额、行业标准或画质承诺；代码测试只支持其对应的结构与失败边界。
+On 2026-10-25 the user confirmed engineering asset-first, Poly Haven visual upgrades, Japanese voiceover and scene composition. Added: the [production tool contract](production-tool-contract.md), a responsibility list, read-only probing/meta retrieval, and a project-declaration validator. The workflow and cache durations are this Skill's design, not a server quota, an industry standard or an image-quality promise; code tests support only the structures and failure boundaries they cover.
 
-Blender MCP的Poly Haven接入通过指定仓库结构、问答及`addon.py`交叉核对，资产检索与HDRI／纹理／模型导入属于文档支持的能力；本机默认端口未接通，没有完成MCP导入或渲染。AivisSpeech及Engine的官方README、角色路由和WAV连接源码支持日语TTS与音频拼接，未支持本轮所需的歌唱承诺；程序与声音模型条件分开核。Mixamo／Unreal暂为候选，不宣称完成其架构、现行许可或本机接入核验。具体一手入口与范围见 [场景与工具组合](scene-tool-composition.md#一手来源与范围)。
+Blender MCP's Poly Haven integration was cross-checked through the specified repository structure, Q&A and `addon.py`; asset search and HDRI/texture/model import are capabilities the documentation supports, but the local default port was not reachable and no MCP import or render was completed. The official READMEs, character routing and WAV concatenation source of AivisSpeech and its Engine support Japanese TTS and audio concatenation, but did not support the singing promise this round needed; program and voice-model conditions are checked separately. Mixamo/Unreal remain candidates, with no claim that their architecture, current licence or local integration has been verified. Specific first-hand entry points and scope: see [scene and tool composition](scene-tool-composition.md#first-hand-sources-and-scope).
 
-用户截图中Poly Haven HDRI改善水面和环境的主张用于提出同镜头比较，未取得原始工程，不能独立核实效果或约500KB的压缩结论。质量检查同时覆盖照明、反射、阴影、连续运动与成本；不能以资产已找到替代合理使用。研究记录和直接API元信息检索留在用户输出目录，不分发私有会话与截图；访问及互动指标未知。
+The claim in the user's screenshot that a Poly Haven HDRI improves the water surface and environment was used to propose a same-shot comparison; the original project was not obtained, so neither the effect nor the ~500KB compression conclusion can be independently checked. Quality checks cover lighting, reflection, shadow, continuous motion and cost at once; having found an asset is no substitute for fair use. Research notes and direct API meta retrieval stay in the user's output directory; private sessions and screenshots are not distributed, and views and engagement metrics are unknown.
 
-## Lemo-Opuscar 工程规范与风格包
+## Lemo-Opuscar engineering conventions and style packs
 
-2026-10-26，经用户确认，纳入 [lemomo-ai/lemo-opuscar 固定版本](https://github.com/lemomo-ai/lemo-opuscar/tree/413a6bd6d78ebd3bdd5abaec9538a26867f890df) 的全部 59 个风格说明、案例说明与可用文本源码，并保留 MIT 许可证与素材来源清单。借鉴 STYLE／DEMO 分离、导演／技术分层、单一元数据生成索引、统一时间与可复现检查。
+On 2026-10-26, with user confirmation, all 59 style descriptions, case descriptions and usable text source of the [lemomo-ai/lemo-opuscar pinned version](https://github.com/lemomo-ai/lemo-opuscar/tree/413a6bd6d78ebd3bdd5abaec9538a26867f890df) were incorporated, keeping the MIT licence and the asset-source list. Borrowed: the STYLE/DEMO separation, the director/technical split, a single metadata source generating the index, unified time and reproducible checks.
 
-DeepWiki 用于架构起点，Context7 未收录该库，工程结论由固定提交源码核对。完整导入记录和哈希见 [第三方声明](../THIRD_PARTY_NOTICES.md)。保留本库真实素材、中文、指定曲目、direct 交付、模型与引擎中立等已确认规则；上游固定次数、模型、BPM 与案例故事不成为本库全局默认。源码收录、包结构校验、最小制作验证、整片观看与听审分别记账。
+DeepWiki served as the starting point for the architecture; Context7 does not index that library, so the engineering conclusions were checked against the pinned commit source. The full import record and hashes: see [third-party notices](../THIRD_PARTY_NOTICES.md). The library's confirmed rules are kept — real assets, Chinese, specified tracks, direct delivery, model and engine neutrality; the upstream's fixed counts, models, BPM and case stories do not become global defaults of this library. Source inclusion, pack-structure validation, minimum production verification, full-film viewing and the listening pass are accounted for separately.

@@ -1,8 +1,8 @@
-# 逐层递进：一层只加一个新负荷
+# Layered reveal: each layer adds exactly one new load
 
-把抽象知识讲成观众跟得上的顺序时读取。好看的载体（见 [物即解释](knowledge-visualization.md)）只解决“看得见”，层次解决“跟得上”：观众每一刻只多背一件新东西，并且知道它接在哪里。
+Read this when you have to turn abstract knowledge into an order the audience can keep up with. A good-looking carrier (see [the object as the explanation](knowledge-visualization.md)) only solves “can be seen”; the layers solve “can be followed”: at any moment the audience carries one more new thing only, and knows where it attaches.
 
-## 七层地图
+## The seven-layer map
 
 ```text
  L0 钩子 ─► L1 黑箱 ─► L2 部件登场 ─► L3 关系 ─► L4 完整一圈 ─► L5 反例与边界 ─► L6 回顾与指路
@@ -10,80 +10,80 @@
  关心        输出是什么   (四问)         怎样影响   跑一遍         东西会怎样         延伸方向、模型边界
 ```
 
-| 层 | 观众此刻要回答 | 画面 | 结束检验（exit_test） | 常见错误 |
+| Layer | What the audience must answer right now | Frame | Exit check (exit_test) | Common mistake |
 | --- | --- | --- | --- | --- |
-| L0 钩子 | 这件事和我有什么关系 | 一个具体问题或矛盾，载体可先不出场 | 能复述这个问题 | 一上来讲定义 |
-| L1 黑箱 | 放进去什么，出来什么 | 载体整体出场，部件闭合 | 能说出输入、输出和结果 | 提前拆开所有部件 |
-| L2 部件登场 | 每个东西是什么 | 一次点亮一个部件，每个答四问 | 能说出每个部件记什么、做什么 | 一口气介绍全部部件 |
-| L3 关系 | 它们怎样互相影响 | 把两个部件并排，用连线或动作显示一条关系 | 给出一个输入，能说出对应输出 | 同时展开多条关系 |
-| L4 完整一圈 | 真跑起来是什么样 | 用真实数字把整个循环走一遍，不跳步 | 能按顺序说出各步的内容 | 只演示最顺利的片段 |
-| L5 反例与边界 | 为什么要这样设计 | 拿掉或改变一个部件，看结果怎样 | 能说出去掉它会出什么问题 | 只讲道理，不让观众看到后果 |
-| L6 回顾与指路 | 带走什么，去哪里继续 | 回到总览，写明没有演示什么，给出读物 | 能说出边界和下一步 | 以“谢谢观看”收尾而不交代边界 |
+| L0 Hook | How does this concern me | one concrete question or contradiction; the carrier may stay off screen | can restate the question | opening with a definition |
+| L1 Black box | what goes in, what comes out | the carrier appears whole, its parts closed | can state the input, the output and the result | taking all the parts apart up front |
+| L2 Parts enter | what each thing is | light one part at a time, each answers the four questions | can say what each part stores and what it does | introducing every part in one breath |
+| L3 Relationship | how they affect each other | put two parts side by side and show one relationship with a connector or an action | given an input, can state the matching output | unfolding several relationships at once |
+| L4 One full cycle | what it looks like actually running | walk the whole loop once with real numbers, skipping no step | can state what each step does, in order | showing only the smoothest stretch |
+| L5 Counter-example and boundary | why it is designed this way | remove or change one part and see what the result is | can say what problem appears without it | arguing the point without letting the audience see the consequence |
+| L6 Review and pointers | what to take away, where to continue | return to the overview, state what was not demonstrated, give further reading | can state the boundary and the next step | closing on “thanks for watching” without stating the boundary |
 
-L2 可以有多个，如先讲部件的“盘与灯”，再讲“信封与拨片”，每个仍只加一个新负荷。同一章内层级只能不降；需要新部件的新一章，用 `chapter` 字段另起，章内重新从 L2 往上走，最后一层仍是 L6。
+There can be more than one L2 — for example the part's “dial and lamp” first, then “envelope and paddle” — each still adding only one new load. Inside one chapter the layer may only go up; a new chapter that needs new parts starts again with the `chapter` field, walks up from L2 inside that chapter, and still ends on L6.
 
-## 规则
+## Rules
 
-1. 一层一个新负荷。`new_load` 写成一件事；写成“A、B、C”或用分号列举，就拆成多层。
-2. 层间桥接：除第一层外，每层写 `bridge_from_previous`，说清“上一层的哪个东西变成这一层的哪个东西”。保持对象身份（同一个 `continuity_key`），用镜头或高亮指出变化的部分。突然换层级，如从 CPU 跳到 GPU，观众会丢掉自己，必须靠缩放、展开或并排保留来过渡。
-3. 术语先定义再使用：术语第一次出现时，同一句或紧随其后、以术语开头的下一句里给出定义。定义、点亮、再用一次。
-4. 部件登场四问：它是什么 / 现在发生什么 / 为什么在这里 / 有什么用。每个部件至少答前面的“是什么”和“为什么”。
-5. L4 用真实数字，整圈走完，不跳步。滑行快慢、颜色等不代表事实的东西，在画面里写“仅为示意”。数字只来自真值账本。
-6. L5 至少有一个反事实探针：拿掉一个部件、改变一个条件或加入一个反例，让后果可见。它回答“为什么不能更简单”。
-7. L6 必须有三样：回顾（一句话加一屏总览）、延伸指路（具体的读物或章节）、模型边界（这台机器没演示什么，比喻在哪里会骗人）。知识包校验要求 L6 的 `model_boundary` 与 `extension_pointers`。
-8. 每个 scene 只服务一层，每层覆盖一个或多个 scene。没有层归属的 scene 会被提醒。
-9. 每层 L2 到 L5 点亮一个焦点元素（`focus_element_id`），其余降调。
+1. One layer, one new load. Write `new_load` as one thing; if it reads as “A, B, C” or as a semicolon-separated list, split it into several layers.
+2. Bridge between layers: except the first, every layer writes `bridge_from_previous` and states exactly “which thing in the previous layer becomes which thing in this one”. Keep object identity (the same `continuity_key`) and use the shot or a highlight to point at the part that changed. Jumping levels abruptly — CPU to GPU, say — loses the audience, so you must bridge with a zoom, an expansion or a side-by-side keep.
+3. Define a term before using it: at a term's first appearance, give the definition in the same sentence, or in the next sentence, which opens with the term. Define it, light it, then use it once more.
+4. The four questions when a part enters: what is it / what is happening now / why is it here / what is it for. Every part answers at least the first two, “what” and “why”.
+5. L4 uses real numbers, walks the whole cycle, skips no step. Anything that does not carry a fact — how fast something slides, a colour — is marked “illustrative only” in the frame. Numbers come only from the ground-truth ledger.
+6. L5 has at least one counterfactual probe: remove one part, change one condition or add a counter-example, and make the consequence visible. It answers “why can't this be simpler”.
+7. L6 must have three things: a review (one sentence plus one overview screen), pointers onward (specific reading or chapters), and the model boundary (what this machine did not demonstrate, where the metaphor starts to lie). The knowledge pack validation requires `model_boundary` and `extension_pointers` on L6.
+8. Every scene serves exactly one layer, and every layer covers one or more scenes. A scene with no layer gets a reminder.
+9. Each layer from L2 to L5 lights one focal element (`focus_element_id`); everything else steps down.
 
-## 篇幅与分块
+## Length and chunking
 
-| 时长 | 做法 |
+| Duration | Approach |
 | --- | --- |
-| 30–45 秒 | 只保留 L0、L1、L4、L6；术语压到最少 |
-| 60–90 秒 | 合并 L2 与 L3，L5 只留一个探针 |
-| 3–5 分钟 | 七层都用，部件多时分成多个 L2 |
-| 8 分钟以上 | 分章；每章是 L2 到 L4 的小循环，章末给一个检查点，总览图随章推进 |
+| 30–45 seconds | keep only L0, L1, L4, L6; cut terms to the minimum |
+| 60–90 seconds | merge L2 and L3, keep a single probe in L5 |
+| 3–5 minutes | use all seven layers, split into several L2s when there are many parts |
+| 8 minutes and up | chapter it; each chapter is a small L2-to-L4 loop, end the chapter on a checkpoint, and let the overview map advance with the chapters |
 
-这些分档是设计起点，没有经过观众实验验证；以实际阅读与回听为准。
+These bands are a design starting point, not validated by audience testing; go by the actual reading and listening.
 
-长片检查点：章末用一问一答的静帧，让观众先在心里答，再给答案。影片不能交互，所以用留白加字幕提问，不假装有互动。
+Checkpoint in a long film: at the chapter's end use a question-and-answer still frame, letting the audience answer in their head before you give the answer. The film cannot interact, so ask with clear space plus a subtitle and do not pretend there is interaction.
 
-可选的“预测—观察—解释”：在 L4 之前停一拍，问“你觉得下一步会怎样”，再运行，再解释。只在预测本身有信息量时用，不要每层都问。
+Optional “predict — observe — explain”: hold one beat before L4, ask “what do you think happens next”, then run it, then explain. Use it only when the prediction itself carries information; do not ask at every layer.
 
-## 同一份内容的模态阶梯
+## The modality ladder for one piece of content
 
-文本、图、网页、视频是递增的成本。顺序是：先在最低成本的形式里把对象、数字和术语定住，再进入更高一级，每一级复用同一个知识包。
+Text, image, web page and video are rising costs. The order is: fix the objects, numbers and terms in the cheapest form first, then move up one level, reusing the same knowledge pack at every level.
 
 ```text
  文字稿（受控表达）→ 图（载体与部件）→ 网页或动图（交互与分层）→ 视频（节奏与声音）
         └──────────── 同一个知识包：术语、账本、映射、层次 ────────────┘
 ```
 
-文字稿里讲不清的，视频里也讲不清。文字稿阶段就能用 `controlled_lint.py` 查句长、术语和读音；画面和视频再用同一份术语与数字。需要海报或封面时，从 L4 或 L6 的关键帧派生，不另编数字。
+What you cannot make clear in the script you will not make clear in the video. At the script stage you can already use `controlled_lint.py` to check sentence length, terms and pronunciation; the frame and the video then reuse the same terms and numbers. When you need a poster or a cover, derive it from an L4 or L6 keyframe; do not invent separate numbers.
 
-## 资讯版七层
+## The seven layers for a news brief
 
-资讯没有机制，但同样需要顺序。载体用证据板（见 [物即解释](knowledge-visualization.md)）。
+A news brief has no mechanism, but it needs an order just the same. Use an evidence board as the carrier (see [the object as the explanation](knowledge-visualization.md)).
 
-| 层 | 资讯里的内容 |
+| Layer | What it holds in a news brief |
 | --- | --- |
-| L0 | 一句话事件：谁在什么时候做了什么，截至哪一天 |
-| L1 | 黑箱：事件由谁、做了什么、何时、影响什么组成 |
-| L2 | 出场的人物与对象：每个答“是谁 / 做了什么 / 依据是什么 / 还缺什么” |
-| L3 | 关系：时间线、因果候选、争议点；候选原因标“候选” |
-| L4 | 一次完整核对：从原始来源到数据再到结论，沿一条证据链走完 |
-| L5 | 反例与边界：未知、口径差异、可能的相反证据；空槽写明为什么空 |
-| L6 | 回顾、来源指路、截至日期 `as_of` 与信息边界 |
+| L0 | the event in one sentence: who did what, when, as of which date |
+| L1 | black box: the event is made of who, what was done, when, and what it affects |
+| L2 | the people and objects that enter: each answers “who / what was done / on what basis / what is still missing” |
+| L3 | relationship: timeline, candidate causes, points of dispute; mark a candidate cause “candidate” |
+| L4 | one complete check: from the original source to the data to the conclusion, along one evidence chain |
+| L5 | counter-example and boundary: unknowns, differing definitions, possible contrary evidence; an empty slot states why it is empty |
+| L6 | review, pointers to sources, the as-of date `as_of` and the information boundary |
 
-资讯的数字必须带口径与日期；不同口径不放进同一个量具。事实、评论、推测分开；版式整齐不等于已核实。
+Numbers in a news brief must come with their definition and date; do not put different definitions into the same measure. Keep fact, commentary and speculation apart; a tidy layout does not mean it is verified.
 
-## 受众级别
+## Audience level
 
-`audience.level` 取 novice、practitioner、expert。
+`audience.level` takes novice, practitioner or expert.
 
-- novice：每个术语首次出现都要定义；L2 不压缩；L5 用生活化反例。
-- practitioner：只定义本片自造或易混的术语；L2 可合并；L5 讲设计取舍。
-- expert：默认不定义常用术语（可用术语卡的 `define_on_first_use` 单独要求）；L2 压成一屏；L5 讲边界条件与已知争议。
+- novice: define every term at first use; do not compress L2; use everyday counter-examples in L5.
+- practitioner: define only terms this film coins or terms that are easily confused; L2 may be merged; L5 discusses the design trade-off.
+- expert: do not define common terms by default (a term card's `define_on_first_use` can require it individually); compress L2 to one screen; L5 covers boundary conditions and known disputes.
 
-## 与计划的对应
+## How this maps to the plan
 
-知识包里每个 layer 写 `scene_ids`、`focus_element_id`（L2 到 L5）、可选 `claim_ids` 和 `element_ids`；L4 应关联至少一个有来源或有推导的 claim。字段与检查码见 [知识包合同](knowledge-pack.md)。这些是结构检查，不是理解证明；是否真的一层只加一个负荷，要靠新手读者检查。
+In the knowledge pack each layer writes `scene_ids`, `focus_element_id` (L2 to L5), and optionally `claim_ids` and `element_ids`; L4 should link at least one claim that has a source or a derivation. For the fields and check codes see the [knowledge pack contract](knowledge-pack.md). These are structural checks, not proof of comprehension; whether a layer really adds only one load has to be checked with a novice reader.

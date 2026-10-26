@@ -1,51 +1,51 @@
-# 在第一轮确定影片为何成立
+# Settle why the film holds, in the first pass
 
-这些方法是从公开导演访谈、制作复盘与视频案例归纳的工作合同，不是某位导演的固定教程。先做判断，再选特效。简单任务在同一计划写三句话即可：观众从什么变成什么、哪条线贯穿、声音和画面怎样共同完成它。复杂任务再展开以下内容，不强制额外五份文档。
+These methods are a working contract distilled from published director interviews, production retrospectives and video cases, not a fixed tutorial from one director. Make the judgement first, then pick the effects. A simple task needs three sentences in the same plan: what the audience turns from and into, which line runs through, and how sound and image finish it together. Expand the rest of this page for a complex task; five separate extra documents are not required.
 
-## 意图与主线
+## Intent and through-line
 
-写清目标观众、观看起点和终点，以及最值得保留的一种感受。贯穿线可以是问题、任务、同一信息单元、物体、人物选择、视觉母题或声音动机。它应解释镜头为何相连，不能只是片名或“酷、未来、震撼”。
+Write down the target audience, the start and the end of their viewing, and the one feeling most worth keeping. The through-line can be a question, a task, the same unit of information, an object, a character's choice, a visual motif or a sound motif. It should explain why the shots connect; it cannot be only the title or "cool, futuristic, striking".
 
-选择合适结构并给理由：任务推进、问题与证据、比较、时间演进、因果、意象或音乐段落。它们可以组合；不强制三幕、固定镜头数、反转或人物冲突。资讯以核实为先，知识以关系为先，产品以真实操作为先；品牌片可以让情绪和意象主导，音乐片可以让段落与变奏主导。
+Choose a fitting structure and give the reason: task progression, question and evidence, comparison, progression in time, cause and effect, imagery, or musical sections. These can combine; three-act, a fixed shot count, a twist or character conflict are not required. In news, verification comes first; in knowledge, the relationship; in product, the real operation. A brand film may let mood and imagery lead, and a music film may let sections and variation lead.
 
-科技感来自内容相关的规则。例如状态响应有精确时序、空间层次可理解、材质和字体一致、声音建立清晰尺度。只写“深色、粒子、霓虹”不足以说明为何适合这件产品。若科技感与温暖、易用等目标相冲突，说明取舍，并用实际画面和试听检验。
+A tech feel comes from rules that belong to the content. For example state responses with precise timing, an intelligible spatial hierarchy, consistent material and type, and sound that establishes a clear scale. "Dark, particles, neon" alone does not say why it suits this product. Where a tech feel conflicts with goals such as warmth or ease of use, state the trade-off and test it with the actual image and a listening pass.
 
-## 元素的设定与使命
+## Setting and mission of elements
 
-给关键元素稳定身份和职责，而不是把所有元素拟人化。
+Give the key elements a stable identity and a duty, instead of anthropomorphising every element.
 
-| 元素 | 可承担的使命 | 必须保留 |
+| Element | Mission it can carry | Must be preserved |
 | --- | --- | --- |
-| 人物／角色 | 视角、选择、阻碍、行动、被影响者 | 身份、关系、必要外观、空间方向；真实人物心理不能编造 |
-| 产品／界面 | 承载初态、触发、反馈与结果 | 版本范围、真实操作、内容与证据 |
-| 物体／符号 | 连接镜头、呈现状态或母题 | 形状、比例、变化规则与必要意义 |
-| 图表／概念／信息单元 | 证据、尺度、比较、过程与条件 | 来源、单位、方向与成立边界 |
-| 声音／音乐动机 | 提示视角、期待、揭示、回忆、段落与释放 | 来源、使用权、时序与主次 |
+| Figure / character | Point of view, choice, obstacle, action, the one affected | Identity, relationships, necessary appearance, spatial direction; the inner life of a real person cannot be invented |
+| Product / interface | Carries the initial state, the trigger, the feedback and the result | Version scope, real operation, content and evidence |
+| Object / symbol | Connects shots, shows a state or carries a motif | Shape, proportion, rules of change and the meaning it must carry |
+| Chart / concept / information unit | Evidence, scale, comparison, process and condition | Source, unit, direction and the boundary within which it holds |
+| Sound / musical motif | Signals point of view, expectation, reveal, memory, section and release | Source, usage rights, timing and hierarchy |
 
-人物故事按需写目标、阻碍、选择与代价；产品和知识片可以完全不写人物心理。跨镜对象的 continuity_key 对应视觉连续；director.entities 的稳定 ID 对应全片职责。两者不是自动身份锁定功能，仍需检查画面。
+A character story writes goal, obstacle, choice and cost as needed; a product or knowledge film can leave character psychology out entirely. The cross-shot object's continuity_key corresponds to visual continuity; the stable ID in director.entities corresponds to the duty carried across the whole film. Neither is an automatic identity lock — you still have to check the image.
 
-## 每镜的任务与镜头语言
+## Each shot's job and the shot language
 
-先写“本镜前后，观众新增什么信息或感受”。再决定主体、景别、视角、光线、运动与停留。建立镜头交代空间和关系；细节镜头给证据；反应镜头承担后果或理解；留白镜头可以让情绪消化。无需每片都包含这些类型。
+Write first what the audience gains in information or feeling before and after this shot. Then decide the subject, shot size, camera angle, light, movement and dwell. An establishing shot sets the space and the relationships; a detail shot gives evidence; a reaction shot carries the consequence or the understanding; a held empty shot lets a feeling settle. Not every film needs all of these types.
 
-相机运动要有目的：推近让证据可见，拉远揭示环境或尺度，跟随维持同一单元，横移释放被遮信息。复杂运镜如果没有新信息，可以改成稳定切换或少动。首尾构图、视线、运动方向、主体位置、形状或声音可以承担接力；不是每个接缝都要强转场。
+A camera move needs a purpose: push in to make evidence visible, pull back to reveal the environment or the scale, follow to hold the same unit, truck to release information that was hidden. A complex move that brings no new information can become a stable cut or a smaller move. Opening and closing composition, eyeline, direction of movement, subject position, shape or sound can carry the handoff; not every seam needs a hard transition.
 
-scene.intent 可记录：对应故事节拍、viewer_change、焦点实体、reveal_order、camera.purpose、handoff、acceptance。揭示顺序引用本镜 element.id，焦点实体引用全片 director.entities。plan中的这些字段记录选择，不证明观众真的理解。
+scene.intent can record: the story beat it answers to, viewer_change, the focal entity, reveal_order, camera.purpose, handoff, acceptance. The reveal order references this shot's element.id; the focal entity references the film-wide director.entities. These fields in the plan record a choice; they do not prove the audience actually understood.
 
-## 两种合理制作路线
+## Two legitimate production routes
 
-**精确路线**适用于产品步骤、明确数据、复杂空间、时间较紧的旁白。先锁事实、身份、关键状态和声画时长，再制作。
+**Precision route** suits product steps, settled data, complex space, and voiceover under time pressure. Lock the facts, the identities, the key states and the sound-and-image durations first, then produce.
 
-**探索路线**适用于意象、表演、品牌氛围、音乐片。先锁意图、身份、关键节拍、必要事实和资源上限，允许草图、试镜与粗剪发现更好的连接。满意的偶然结果可以保留，但不能使知识、产品或真实人物失真。
+**Exploratory route** suits imagery, performance, brand atmosphere and music films. Lock the intent, the identities, the key beats, the necessary facts and the resource ceiling first, and allow sketches, tests and the rough cut to find better connections. A satisfactory accident can be kept, but it must not distort knowledge, the product or a real person.
 
-两条路线都可以在粗剪后调整。可先试最难镜头或关键接缝；用户明确一次性完成、直接成片或无需试片时，直接制作整片并内部检查返修，不强制先试片或等待中途确认。连续生成失败时拆镜、分层、换视角或用声音承担连接。记录候选被选的原因、替代镜头和未兑现的意图。探索次数、费用与时间服从用户授权和资源条件，不采用无限重试。
+Both routes can adjust after the rough cut. You may test the hardest shot or the critical seam first; when the user has explicitly asked for a single pass, direct to the finished film, or no test cut, produce the whole film and check and rework it internally — do not insist on a test cut first or wait for a mid-point confirmation. When generation keeps failing, split the shot, add layers, change the angle, or let sound carry the connection. Record why a candidate was chosen, the alternate shots and any intent left unfulfilled. The number of explorations, the cost and the time obey the user's authorisation and the available resources; there is no unlimited retry.
 
-## 停止与审片
+## Stopping and review
 
-停止规则应是关键意图已兑现、必需内容无阻断项、可播放且验收缺口明确，而不是“已经生成很多次”。质量问题回到具体 scene／entity／beat：看不懂哪个关系、哪处阅读窗不足、哪个声音遮住信息。用户只改色板时不要自动重写故事；改揭示顺序时重查前后镜头与声音。
+The stopping rule should be that the key intent is fulfilled, the required content has no blockers, the film plays and the acceptance gaps are stated — not "it has been generated many times". Take a quality problem back to the specific scene / entity / beat: which relationship is unreadable, where the reading window is too short, which sound covers the information. When the user only changes the palette, do not rewrite the story on your own; when the reveal order changes, re-check the neighbouring shots and the sound.
 
-来源与适用边界见 [sources.md](sources.md)。导演个人美学、作息、费用、当时模型观点都不是通用要求。
+Sources and the boundaries of what applies are in [sources.md](sources.md). A director's personal aesthetics, working hours, fees or opinions about the models of the day are not general requirements.
 
-## 产品任务与章节证据
+## Product tasks and section evidence
 
-产品片先按 [产品表达](product-expression.md) 判断：一项任务怎样经过操作与过程到达真实产出。`product-task-proof`的递进困难与声明/证据章节只是可选分支；不强迫旧方法失败、固定播放器、统一镜头数或固定快慢比例。每镜标清证据角色，重要短语能对应可见元素，收束按用途选择价值、品牌或可执行下一步。
+A product film starts with [Product expression](product-expression.md): how one task goes through operation and process to a real output. The escalating difficulty and the claim/evidence sections of `product-task-proof` are optional branches only; do not force the old method to fail, a fixed player, a uniform shot count or a fixed fast/slow ratio. Mark each shot's evidence role, let important phrases map to visible elements, and choose the ending by purpose — value, brand, or a next step the viewer can take.

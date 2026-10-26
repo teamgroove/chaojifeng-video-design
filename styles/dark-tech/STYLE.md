@@ -1,22 +1,22 @@
 # 暗色技术
 
-区分操作、信息流与状态。
+Separate operation, information flow and state.
 
-## 风格规则
+## Style rules
 
-- 光晕只作辅助，正文不依赖发光。
-- 真实UI不擅自转暗。
+- Glow is a supporting device only; body copy does not depend on luminance.
+- Do not darken a real UI on your own initiative.
 
-## 运动与节奏
+## Motion and rhythm
 
-- 短促动作与结果停留交替
-- 快速且稳定
-- 每次突出一个语义焦点
+- Short actions alternate with a hold on the result
+- Fast and steady
+- One semantic focus stands out at a time
 
-## 调整与回退
+## Adjustment and fallback
 
-去辉光粒子，保留暗底高对比信息。
+Remove glow particles; keep the dark ground and the high-contrast information.
 
-避免：满屏霓虹；乱码代替真实信息。
+Avoid: a screen full of neon; gibberish in place of real information.
 
-颜色、字形与尺寸见本包 style.json；按真实品牌、画幅与中文阅读检查后使用。
+Colour, typeface and sizes are in this pack's style.json; check them against the real brand, the aspect ratio and Chinese reading before use.

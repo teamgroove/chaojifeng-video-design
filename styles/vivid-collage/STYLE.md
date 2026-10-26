@@ -1,22 +1,22 @@
 # 鲜明拼贴
 
-用图片切块和尺度差建立节奏。
+Build rhythm with cut-up images and differences of scale.
 
-## 风格规则
+## Style rules
 
-- 只用获准素材，不无依据重构人物品牌。
-- 复杂内容不用碎片排版。
+- Use cleared assets only; do not reconstruct people or brands without grounds.
+- Do not use fragment layout for complex content.
 
-## 运动与节奏
+## Motion and rhythm
 
-- 切块出现后稳定阅读
-- 有限回弹
-- 每次突出一个语义焦点
+- Blocks settle into reading once they appear
+- Limited rebound
+- One semantic focus at a time
 
-## 调整与回退
+## Adjustment and fallback
 
-单图加说明，取消旋转拼贴。
+One image with a caption; drop the rotating collage.
 
-避免：所有块同时旋转；高频闪烁；来源不明图片。
+Avoid: all blocks rotating at once; high-frequency flicker; images of unknown provenance.
 
-颜色、字形与尺寸见本包 style.json；按真实品牌、画幅与中文阅读检查后使用。
+Colour, letterforms and sizes are in this pack's style.json; check them against the real brand, the aspect ratio and Chinese reading before use.

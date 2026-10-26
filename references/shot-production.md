@@ -1,70 +1,70 @@
-# 镜头生产统筹：先规划，再实现
+# Shot production planning: plan first, then implement
 
-适用于产品、讲解、资讯、图片、故事、功能、品牌和音乐视频。这里组织内容、工具与素材，不是新场景或生成模型专属流程。按 [创意导演](creative-direction.md) 先确定主线、审美边界和关键事件；复杂任务展开本参考，简单任务只留必要决定。
+Applies to product, explainer, news, image, story, feature, brand and music videos. This organises content, tools and assets; it is not a new scenario, and not a process exclusive to generative models. With [creative direction](creative-direction.md), fix the through-line, the aesthetic boundary and the key events first; expand this reference for complex tasks, and keep only the necessary decisions for simple ones.
 
-## 用真实能力选择制作路线
+## Choose the production route by real capability
 
-将关键表达写成“镜头意图 → 可用路线 → 能力证据／未知 → 最小试验 → 资源上限 → 替代方案”。沿现有工程选择组件、代码绘制、截图、录屏、现有媒体或获准的生成工具；先看哪种最能保真和兑现意图。这里的分工是制作职责，不自动授权多模型、多Agent或付费。
+Write the key expression as “shot intent → available route → capability evidence / unknown → smallest test → resource ceiling → alternative”. Along the existing project, choose components, drawn code, screenshots, screen recording, existing media or an approved generative tool; look first at which one preserves fidelity and delivers the intent best. The division of labour here is production responsibility; it does not automatically authorise multiple models, multiple agents or spending.
 
-已核说明与本机实际试验分开，结果用已验证、未验证或当前不可用记录。字段与真实运行状态仍按 [计划合同](plan-contract.md)；未测试的能力不写入已验证capabilities。工具API、输入、限制和参考方式按宿主规定查当前文档，不凭名字或旧记忆确定。
+Keep documented claims separate from what was actually tried on this machine; record the outcome as verified, unverified or currently unavailable. Fields and real run state still follow the [plan contract](plan-contract.md); do not write untested capabilities into verified capabilities. For tool APIs, inputs, limits and how to pass references, consult current documentation under the host's rules — do not settle it from a name or an old memory.
 
-对尚不熟悉但有潜力的路线，在既有授权和资源内选一个能判定风险的小样。检查实际结果，再决定沿用、分层、拆镜、换视角或替代；不机械重复失败调用。试验是内部质量检查，用户未要求时不新增确认门禁。资源复用与串行重任务见 [执行与交付](runtime-and-delivery.md)。
+For a route you are not yet familiar with but that looks promising, pick one small sample inside the existing authorisation and resources that can settle the risk. Check the actual result, then decide whether to stay with it, layer it, split the shot, change the angle or replace it; do not mechanically repeat a failing call. A test is an internal quality check — add no confirmation gate the user did not ask for. For asset reuse and serialised heavy jobs see [runtime and delivery](runtime-and-delivery.md).
 
-角色、三维与电影运镜在任何对象创建前先写镜头、表情／姿势、摄像机运动和最终姿势，沿已有ID记录；空间灯光、材质反射与字幕留白一起设计。按 [场景与工具组合](scene-tool-composition.md) 分配Blender、Three.js、Remotion和交付职责，允许单用或多种组合；具体执行器由表达收益、已有能力和资源决定，不强制全套安装。
+For characters, 3D and cinematic camera work, write the shot, the expression/pose, the camera move and the final pose before any object is created, recorded along the existing IDs; design spatial lighting, material reflection and subtitle clear space together. Per [scene and tool composition](scene-tool-composition.md), allocate Blender, Three.js, Remotion and delivery responsibilities — one alone or several combined is allowed; the concrete executor is decided by expressive payoff, existing capability and resources, and a full toolchain install is not mandatory.
 
-## 参考各司其职，固定项与变奏分开
+## Let each reference do its own job; separate the fixed from the varying
 
-在项目笔记关联现有素材ID、版本／哈希和使用镜头，明确参考只负责什么。按任务取用下面的行，不要求每片都造角色设定图或图像生成风格表。
+In the project notes, link the existing asset IDs, version/hash and the shots that use them, and state exactly what the reference is responsible for. Take the rows below as the task needs them; not every film has to produce character sheets or an image-generation style sheet.
 
-| 参考职责 | 应固定 | 可以变化与复核 |
+| Reference's job | Must stay fixed | May vary — and must be re-checked |
 | --- | --- | --- |
-| 人物／主体身份 | 必需外观、名称、关系与身份依据 | 姿势、行动、机位和环境可变；实际检查跨镜身份 |
-| 产品／信息证据 | 真实界面、状态、数据、单位与来源 | 聚焦与版式可变；不能改变能力、结果或比例含义 |
-| 构图／空间 | 必需相对关系、视线与接力位置 | 景别、裁切和镜头按意图变化，检查方向和遮挡 |
-| 风格／世界 | 本片约定的色光、材质、字体和声音气质 | 随段落变奏；变化须有目的而非无意漂移 |
-| 动作／时间 | 关键前后状态、反馈和实际锚点 | 时机与运动按表达安排，复核因果与接缝 |
+| Person / subject identity | required appearance, name, relationships and the basis for identity | pose, action, camera position and environment may vary; actually check identity across shots |
+| Product / information evidence | real interface, state, data, units and source | focus and layout may vary; capability, result or the meaning of a ratio may not change |
+| Composition / space | required relative positions, eyelines and handoff positions | shot size, crop and lens vary by intent; check direction and occlusion |
+| Style / world | the colour and light, materials, type and sound character agreed for this film | vary by section; change must have a purpose, not drift |
+| Action / time | key before and after states, feedback and the actual anchors | timing and motion follow the expression; re-check cause and effect and the seams |
 
-参考图、源码和原视频均是材料；传入参考不证明身份或风格已锁定。记录实际阅读、观看与听审范围。只读取相关且获准的资产，避免无边界遍历全部私有资料。
+Reference images, source code and the original video are all material; passing a reference in does not prove identity or style is locked. Record what was actually read, watched and auditioned. Read only assets that are relevant and permitted; avoid unbounded traversal of all private material.
 
-## 素材可操作性先于具体动作承诺
+## Asset workability before any specific motion promise
 
-已有图片或媒体要拆开、出框、重组或跨镜使用时，按 [素材表演与调度](asset-motion-direction.md) 检查完整单元、源到场景坐标、遮挡和露底，复用已准备部件。先保留内容意图，再按实际可操作范围修正动作；静态叠回正确后仍要验最大运动。复杂任务可用 [素材舞台笔记](../templates/asset-stage.md)，沿现有ID记录，不增加必填轨道或自动分层依赖。
+When an existing image or piece of media has to be cut apart, pushed out of frame, recomposed or used across shots, use [asset performance and routing](asset-motion-direction.md) to check the complete unit, the source-to-scene coordinates, occlusion and exposed background, and reuse the parts already prepared. Keep the content intent first, then correct the motion to the range that is actually workable; a correct static put-back still needs the maximum motion checked. Complex tasks can use the [asset stage note](../templates/asset-stage.md), recorded along the existing IDs, without adding required tracks or an automatic layering dependency.
 
-## 生成或采集前写清每镜的生产任务
+## Write each shot's production task before generating or capturing
 
-沿已有scene、element、beat、素材和连续性ID记录以下决定，可放在purpose、intent、方向或镜头笔记；不是新增必填JSON字段。
+Record the following decisions along the existing scene, element, beat, asset and continuity IDs; they can sit in purpose, intent, direction or the shot notes — these are not new required JSON fields.
 
-- 本镜新增什么信息／感受，依据来自哪里，哪个主体承担变化。
-- 进入时状态、关键动作、退出时状态和下一镜怎样接住。
-- 视点与主运动；次级响应、落定和阅读窗；同属性由谁控制。
-- 使用哪份参考，它约束身份、构图、风格还是动作；必须保留及允许变化的部分。
-- 主体、精确文字、字幕、标注、数据与装饰的位置和出现时间；声音职责与已有时间锚点。
-- 实际制作路线、风险、替代方案、观察范围和接受条件。
+- What information or feeling this shot adds, where the basis comes from, and which subject carries the change.
+- The state on entry, the key action, the state on exit, and how the next shot catches it.
+- Point of view and primary motion; secondary response, settling and reading window; who controls the same property.
+- Which reference is used, and whether it constrains identity, composition, style or action; the parts that must be kept and the parts allowed to vary.
+- Position and appearance time for the subject, exact copy, subtitles, annotations, data and decoration; sound's job and the existing time anchors.
+- The actual production route, risks, alternatives, scope of observation and acceptance conditions.
 
-一个清楚的主运动有助于减少冲突，但不禁止有计划的复合镜头。生成式镜头按实际工具能力切段，提示中说明主体、动作、视点、参考用途、统一选择和必要约束；不臆造支持的参数或固定每段时长。代码、录屏和实拍素材同样需要首尾状态、文字空间和接缝规划。
+One clear primary motion helps reduce conflicts, but it does not forbid a planned compound shot. Split generative shots into segments according to what the tool can actually do, and state in the prompt the subject, action, point of view, what each reference is for, the consistency choices and the necessary constraints; do not invent supported parameters or fix a duration per segment. Code, screen recording and live-action footage equally need start and end states, copy space and seam planning.
 
-## 文字从一开始就是构图的一部分
+## Copy is part of the composition from the start
 
-先决定文字是主角、证据标签、解释还是安静字幕。重要文字需要存在感时，让背景和运动让出注意力，并安排可读停留；已能由画面说明的内容可减少文字。装饰须能说明与当下内容的关系，堆砌时优先删除。
+Decide first whether the copy is the protagonist, an evidence label, an explanation or a quiet subtitle. When important copy needs presence, make the background and the motion yield attention, and schedule a readable dwell; content the image can already explain can carry less copy. Decoration must be able to say how it relates to what is on screen — when it piles up, delete first.
 
-对需要准确、可修改的标题、数据、歌词和标注，按能力优先选可控编辑层；可用原生编辑器、HTML、SVG或既有合成方式，不固定JavaScript。生成底片与精确文字可以分开，但真实产品界面不能被伪造重绘冒充证据。已有媒体中的必要文字可直接保留，实际复核清晰度和来源。
+For titles, data, lyrics and annotations that must be exact and revisable, choose a controllable edit layer according to capability; a native editor, HTML, SVG or an existing compositing route all work — JavaScript is not fixed. The generated plate and the exact copy can be separated, but a real product interface may not be redrawn as a fake and passed off as evidence. Necessary copy inside existing media can be kept as it is; actually re-check its legibility and its source.
 
-文字与主体冲突时，先改构图、景别、信息密度或出场时机，不只缩字。实际观看尺寸、横竖画幅、运动和字幕切换都要核；静态关键帧正确不证明全段可读。
+When copy and subject conflict, change the composition, the shot size, the information density or the entry timing first — do not just shrink the type. Check the actual viewing size, landscape versus portrait, motion and subtitle changes; a correct static keyframe does not prove the whole section is readable.
 
-## 从单镜到整片
+## From a single shot to the whole film
 
-沿同一有效时间依据安排声音与画面，区分源媒体时间和整片时间。可先检验最难关系及关键接缝，再完成整片；明确direct时直接制作整片，在同轮内部检查和返修，不强制试片或等待批准。内部小样不能代替最终交付。关键表达兑现与跨段复核见 [审片方法](review-and-revision.md)。
+Lay out sound and picture on the same valid time basis, and keep source-media time distinct from whole-film time. You can test the hardest relationship and the key seams first, then finish the film; when direct is explicitly asked for, make the whole film straight through, checking and reworking inside the run, with no mandatory test cut and no waiting for approval. An internal sample does not replace final delivery. For key-expression delivery and cross-section checks see [review method](review-and-revision.md).
 
-问题定位后只替换受影响段或组件，保留旧版供对比；更换后复核前后镜头身份、方向、色光、文字、安全区、声音尾音及下游时间。沿实际执行器输出必要版本，不为每次局部修改重建相似环境。看过、听过、结构检查和尚未验证分别记录。
+Once a problem is located, replace only the affected section or component and keep the old version for comparison; after the swap, re-check identity, direction, colour and light, copy, safe area, sound tail and downstream timing in the shots before and after. Emit the necessary versions along the real executor's output; do not rebuild a similar environment for every local revision. Record watched, heard, structurally checked and not yet verified separately.
 
-## 按任务启用的音乐与生成分支
+## Music and generation branches enabled by the task
 
-这些条件不以片型名称强制绑定。任何任务明确锁定原声时都遵守；任何任务涉及说话人物时才考虑口型。
+These conditions are not hard-bound to a film-type name. Honour them whenever a task explicitly locks the original audio; consider lip sync only when a task involves a person speaking.
 
-- **原声不改**：用户明确要求沿用原曲或原声且不改动时，保留原源、版本与哈希，不擅自裁剪、重排、变速、混入新声或改音量；若输出编码不可避免地产生区别，记录真实处理与缺口，不声称音频字节完全一致。必需的声音要求冲突时先说明。普通产品配乐继续按 [音乐导演](music-direction.md) 选择片段，不自动启用此约束。
-- **歌曲与歌词**：有歌词时核来源和完整性，不清楚不编造。歌曲段落、关键歌词、拟声词、重音和停顿区分实测、人工判断与估计，沿现有节拍／声音合同关联；纯器乐按动机、音色与段落，不硬造歌词。
-- **人物口型与生成参考**：任务需要时才研究当前工具是否支持相关参考并验证同步，不因提示词提到就假定可用。用户限制模型时先守边界，允许用替代镜头表达。
-- **交互播放页**：只在交付需要时考虑章节、叠层开关、全屏、缓冲和调试；真实时钟、预加载与跳转按执行器核验。MP4任务不强制另建播放器，不以网页存在证明完整导出。
-- **额外交付**：独立镜头素材、双语文档或交互页依本次需要；沿现有合同交实际成片、必要源与验证。素材用途和公开发布授权按宿主规则核实，不从创作自主权推导发布权限。
+- **Original audio untouched**: when the user explicitly asks to keep the original track or original sound unaltered, keep the original source, version and hash, and do not crop, reorder, change speed, mix in new sound or change level on your own; if the output encoding unavoidably makes a difference, record the real processing and the gap, and do not claim the audio bytes are identical. If a required sound requirement conflicts, say so first. Ordinary product scoring continues to pick segments per [music direction](music-direction.md) and does not switch this constraint on.
+- **Songs and lyrics**: when there are lyrics, check the source and completeness; if it is unclear, do not invent. For song sections, key lyrics, onomatopoeia, stresses and pauses, separate measured, human-judged and estimated, and link them along the existing beat/sound contract; for instrumental music work by motif, timbre and section, and do not force lyrics onto it.
+- **Lip sync and generation references**: only when the task needs it, investigate whether the current tool supports the relevant reference and verify the sync; do not assume it works because the prompt mentions it. When the user restricts models, hold the boundary first and let a substitute shot carry the expression.
+- **Interactive playback page**: consider chapters, overlay toggles, fullscreen, buffering and debugging only when delivery needs them; verify the real clock, preload and seeking against the executor. An MP4 task does not require a separate player, and the existence of a web page does not prove a complete export.
+- **Extra deliverables**: standalone shot assets, bilingual documents or an interactive page as this job needs them; deliver the actual film, the necessary sources and the verification along the existing contract. Verify asset usage and public-release permission against the host's rules, and do not derive publishing rights from creative autonomy.
 
-通用方法来自用户于2026-10-18提供的MV创作提示词，经用户明确确认适用于Agent视频创作的通用指导后原创适配；作者和公开入口未知。这里只保留必要方法，完整来源提示词不打包进Skill。设计指令、工具说明和结构校验不证明实际作品质量。
+The general method comes from an MV creation prompt the user supplied on 2026-10-18, adapted originally after the user explicitly confirmed it applies as general guidance for agent video creation; the author and the public entry point are unknown. Only the necessary method is kept here; the full source prompt is not packaged into the skill. Design instructions, tool documentation and structural checks do not prove the quality of the actual work.

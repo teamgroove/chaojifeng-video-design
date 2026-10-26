@@ -1,10 +1,10 @@
-# 从表达指导组合到实现
+# From combining expression guidance to implementation
 
-原有 motion 目录提供12种属性变化；expression 目录提供64项跨层表达指导（含11项知识讲解层、14项发布片元素）；recipe目录提供18类组合起点。新层不替换底层稳定ID，不把来源视频或提示词当可执行插件。
+The original motion catalog offers 12 property changes; the expression catalog offers 64 cross-layer expression entries (including 11 knowledge-explainer layers and 14 launch-film elements); the recipe catalog offers 18 combination starting points. The new layers do not replace the underlying stable IDs, and neither the source videos nor the prompts are treated as executable plugins.
 
-## 按问题查询
+## Query by problem
 
-先查场景候选，再按当前问题查一到三项。将 SKILL_ROOT 换成实际路径。
+List the scenario candidates first, then look up one to three entries for the problem at hand. Replace SKILL_ROOT with the real path.
 
 ```text
 python3 SKILL_ROOT/scripts/catalog.py --kind expression list --scenario knowledge-explainer
@@ -14,58 +14,58 @@ python3 SKILL_ROOT/scripts/catalog.py --kind expression get sound.event-collisio
 python3 SKILL_ROOT/scripts/catalog.py --kind recipe list --scenario brand-film
 ```
 
-| 层 | 要解决的问题 | 示例ID |
+| Layer | Problem it solves | Example IDs |
 | --- | --- | --- |
-| 叙事 | 按什么顺序组织变化 | narrative.goal-proof、narrative.follow-unit、narrative.energy-arc |
-| 相机 | 视点怎样提供信息 | camera.focus-frame、camera.waypoint-travel、camera.velocity-match |
-| 转场 | 前后镜头如何保持关系 | transition.shared-morph、transition.match-cut、transition.occlusion-reveal |
-| 视觉／动画 | 结构、数量、材质怎样变化 | visual.quantity-progress、visual.structure-separate、animation.fill-transfer |
-| 文字 | 文字何时被读、何时参与表演 | text.semantic-emphasis、text.counter-rotate、text.read-then-move |
-| 视觉强调 | 框准真实目标，标签避让并与运镜保持归属 | visual.target-callout，配合camera.focus-frame与text.semantic-emphasis |
-| 声音 | 节拍、动作与频段怎样关联 | sound.beat-map、sound.event-collision、sound.band-response |
-| 交互 | 输入怎样变成可复现的视频 | interaction.direct-manip、interaction.to-video |
-| 风格／生产 | 如何维持规则与可导出性 | style.token-contract、production.time-function、production.loop-seam |
-| 知识讲解 | 抽象知识或资讯怎样讲清、讲准、一层一层讲 | knowledge.object-is-explanation、knowledge.layered-reveal、knowledge.truth-ledger、knowledge.evidence-board |
-| 发布片 | 产品发布片的痛点、转折、自证、行动怎样编成一条弧 | narrative.pain-to-verdict、sound.pivot-drop、narrative.parallel-promise、narrative.cta-as-action、production.dwell-budget |
+| Narrative | In what order the change is organised | narrative.goal-proof、narrative.follow-unit、narrative.energy-arc |
+| Camera | How the viewpoint supplies information | camera.focus-frame、camera.waypoint-travel、camera.velocity-match |
+| Transition | How two shots keep their relation | transition.shared-morph、transition.match-cut、transition.occlusion-reveal |
+| Visual / animation | How structure, quantity and material change | visual.quantity-progress、visual.structure-separate、animation.fill-transfer |
+| Type | When the type is read, and when it takes part in the performance | text.semantic-emphasis、text.counter-rotate、text.read-then-move |
+| Visual emphasis | Frame the real target, keep labels clear of it and hold their ownership through the camera move | visual.target-callout, paired with camera.focus-frame and text.semantic-emphasis |
+| Sound | How beat, action and frequency band relate | sound.beat-map、sound.event-collision、sound.band-response |
+| Interaction | How input becomes a reproducible video | interaction.direct-manip、interaction.to-video |
+| Style / production | How to keep the rules and exportability | style.token-contract、production.time-function、production.loop-seam |
+| Knowledge explainer | How to explain abstract knowledge or news clearly, accurately and layer by layer | knowledge.object-is-explanation、knowledge.layered-reveal、knowledge.truth-ledger、knowledge.evidence-board |
+| Launch film | How a product launch film weaves pain, turn, proof and action into one arc | narrative.pain-to-verdict、sound.pivot-drop、narrative.parallel-promise、narrative.cta-as-action、production.dwell-budget |
 
-## 看清抽象层
+## See the abstraction layer clearly
 
-查看 tier、source_relation、inputs、parameters、composition、required_capabilities、fallback 和 verification_questions。parameters 中的 design-control 是设计选择，不是已经实现的API或数值范围。required_capabilities 是落地需要探测的语义能力，不能抄入 runtime.capabilities 冒充实测。
+Look at tier, source_relation, inputs, parameters, composition, required_capabilities, fallback and verification_questions. A design-control in parameters is a design choice, not an API already implemented or a numeric range. required_capabilities are the semantic capabilities you must probe in order to land the effect; do not copy them into runtime.capabilities and pass them off as measured.
 
-关系算子、时间约束、领域操作、组合配方与生产规则可以共同出现。例如先让文字读完再移动，是时间约束；围绕主体排一圈媒体，是组合布局；拆解科学结构，需要领域正确性。不要把它们全转成同一层“动画函数”。
+Relation operators, timing constraints, domain operations, combination recipes and production rules can appear together. Letting the type be read to the end before it moves, for example, is a timing constraint; arranging a ring of media around a subject is a composition layout; dissecting a scientific structure needs domain correctness. Do not flatten them all into the same layer of "animation functions".
 
-## 落地顺序
+## Order of implementation
 
-1. 确认它帮助哪条故事节拍或信息关系；不适合就跳过目录自由设计。
-2. 将语义参数变成项目可执行的时间、坐标、材质、声音与输入。复杂效果可先试短段；明确direct时直接制作整片并内部检查修复，不强制试片。
-3. 用已有 motion 或项目实现承载；没有现成动效的，用 custom 并填写 channels、implementation、composition_reason 等原合同要求。
-4. 将选择记在 design.expression_ids、design.recipe_id 或镜头说明中。目录引用只验证选择是否存在，不自动排镜头或驱动渲染器。
-5. 实际核验关键帧、连续运动、声音与语义。来源只演示局部时，不能借此宣布全套实现通过。
+1. Confirm which story beat or information relation it helps; if it does not fit, skip the catalog and design freely.
+2. Turn the semantic parameters into this project's executable time, coordinates, material, sound and inputs. A complex effect may be tried on a short segment first; when direct is explicit, make the whole film and check and fix it internally — a test cut is not mandatory.
+3. Carry it with an existing motion or the project's own implementation; where there is no ready-made motion, use custom and fill in the original contract's requirements: channels, implementation, composition_reason and the rest.
+4. Record the choice in design.expression_ids, design.recipe_id or the shot note. A catalog reference only verifies that the choice exists; it does not arrange shots or drive the renderer.
+5. Verify keyframes, continuous motion, sound and semantics for real. When the source only demonstrates part of it, you cannot use that to declare the whole set implemented.
 
-相机与对象同时运动需明确坐标空间和合成；匹配剪辑需对应构图／方向／声音；弹性只在适合对象材质时使用；图形数量与面积须依据数据。粒子深度化、三维结构、流体与人物表演能力不足时，按目录回退，并说明损失。
+Camera and object moving together need an explicit coordinate space and composition; a match cut needs matching composition/direction/sound; use spring only where the subject's material suits it; a graphic's quantity and area must follow the data. When particle depth, 3D structure, fluid or character performance capability falls short, fall back per the catalog and state the loss.
 
-交互演示不是自动可导出的视频。需要固定输入、状态以及适用的随机种子与时钟，再检查受控操作和最终播放。只有执行器声明可随机 seek 时才检查跳转一致性；不支持时可用受控录屏或顺序渲染，并记录限制。交互来源仅提供输入机制，固定输入的视频适配是本Skill的设计建议。
+An interactive demo is not a video that exports on its own. Fix the inputs, the state and the applicable random seed and clock, then check the controlled operation and the final playback. Check seek consistency only when the executor declares random seek; where it does not, use a controlled screen recording or a sequential render and record the limitation. An interactive source provides only the input mechanism — adapting fixed inputs into a video is this skill's design recommendation.
 
-## 验证范围
+## Scope of verification
 
-目录初始为 guidance，design=authored；preview/exported 依实际范围登记。小型索引示意不覆盖全部条目。64项不等于64个已渲染特效，18类配方也不保证任意组合。新增源不能自动提升历史验证状态，升级需保留反例与失效条件。标注轨道与检查范围见 [视觉强调](visual-emphasis.md)；采样几何无碰撞不等于所有帧、字形和语义已经通过。
+The catalog starts as guidance with design=authored; preview/exported are registered to the extent actually covered. A small index sample does not cover every entry. 64 entries are not 64 rendered effects, and 18 recipe classes do not guarantee any arbitrary combination. A new source cannot raise historical verification status automatically; an upgrade must keep the counter-examples and failure conditions. Callout tracks and the scope of checks are in [visual emphasis](visual-emphasis.md); sampled geometry showing no collision does not mean every frame, glyph and meaning has passed.
 
-## 知识讲解的组合入口
+## Entry point for knowledge explainers
 
-讲解抽象知识或资讯时，先读 [物即解释](knowledge-visualization.md)，再选配方：机制类用 `object-explainer`，要把一个概念分层讲透用 `layered-concept-reveal`，资讯用 `evidence-board-brief`。11项 `knowledge.*` 表达是设计指导：它们规定什么要写进 [知识包](knowledge-pack.md)、什么要在画面里兑现，不是已安装的动效。前半段的行业规范、术语与受控表达见 [行业规范先行](domain-standards.md)，层次安排见 [逐层递进](layered-reveal.md)。
+When explaining abstract knowledge or news, read [object is explanation](knowledge-visualization.md) first, then choose the recipe: `object-explainer` for mechanisms, `layered-concept-reveal` to take one concept apart layer by layer, `evidence-board-brief` for news. The 11 `knowledge.*` expressions are design guidance: they specify what must be written into the [knowledge pack](knowledge-pack.md) and what must be delivered on screen; they are not installed motion effects. Domain norms, terminology and controlled expression for the first half are in [domain standards first](domain-standards.md), and the layering is in [layered reveal](layered-reveal.md).
 
-选了 `knowledge.*` 表达就写 `plan.knowledge`，并运行 `validate_plan.py`；这些检查只核结构、引用和文字的机械问题，不证明事实为真、比喻贴切或观众看懂。
+If you select a `knowledge.*` expression, write `plan.knowledge` and run `validate_plan.py`; these checks only cover the mechanical issues of structure, references and copy, and do not prove a fact true, a metaphor apt or the audience's comprehension.
 
-概念知识科普用 `knowledge-music-explainer`，按 [科普编排](knowledge-music-direction.md) 选择字幕／旁白与direct／staged，从配方音乐池、当前默认或用户指定曲目反推声画编排，沿现有知识包和声音合同组织，不把试片确认设为通用门禁。
+For concept knowledge explainers use `knowledge-music-explainer`; choose subtitles/voiceover and direct/staged per [explainer arrangement](knowledge-music-direction.md), derive the sound-image arrangement from the recipe music pool, the current default or the user's chosen track, organise along the existing knowledge pack and sound contract, and do not make test-cut confirmation a universal gate.
 
-用Rap／嘻哈／说唱讲知识时自动选 `knowledge-rap-explainer`，按 [说唱科普](knowledge-rap-direction.md) 逐句关联事实、实际唱词、素材、重音和动作落定；背景音乐科普不切Rap。需要角色、三维、灯光与跨工具合成时按 [场景与工具组合](scene-tool-composition.md) 选择单一或多种路线，最终看真实MP4并检查声音，目录示意不代表工具已接入。
+When explaining knowledge through rap/hip-hop, select `knowledge-rap-explainer` automatically; per [rap explainer](knowledge-rap-direction.md), tie each line to fact, actual lyrics, asset, accent and motion settle. A background-music explainer does not switch to rap. When you need characters, 3D, lighting and cross-tool composition, choose one or several routes per [scene and tool composition](scene-tool-composition.md), and in the end watch the real MP4 and check the sound; a catalog illustration does not mean the tool is connected.
 
-## 产品表达的组合入口
+## Entry point for product expression
 
-两份新增配方与边界扫描见 [产品表达](product-expression.md)。同框换证据、递进困难和语义槽是组合规则；底层仍复用原12动效，不把每种标题/播放器/品牌外观建立为新原子。镜头注记不扩大机器校验或实际效果声明。
+The two new recipes and the boundary scan are in [product expression](product-expression.md). Swapping evidence within one frame, escalating difficulty and semantic slots are combination rules; the underlying work still reuses the original 12 motion effects, and each title/player/brand look is not established as a new atom. A shot note does not widen the machine check or the claim about actual effect.
 
-## 发布片的组合入口
+## Entry point for launch films
 
-做30秒级的产品发布片或多功能串联时，先读 [发布片语法](launch-film-grammar.md)，再选配方：整片情绪弧用 `launch-film-arc`，三到四个功能逐章证明用 `feature-chapter-reel`；`product-task-proof` 仍负责“真实任务与证据”的最小结构，两者不重复。14项发布片元素同样是设计指导，不是已安装动效：它们给出观察依据、迁移写法和失败信号，数值只是来自一部参考片的起点。声音一律先写事件表再排时间线，用 `audio_event_audit.py` 核对，测的是起音时刻，不是听感。研究另一部参考片的方法见 [参考片研究](reference-film-study.md)。
+For a 30-second product launch film or several features chained together, read [launch film grammar](launch-film-grammar.md) first, then choose the recipe: `launch-film-arc` for a whole-film emotional arc, `feature-chapter-reel` to prove three or four features chapter by chapter; `product-task-proof` still owns the minimal structure of "real task and evidence", and the two do not overlap. The 14 launch-film elements are likewise design guidance, not installed motion: they give the observation basis, a way to transfer the writing and the failure signals, and their numbers are only a starting point taken from one reference film. For sound, always write the event map before laying out the timeline and check it with `audio_event_audit.py`; it measures onset times, not the listening impression. The method for studying another reference film is in [reference film study](reference-film-study.md).
 
-产品宣传由歌词和乐段共同讲述时，选择 [产品音乐叙事](product-music-story.md) 的 `product-music-story`，沿现有动作、主体连续和声音表达组合；先核片型适配与功能主张，再选择素材、开场和实际声音。它跨用产品、品牌与音乐场景，不新增底层动效或必填合同；新配方仍待实际成片与效果验证。
+When product promotion is told by lyrics and sections together, choose `product-music-story` from [product music story](product-music-story.md), combining along the existing motion, subject continuity and sound expression; check the film-type fit and the feature claim first, then choose the assets, the opening and the actual sound. It crosses product, brand and music scenarios and adds no underlying motion effect or mandatory contract field; the new recipe still awaits a real finished film and effect verification.

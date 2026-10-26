@@ -1,22 +1,22 @@
 # 影像叙事
 
-让已有照片和影像主体承担叙事。
+Let the photographs you already have, and the subjects already in the footage, carry the story.
 
-## 风格规则
+## Style rules
 
-- 文字有对比底或安全区域。
-- 推近不裁掉关键证据。
+- Text sits on a contrasting ground or inside a safe area.
+- A push-in never crops away the key evidence.
 
-## 运动与节奏
+## Motion and rhythm
 
-- 推进与静止呼吸并存
-- 平缓进出
-- 每次突出一个语义焦点
+- A push and a held stillness coexist
+- Ease in and out gently
+- One semantic focus is brought forward at a time
 
-## 调整与回退
+## Adjustment and fallback
 
-原图静态，以字幕与顺序叙事。
+Keep the original image static and tell the story through subtitles and sequence.
 
-避免：全片持续漂移；假景深破坏细节；强制黑场收尾。
+Avoid: drifting for the whole film; fake depth of field that destroys detail; a forced fade to black at the end.
 
-颜色、字形与尺寸见本包 style.json；按真实品牌、画幅与中文阅读检查后使用。
+Colour, letterforms and sizes are in this pack's style.json; check the real brand, aspect ratio and Chinese reading before use.

@@ -1,19 +1,19 @@
-# 扩展一种表达
+# Extending a kind of expression
 
-先查已有项能否参数化。新项按plan-contract登记稳定ID、表达目的、输入、参数/单位/范围、兼容能力、组合限制、失败回退、来源与独立验证状态，不只登记审美名。
+First check whether an existing item can be parameterised. Register a new item under plan-contract with a stable ID, expressive purpose, inputs, parameters/units/ranges, compatible capabilities, composition limits, failure fallback, source and independent verification status — not just an aesthetic name.
 
-新场景给观众所得、素材条件、可替代叙事、布局、风格/动效候选与反例；新风格给token、字体回退、画幅/长文适配、运动气质与避用；新动效给channels、实际引擎支持、时序/层级和冲突条件。项目自由实现先用custom，验证后再提炼。
+A new scene states what the audience gains, asset conditions, replaceable narrative, layout, style/motion candidates and counter-examples; a new style states tokens, font fallbacks, aspect-ratio/long-text adaptation, motion temperament and what to avoid; a new motion effect states channels, actual engine support, timing/layering and conflict conditions. Free design inside a project starts as custom and is distilled only after verification.
 
-新expression先说明它是原子变化、关系算子、时间约束、组合配方、领域操作还是生产规则；登记source_relation，区分来源实际展示、我们的推导与已有合同补充。新recipe给每步镜头目的、视觉动作、声音职责与检验，不只拼动效ID。两者使用现有底层motion时复用ID，不另起近义库。先保持guidance；实际实现、预览、完整导出与理解效果分别核验。
+A new expression first says whether it is an atomic change, a relational operator, a timing constraint, a composition recipe, a domain operation or a production rule; register source_relation, separating what the source actually shows, what we derived and what existing contracts add. A new recipe gives every step a shot purpose, visual action, sound responsibility and check — not just a string of motion IDs. When both reuse existing underlying motion, reuse the IDs; do not start a near-synonym library. Keep it guidance first; actual implementation, preview, full export and comprehension benefit are each verified separately.
 
-配方可选`music_policy`，支持多个候选ID与一个池内默认、music_first/content_first/adaptive编排模式及默认是否需要确认；旧配方不要求补字段。音乐库保存曲目事实与素材关联，默认属于配方配置。用户指定或项目选择优先，单次选择不改池，明确加入候选或更换默认后才改相应配置。新曲按自己的实际音乐地图反推或适配内容，不继承其他曲子的拍点和听审；见 [概念知识科普](knowledge-music-direction.md)。
+A recipe may carry an optional `music_policy`, supporting several candidate IDs with one in-pool default, the music_first/content_first/adaptive orchestration modes, and whether the default needs confirmation; existing recipes are not required to add the field. The music library stores track facts and asset links; the default belongs to the recipe configuration. A user-nominated or project-selected track wins, a single selection does not change the pool, and only an explicit addition to the candidates or a change of default edits the relevant configuration. A new track is reverse-engineered from or fitted to the content using its own actual music map; it inherits no other track's beat points or listening pass; see [concept knowledge explainer](knowledge-music-direction.md).
 
-风格与动效不做无限排列；位置、缩放、遮罩、相机及时间会覆盖，需分层或明确合成。通用模式与各引擎实现分别记录。
+Styles and motion effects are not arranged without limit; position, scale, mask, camera and timing overlap, so they need layering or explicit compositing. General patterns and per-engine implementations are recorded separately.
 
-动态索引是原创小示意，通过scripts/build_gallery.py嵌入当前catalog；不包含所有项目能力，播放索引不自动提升条目状态。实际预览/导出记录引擎版本、参数、素材、画幅、环境、artifact与范围。一个例子不代表所有语言/参数/宿主通过，理解收益另测。
+The motion index is a small original illustration, embedded into the current catalog by scripts/build_gallery.py; it does not cover every project capability, and playing the index does not automatically raise an entry's status. An actual preview/export records engine version, parameters, assets, aspect ratio, environment, artifact and scope. One example does not mean every language/parameter/host passes; comprehension benefit is measured separately.
 
-当前任务可自定义源；改Skill目录/规范/行为仍走宿主确认。长期偏好须用户确认，方法经验须多次可核验任务并保留失败条件。不存客户私料，不把研究仓库副本当新安装Skill。
+A task may define its own sources; changing the Skill's catalog/spec/behaviour still goes through host confirmation. Long-term preferences need user confirmation, and a method learning needs several verifiable tasks while keeping its failure conditions. Do not store client material, and do not treat a copy of a research repository as a newly installed Skill.
 
-## 独立风格包
+## Standalone style packs
 
-风格扩展按 [风格包合同](style-pack-contract.md) 和 [维护规范](../MAINTAINING.md) 组织。style.json 是唯一元数据源，catalog/styles.json 与 styles/README.md 自动生成；旧计划与稳定 ID 保持兼容。新风格可直接在外置集合接入，无需扩大主入口。动效、表达与配方继续沿上述各自合同扩展，不把指导条目当自动执行插件。
+Style extensions are organised per the [style pack contract](style-pack-contract.md) and the [maintenance spec](../MAINTAINING.md). style.json is the single metadata source; catalog/styles.json and styles/README.md are generated automatically; old plans and stable IDs stay compatible. A new style can plug into an external collection without widening the main entry point. Motion, expression and recipes keep extending along their respective contracts above; guidance entries are not treated as auto-executing plugins.

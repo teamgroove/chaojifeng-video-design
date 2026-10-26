@@ -1,16 +1,16 @@
-# 概念知识科普：配方、音乐池与声画编排
+# Concept knowledge explainer: recipe, music pool and sound-image arrangement
 
-用于 `knowledge-music-explainer` 配方。复用知识包、逐层讲解、音乐 cue sheet 和音效事件表；不强制新增引擎、付费服务、模型或主计划必填字段。
+For the `knowledge-music-explainer` recipe. Reuses the knowledge pack, layer-by-layer explanation, the music cue sheet and the SFX event map; it introduces no new engine, paid service, model or required field in the master plan.
 
-此配方处理音乐推进的字幕／旁白科普。明确要求用Rap、嘻哈或说唱讲知识时，自动转 [嘻哈知识科普](knowledge-rap-direction.md) 与 `knowledge-rap-explainer`，先核歌词与实际演唱再编排；只要背景音乐不转Rap。两份配方独立选音轨，新配方不继承本配方的默认音乐或续接规则；既有音乐池政策保持。
+This recipe handles subtitled/voiceover explainers that music drives forward. When rap, hip-hop or spoken-word rap is explicitly required for the knowledge, switch automatically to [hip-hop knowledge explainer](knowledge-rap-direction.md) and `knowledge-rap-explainer`, verifying the lyrics and the actual performance before arranging anything; background music alone does not trigger the switch. The two recipes choose their audio track independently, and the new recipe does not inherit this recipe's default music or continuation rules; the existing music pool policy stands.
 
-## 配方内选曲，按音乐反推编排
+## Choose the track inside the recipe, derive the arrangement from the music
 
-配方显示名为“概念知识科普”，沿用原ID以兼容旧计划。元素提供可复用表达，规则约束事实、阅读与声画，配方组织叙事，direct/staged决定交付节奏；音乐作为配方配置，可在未来增加或更换。
+The recipe's display name is "concept knowledge explainer"; it keeps the original ID for compatibility with existing plans. Elements supply reusable expressions, rules constrain facts, reading and sound-image, the recipe organises the narrative, and direct/staged decides the delivery rhythm; music is a recipe configuration and can be added or swapped in future.
 
-`music_policy.candidate_track_ids`为候选列表，`default_track_id`为其中一首，`planning_mode=music_first`，`default_requires_confirmation=false`。当前初始默认是`user-knowledge-sharing-theme`。运行时读取配置，不能把曲名或ID硬编码成永久默认。用户明确指定优先，其次沿用项目选择，均无选择时直接使用配方默认，不再每片问是否用神曲；无配乐与原声要求优先保留。
+`music_policy.candidate_track_ids` is the candidate list, `default_track_id` is one of them, `planning_mode=music_first`, `default_requires_confirmation=false`. The current initial default is `user-knowledge-sharing-theme`. Read the configuration at run time; never hard-code a track name or ID as a permanent default. An explicit user choice wins, then the project's earlier choice, and with neither, use the recipe default directly — stop asking film by film whether to use the signature track; a request for no music or for original audio is honoured first.
 
-用户指定库内曲目时可用池外曲目，本次选择不改音乐池。指定本地新文件时核音频元信息和哈希，用于当前作品；只有明确要求“加入配方”才将核实过的曲目登记音乐库并加入池，只有明确“设为默认”才更新默认引用。新增候选不会自动成为默认。默认引用与候选必须可解析，源缺失或哈希变化时说明具体缺口，不擅换下一首。
+When the user names a track from the library, a track from outside the pool may be used; this choice does not change the music pool. With a new local file specified, check the audio metadata and hash and use it for the current piece; only on an explicit "add it to the recipe" do you register the verified track in the music library and add it to the pool, and only on an explicit "make it the default" do you update the default reference. A new candidate never becomes the default automatically. The default reference and the candidates must resolve; when a source is missing or its hash has changed, name the specific gap — do not quietly switch to the next track.
 
 ```text
 python3 SKILL_ROOT/scripts/music_library.py select --recipe knowledge-music-explainer
@@ -20,74 +20,74 @@ python3 SKILL_ROOT/scripts/music_library.py select --recipe knowledge-music-expl
 python3 SKILL_ROOT/scripts/music_library.py select --recipe knowledge-music-explainer --source-file /project/music/chosen.wav
 ```
 
-`search --recipe`只列该配方候选片段并返回默认ID；`--silent`或`--original-audio`保留用户相应要求。`select`只选择并核所选本地源，不渲染、不改默认、不加入候选、不证明音乐使用范围或听感。输出保存到项目作为本次选择依据；音源路径仍走本机registry，文件不复制进配方。
+`search --recipe` lists only that recipe's candidate clips and returns the default ID; `--silent` or `--original-audio` preserve the corresponding user requirement. `select` only chooses and verifies the chosen local source — it does not render, does not change the default, does not add to the candidates, and does not prove the scope of the music's use or how it sounds. The output is saved into the project as the basis for this choice; source paths still go through the local registry, and files are not copied into the recipe.
 
-选定曲目后先分析它的实际段落、疏密、乐句与可核锚点，再把知识任务分给适合的位置：建立问题、铺垫条件、展开机制、揭示结果、比较反例和收束。字幕与动作随后落位。主题已确定时保留该主题与事实，音乐不能生成知识结论；主题未定时可提出适合该音乐表达的选题，事实仍另核。必要条件、机制完整与阅读时间优先；音乐太短可收窄本片知识范围或按该曲实际策略续接，不为赶拍删掉关键条件。
+Once a track is chosen, analyse its actual sections, density, phrases and checkable anchors first, then hand the knowledge tasks to the places that suit them: establishing the question, setting up the conditions, unfolding the mechanism, revealing the result, comparing the counter-example and closing. Subtitles and motion land after that. With the topic already fixed, keep that topic and its facts — music cannot generate a knowledge conclusion; with the topic open, you may propose a subject that suits this musical expression, but the facts are still verified separately. Necessary conditions, a complete mechanism and reading time come first; if the music is too short, narrow this film's knowledge scope or continue per that track's actual strategy — never delete a key condition to hit the beat.
 
-## 先选择领拍与交付节奏
+## Choose the lead mode and the delivery rhythm first
 
-| 分支 | 组织方式 | 失败回退 |
+| Branch | How it is organised | Fallback when it fails |
 | --- | --- | --- |
-| subtitle | 短句承担解释，图形显示关系，音乐推进段落；文字完整出现后保留阅读与对照时间 | 改短、拆镜、跨多个拍点或改用旁白；不删必要条件赶拍 |
-| narration | 先取得真实旁白并量时，沿语义揭示；音乐辅助重点和停顿 | 降低配乐／提示密度，延长机制演示，改用句级揭示 |
+| subtitle | Short lines carry the explanation, graphics show the relationships, music drives the sections; once the text is fully on screen, leave time to read and compare | Shorten, split the shot, spread across several beat hits or switch to voiceover; do not delete a necessary condition to hit the beat |
+| narration | Get the real voiceover first and measure it, reveal along the semantics; music supports the emphasis and the pauses | Lower the score/prompt density, extend the mechanism demonstration, switch to sentence-level reveal |
 
-用户明确要求一次性完成、直接成片、无需试片或不要中间确认时，`delivery_mode=direct`：直接制作整片，内部检查和必要返修在同一轮完成；不强制先渲染10秒，不要求挑方向、批准试片或逐段批准。必要静帧、音频探测和最终检查可以内部完成，不将它们包装成用户确认门禁。用户明确要求逐阶段审阅时用 `staged`，只在约定节点等待。未指定时自主决定必要的低成本检查并继续完成，不固定停等。
+When the user explicitly asks for one pass, direct to film, no test cut or no intermediate confirmation, `delivery_mode=direct`: make the whole film directly and complete the internal checks and any necessary rework in the same round; do not force a 10-second render first, do not require picking a direction, approving a test cut or approving section by section. Necessary stills, audio probes and the final check can be done internally — do not dress them up as user confirmation gates. When the user explicitly asks to review stage by stage, use `staged` and wait only at the agreed nodes. When unspecified, decide the necessary low-cost checks yourself and carry on to completion; no fixed stop-and-wait.
 
-跳过试片不跳过事实、阅读窗、音频、连续播放和导出检查。遇到缺失的必要事实、不可用能力或费用边界仍准确说明阻塞；不能因为 direct 就虚构完成。有指定音乐、原声或无配乐要求时遵从；委托自行决定并无需中间确认时可直接选择现有合适候选。
+Skipping the test cut does not skip the fact, reading-window, audio, continuous-playback and export checks. A missing necessary fact, an unavailable capability or a cost boundary is still reported accurately as a blocker; direct is no licence to fake completion. Honour a specified track, original audio or a no-music requirement; when the user delegates the decision and needs no intermediate confirmation, go ahead and pick a suitable existing candidate.
 
-## 内容先形成可解释的关系
+## Let the content form an explainable relationship first
 
-先写一句观看后能复述的关系，核术语、数字和成立条件，再选载体。按既有 L0–L6 安排新增负荷、桥接和边界，短片按内容合并，不能为模板填满七段。可使用“问题→预测→可见后果→解释→边界→回收”，题目不适合预测时直接对照或演示，不强造悬念。
+Write one sentence stating a relationship the viewer can repeat afterwards, verify the terms, the numbers and the conditions under which it holds, then choose the carrier. Place the added load, the bridges and the boundaries on the existing L0–L6; short films merge sections by content — do not fill seven sections to satisfy a template. You may use "question → prediction → visible consequence → explanation → boundary → return"; where the subject does not lend itself to prediction, go straight to comparison or demonstration — do not manufacture suspense.
 
-每镜写：claim/layer、观众新增什么、焦点、字幕或旁白、初态与可见变化、落定与阅读窗、声音职责、下一镜接力。沿同一对象增加关系，用近景、尺度、密度与留白形成变化。只移动而没有新信息时减少动作。配方提供起点，不固定深色金字、粒子、镜头数、BPM、片长、标题时刻或转折比例。
+For each shot write: claim/layer, what the viewer gains, the focus, subtitle or voiceover, the initial state and the visible change, the settle and the reading window, sound's job, the handoff to the next shot. Add relationships along the same object and create variation through close shot size, scale, density and negative space. Where something only moves and carries no new information, cut the motion. The recipe gives a starting point, not a fixed dark ground with gold type, particles, shot count, BPM, length, title timing or turn ratio.
 
-## 音乐地图：音源分析复用，排程按片重算
+## The music map: reuse the source analysis, recompute the schedule per film
 
-地图绑定 `track_id` 与 `source_sha256`，记录源时间锚点、类型（beat/downbeat/phrase/section）、分析方法、证据与 candidate/verified 状态。可在项目中独立保存，填写任务表时原样引用所用锚点；换音源哈希后重新核验。自动候选可配合实际核听，不为一个速度值强制安装模型。
+The map binds `track_id` and `source_sha256` and records source-time anchors, type (beat/downbeat/phrase/section), analysis method, evidence and candidate/verified status. It can be stored separately in the project; when filling the task sheet, reference the anchors used exactly as they are. Re-verify after the source hash changes. Automatic candidates work alongside actual listening; do not force a model install for one tempo value.
 
-速度只描述快慢，拍位还需要起拍；半速／倍速、拍号和局部速度变化须分别判断。稳定速度才按起拍推导等距网格，变化速度保留实际序列。波形峰值和能量突变是候选瞬态，不能自动升为小节首拍或乐句。只有核对过的范围标 verified，并保留证据；人工标记的范围也不能自动覆盖整首。
+Tempo describes only fast or slow; beat positions also need the first beat. Half/double time, time signature and local tempo change are judged separately. Only a steady tempo justifies deriving an equidistant grid from the first beat; a changing tempo keeps the actual sequence. Waveform peaks and energy jumps are candidate transients and are not automatically promoted to downbeats or phrase starts. Only a range that was checked is marked verified, and the evidence is kept; a hand-marked range does not automatically cover the whole track either.
 
-当前初始默认曲 `user-knowledge-sharing-theme` 已有119.083秒音源与基本信号信息，未听审、未测拍状态继续保留，直到实际核验。运行时默认以配方当前引用为准；换曲后按新哈希重核地图，不继承旧曲的速度、拍点、乐句、调性或听审状态。参考教程和其他作品的113 BPM不能移植过来。
+The current initial default track `user-knowledge-sharing-theme` already has 119.083 seconds of source audio and basic signal information; the not-auditioned, not-beat-measured state stands until it is actually verified. At run time the default is whatever the recipe currently references; after a track change, re-check the map against the new hash and inherit nothing from the old track's tempo, beats, phrases, key or audition state. The 113 BPM of the reference tutorial and of other works cannot be transplanted.
 
-| 同步层次 | 适合的任务 | 冲突处理 |
+| Sync level | The task it suits | Handling a conflict |
 | --- | --- | --- |
-| 拍点 | 点亮、命中、一个状态变化 | 只选有语义的事件，不逐字逐拍提示 |
-| 局部重音／小节 | 短句建立、步骤落定 | 按实际拍号选择，不固定四拍 |
-| 乐句 | 一个关系、对照、完整过程 | 复杂知识跨多个拍点，保留阅读窗 |
-| 段落 | 问题转向解释、后果揭示、收束 | 依据内容选择，不套某一期固定秒点 |
+| Beat hit | Lighting up, an impact, one state change | Pick only events with meaning; do not prompt word by word, beat by beat |
+| Local accent / bar | Establishing a short line, settling a step | Choose by the actual time signature; do not assume four beats |
+| Phrase | One relationship, one comparison, one complete process | Complex knowledge spans several beat hits; keep the reading window |
+| Section | Turning from question to explanation, revealing the consequence, the close | Choose by content; do not copy one episode's fixed second marks |
 
-视觉锚点是关键词完整可读、对象真正接触、结果首次成立或关系落定的时刻。动画可以提前开始，在锚点落定；不能只对齐动画起始时间。事实、因果与阅读优先于卡点；可以选择更晚的乐句、拆句拆镜或少动。有意错拍记录偏移和原因。
+A visual anchor is the moment a keyword becomes fully readable, objects actually touch, a result first holds, or a relationship settles. Animation may start earlier and settle on the anchor; aligning only the animation's start time is not enough. Facts, causality and reading outrank hitting the beat; you may take a later phrase, split the sentence and the shot, or move less. Deliberate off-beat placement records the offset and the reason.
 
-## 声音提示与同曲续接
+## Sound prompts and continuing the same track
 
-先试少量音色及其职责：首次出现、重要结果、回顾或反例。钢琴、钟琴、木质单音均只是候选，按原曲音高、音色与尾音实际试混；未测调不称同调。音乐已提供清晰重音时可不另叠声音。降低持续高频、密集瞬态与长尾叠加；提示音不能掩盖旁白。需要短时闪避时只处理必要事件，并听是否抽吸或不自然。
+Try a few timbres and their jobs first: first appearance, important result, recap or counter-example. Piano, glockenspiel and wooden single notes are all only candidates — test-mix them against the track's actual pitch, timbre and tails; without a key measurement, do not call them in key. When the music already gives a clear accent, you can skip stacking another sound. Reduce sustained high frequencies, dense transients and stacked long tails; a prompt sound must not mask the voiceover. Where short ducking is needed, treat only the necessary events and listen for pumping or unnaturalness.
 
-每个声音回答“提示什么信息”，并沿既有 audio-event-map 记录动作时刻、真正起音、偏移和容差。任务表的检查只比排程，实际起音继续用无音乐SFX分轨和 `audio_event_audit.py` 实测，混音关系另听。
+Every sound answers "what information does this prompt", and is logged along the existing audio-event-map with the action time, the actual onset, the offset and the tolerance. The task sheet's check compares the schedule only; actual onsets are still measured with the music-free SFX stem and `audio_event_audit.py`, and the mix relationship is listened to separately.
 
-当前神曲保留用户确认的策略：短片裁剪，长片从曲首接下一遍并裁掉多余部分，仍不足再续接。不默改为重编、变速或其他循环段；其他曲目独立决定适配策略，不因加入此配方就继承这条续接规则。每次放置有不同cue ID，同曲同哈希，源区间和整片区间分别记录；接缝、首击、尾音与结尾实际核听。剪辑变化后重算所有映射和锚点，时长补齐本身不证明无缝。
+The current signature track keeps the strategy the user confirmed: trim for short films; for long films take the next pass from the top of the track and cut the excess, and continue again only if that is still not enough. Do not silently switch to re-editing, time-stretching or another loop section; other tracks decide their own fitting strategy and do not inherit this continuation rule just by joining this recipe. Each placement gets a different cue ID, same track and same hash, with the source interval and the film interval recorded separately; listen to the seam, the first hit, the tail and the ending. Recompute every mapping and anchor after a picture change; a duration that now adds up does not by itself prove the join is seamless.
 
-## 可选任务表与时序检查
+## The optional task sheet and the timing check
 
-`templates/knowledge-music-score.json` 是内部可选旁路记录，不自动驱动渲染。模板引用随包的最小计划，音乐为空，供结构检查；复制后用当前计划哈希和真实ID重填。无需给旧计划补字段。
+`templates/knowledge-music-score.json` is an internal optional side record and does not drive rendering automatically. The template references the minimal plan shipped with the pack, with the music empty, for structural checking; after copying, refill it with the current plan hash and the real IDs. Old plans need no backfilled fields.
 
-- `plan_sha256` 绑定当前主计划原始字节。执行时间仍只在计划的 beats/audio_cues；任务表用ID引用，不再手写同一动作时间。
-- `delivery_mode` 为 direct/staged，`lead_mode` 为 subtitle/narration；`decision_reason` 记录实际任务依据，不伪造用户原话。
-- `reading_windows[]` 指 scene、element、完整可读与退出的两个 beat ID、`min_read_seconds` 和 `reason`；可关联 `claim_ids`、`layer_id`。字符容量只作初筛，公式、术语和图形对照另留时间。
-- 可选 `music_map` 含音源身份、源时间锚点和证据；可选 `sync_points[]` 关联计划视觉beat与cue sheet放置、源锚点，明确 `intended_offset_s` 和 `tolerance_s`。`audio_cue_id` 加 `onset_offset_s` 可检查SFX排程，仍不代表实测。
-- 原曲锚点到成片时刻：`timeline_start + (source_time - source_in) / playback_rate`。先核同哈希、源区间、速率与长度；续接必须选正确放置ID。
+- `plan_sha256` binds the current master plan's raw bytes. Execution times still live only in the plan's beats/audio_cues; the task sheet references them by ID and no longer hand-writes the same action time.
+- `delivery_mode` is direct/staged, `lead_mode` is subtitle/narration; `decision_reason` records the actual basis for the choice and does not fabricate the user's words.
+- `reading_windows[]` names the scene, the element, the two beat IDs for fully readable and exit, `min_read_seconds` and `reason`; it may reference `claim_ids` and `layer_id`. Character capacity is a first filter only; formulas, terminology and graphical comparisons get their own time.
+- The optional `music_map` holds the source identity, the source-time anchors and the evidence; the optional `sync_points[]` links the plan's visual beat to the cue sheet placement and the source anchor, stating `intended_offset_s` and `tolerance_s`. `audio_cue_id` plus `onset_offset_s` allows checking the SFX schedule, but still does not represent a measurement.
+- Source anchor to finished-film time: `timeline_start + (source_time - source_in) / playback_rate`. Check the same hash, the source interval, the rate and the length first; a continuation must pick the right placement ID.
 
 ```text
 python3 SKILL_ROOT/scripts/explainer_timing_audit.py score.json --plan plan.json --music-sheet music-cue-sheet.json --out timing-audit.json
 ```
 
-检查ID、哈希、窗口与声明容差、源到成片映射和排程漂移；只对当前任务表覆盖的项目有效，不自动检测真实拍点、字幕像素可读性、音效起音、和声、审美或理解。候选音乐锚点给警告，不冒称验证完成。主计划和cue sheet仍按原工具独立校验。
+It checks IDs, hashes, windows against the declared tolerances, the source-to-film mapping and schedule drift; it is valid only for what the current task sheet covers, and it does not automatically detect real beats, the pixel readability of subtitles, SFX onsets, harmony, aesthetics or comprehension. Candidate music anchors raise a warning and do not pass themselves off as verified. The master plan and the cue sheet are still validated independently by their own tools.
 
-## 制作、迁移与效果
+## Production, transfer and effect
 
-direct 连续完成整片再内部检查修复。其他任务可先检查开场、最难机制和重要转折，风险重合时用一个短段覆盖；10秒只是参考教程的开场起点，staged仅在用户指定节点等待。保留稳定ID与回退，避免整片反复重生。
+direct completes the whole film in one run, then checks and fixes internally. Other jobs may check the opening, the hardest mechanism and the important turns first, covering them with one short segment where the risks coincide; 10 seconds is only the reference tutorial's opening starting point, and staged waits only at the nodes the user named. Keep stable IDs and rollbacks so the whole film is not regenerated again and again.
 
-复用少量文字、对照、过程轨道、图表和强调组件，固定术语、视觉语义、音色与时间接口；各期更换问题、证据、载体和转折。先用不同关系类型的题目验证迁移，分别记事实错误、阅读问题、时序漂移、返工和成本，不由一条片宣布稳定。
+Reuse a small set of text, comparison, process-track, chart and emphasis components, and fix the terminology, visual semantics, timbres and time interfaces; each episode swaps the question, the evidence, the carrier and the turn. Validate the transfer first with subjects built on different relationship types, recording factual errors, reading problems, timing drift, rework and cost separately; one film does not declare the method stable.
 
-实际审片和首次观众复述分别记录。发布数据可得时，在同平台、相近题材与长度中看开头流失、平均观看、完播、回看、收藏和具体疑问；指标不预设统一门槛，不把完播代替理解。一次反馈只支持相应范围的修改，不能自动升格为所有题材有效。
+Record the actual review and the first viewers' retellings separately. Where publication data is available, look at opening drop-off, average view, completion, rewatches, saves and the specific questions, on the same platform and among comparable subjects and lengths; no uniform threshold is preset, and completion is not a stand-in for comprehension. One round of feedback supports revisions in its own scope only and does not automatically become "works for every subject".
 
-来源：本机教程的四步与片内字幕为观察；分层同步、双分支、direct与时序检查为本Skill原创适配。参考[拍点说明](https://www.audiolabs-erlangen.de/resources/MIR/FMP/C6/C6S2_TempoBeat.html)及[多媒体学习原则](https://www.cambridge.org/core/books/abs/cambridge-handbook-of-multimedia-learning/principles-for-reducing-extraneous-processing-in-multimedia-learning/F29A19FCD34C542806F736E0661C05F5)。一部教程只能支持方法存在，未证明本配方的观众或传播效果；不分发原片、音源和私有对话。
+Sources: the four steps of the local tutorial and its in-film subtitles are observations; the layered sync, the two branches, direct and the timing check are original adaptations for this Skill. See the [beat note](https://www.audiolabs-erlangen.de/resources/MIR/FMP/C6/C6S2_TempoBeat.html) and the [multimedia learning principles](https://www.cambridge.org/core/books/abs/cambridge-handbook-of-multimedia-learning/principles-for-reducing-extraneous-processing-in-multimedia-learning/F29A19FCD34C542806F736E0661C05F5). One tutorial can only support that the method exists, not that this recipe has any audience or distribution effect; the original film, the source audio and private conversations are not distributed.

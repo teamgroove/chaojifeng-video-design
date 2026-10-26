@@ -1,38 +1,38 @@
-# 技术：能力、工程与真实交付
+# Technique: capabilities, engineering and real delivery
 
-创作计划采用 [plan-contract.md](references/plan-contract.md)，具体执行沿用 [runtime-and-delivery.md](references/runtime-and-delivery.md)。现有项目、素材、依赖缓存与工具优先，不以重装环境作为默认起点。
+The creative plan uses [plan-contract.md](references/plan-contract.md); the actual execution follows [runtime-and-delivery.md](references/runtime-and-delivery.md). Existing projects, assets, dependency caches and tools come first — reinstalling the environment is not the default starting point.
 
-## 三个独立层
+## Three independent layers
 
-| 层 | 内容 | 边界 |
+| Layer | Content | Boundary |
 | --- | --- | --- |
-| 导演与计划 | 观众变化、镜头任务、声音、整片排程 | 不从模板或案例反推故事 |
-| 风格包 | 材质、颜色、文字、运动、镜头、声音和原生动作 | 定义效果与实现参考，不自动成为渲染器 |
-| 实际制作路线 | 已有引擎、录屏、素材合成或生成工具 | 经实际探测、接入和导出后登记能力 |
+| Director and plan | viewer change, shot jobs, sound, whole-film schedule | do not reverse-engineer a story from a template or a case |
+| Style pack | material, colour, type, motion, camera, sound and native moves | defines effects and implementation references; does not become a renderer by itself |
+| Actual production route | existing engine, screen recording, asset compositing or generation tools | capabilities are logged only after real probing, integration and export |
 
-本库的查询、导入和校验脚本只用 Python 标准库。上游文本源码位于各包 demo/ 与 vendor/lemo-opuscar/；它们的运行依赖由本片项目按需准备，查询不会运行这些代码或安装依赖。
+The library's query, import and validation scripts use only the Python standard library. Upstream text sources live in each pack's `demo/` and in `vendor/lemo-opuscar/`; their runtime dependencies are prepared on demand by the project making the film — querying never runs that code and never installs dependencies.
 
-## 适配执行路线
+## Adapting the execution route
 
-| 已有路线 | 风格能力接入 | 验证重点 |
+| Existing route | How style capabilities plug in | What verification focuses on |
 | --- | --- | --- |
-| HTML／Canvas／WebGL | 可按上游 render(t)、DUR、READY 接口复用绘制与镜头技术 | 字体与素材就绪、任意时间定位、重复帧一致 |
-| Remotion／HyperFrames | 将绝对秒与事件映射为宿主时间，复用材质和动作关系 | 实际宿主版本、帧数、音轨与导出 |
-| Blender／Three.js | 按镜头拆摄像机、空间、材质、灯光与终态 | 渲染成本、世界与屏幕映射、实际输出 |
-| 现有影像与录屏合成 | 保留源入出点、裁切、速率、字幕和证据关系 | 素材来源、遮挡、阅读窗与声音接缝 |
+| HTML / Canvas / WebGL | drawing and camera technique can be reused along the upstream `render(t)`, `DUR`, `READY` interface | fonts and assets ready, seeking to any time, identical repeated frames |
+| Remotion / HyperFrames | map absolute seconds and events onto the host timeline, reuse material and motion relationships | actual host version, frame count, audio track and export |
+| Blender / Three.js | split camera, space, material, lighting and end state per shot | render cost, world-to-screen mapping, actual output |
+| Compositing existing footage and screen recordings | keep source in/out points, crop, speed, subtitles and the evidence relationships | asset provenance, occlusion, reading windows and sound seams |
 
-这些是适配合同；runtime.adapter 仍记录实际路线。能力不足先报告具体缺口，不把一个风格包的源码状态当作全部引擎支持。
+These are adaptation contracts; `runtime.adapter` still records the route actually taken. When capability is missing, report the concrete gap first — do not treat one style pack's source status as support across every engine.
 
-## 统一时间与资源
+## One clock and one set of resources
 
-画面、音效、旁白、字幕与检查从同一有效排程派生，使用稳定对象和事件 ID。确定性实现按时间计算状态、固定随机种子、等待字体和素材就绪；顺序、倒序和随机定位对照后再声称可重复。
+Picture, sound effects, narration, subtitles and checks derive from the same effective schedule, using stable object and event IDs. Deterministic implementations compute state from time, fix the random seed, and wait for fonts and assets to be ready; claim repeatability only after comparing forward, reverse and random seeks.
 
-上游渲染器默认多 worker；本库制作默认串行、一个任务执行实例，明确设置并发上限。可复用现有浏览器、渲染器、端口和缓存时复用，失败先读日志，收尾只处理本任务资源。网站操作遵守宿主 Chrome 路由。
+Upstream renderers default to multiple workers; this library produces serially by default, one execution instance per task, with an explicit concurrency cap. Reuse the existing browser, renderer, ports and cache where possible, read the logs first on failure, and clean up only this task's resources at the end. Website operations follow the host's Chrome routing.
 
-上游的 readcheck、ASR、混音与渲染代码可供项目适配；现有 check_delivery、film_probe、audio_event_audit、explainer_timing_audit 分别检查文件、媒体与声明排程。缺少所需接口时登记未检查，不能当作通过。
+The upstream readcheck, ASR, mixing and rendering code can be adapted by the project; the existing `check_delivery`, `film_probe`, `audio_event_audit` and `explainer_timing_audit` check files, media and declared schedules respectively. When a required interface is missing, log it as unchecked — it cannot count as passed.
 
-## 从源码进入项目
+## Entering a project from source
 
-先读选中包的 STYLE.md、STYLE.upstream.md；确定本片意图后读 DEMO.md，按需复制 demo/ 中的实现到用户工程。修正 LIB、导入、资源和构建路径，按当前官方文档与本地版本核实 API。不要在库内执行 build.sh，不直接照搬上游模型、声音服务、素材或发布脚本。
+Read the chosen pack's STYLE.md and STYLE.upstream.md first; fix this film's intent, then read DEMO.md and copy the implementation from `demo/` into the user's project as needed. Correct LIB, imports, asset and build paths, and verify the API against the current official documentation and the local version. Do not run `build.sh` inside the library, and do not copy upstream models, sound services, assets or publishing scripts outright.
 
-素材取用见 [asset-routing.md](references/asset-routing.md) 和 [production-tool-contract.md](references/production-tool-contract.md)；角色、空间与跨引擎组装见 [scene-tool-composition.md](references/scene-tool-composition.md)。
+For asset use see [asset-routing.md](references/asset-routing.md) and [production-tool-contract.md](references/production-tool-contract.md); for characters, space and cross-engine assembly see [scene-tool-composition.md](references/scene-tool-composition.md).

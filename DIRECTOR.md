@@ -1,29 +1,29 @@
-# 导演：内容、镜头与声音
+# Director: content, shots and sound
 
-先读 [导演前期方法](references/director-method.md) 与 [设计方法](references/design-method.md)。导演意图、风格语法与实现技术分别决定内容、外观和可执行能力。
+Read the [director's front-end method](references/director-method.md) and the [design method](references/design-method.md) first. Directorial intent, style grammar and implementation technique decide content, appearance and executable capability — separately.
 
-## 本片先成立
+## What has to hold for this film
 
-写清观众起点与终点、贯穿线、关键元素使命、每段声音职责。人物、产品、物体或概念都可以承担主线；按内容选择结构，产品与知识不强加人物冲突，音乐视觉不强加三幕。
+Write down where the audience starts and where it ends, the through-line, the mission of the key elements, and the job of each sound section. A person, a product, an object or a concept can all carry the spine; choose the structure by content — do not force character conflict onto product and knowledge films, and do not force a three-act onto music visuals.
 
-先确定当前题材和镜头任务，再看上游 DEMO.md 与代码。参考案例用于学习笔刷、角色、遮罩、材质、镜头或声画技术；题材、故事、台词、产品、镜头排程和落款重新设计。研究参考片本身时，可按研究任务直接看案例，观察与推断分开记。
+Fix the current subject and the job of the shot first, then look at the upstream DEMO.md and code. Reference cases are for learning brush, character, mask, material, shot or sound-image technique; subject, story, lines, product, shot schedule and sign-off are designed anew. When the reference film itself is the object of study, you may look at the case directly per the research task, and record observation and inference separately.
 
-开放创作读 [创意导演与编排](references/creative-direction.md)，按“行动 → 决定或产物 → 依据 → 验法 → 失败调整”记录。合理选择方向，避免把低影响创作决定逐项退回用户。
+For open creative work read [creative direction and arrangement](references/creative-direction.md) and record by "action → decision or artefact → grounds → check → adjustment on failure". Choose a direction sensibly; do not hand low-impact creative decisions back to the user one by one.
 
-## 把意图变成镜头
+## Turn intent into shots
 
-每镜明确新增信息或感受、焦点、揭示顺序、稳定阅读窗与下一镜接力。相机移动要服务揭示、关系或情绪；无需凑固定运镜数量。风格原生动作按语义使用，故事、开头、结尾与时长由本片决定。
+For every shot state the new information or feeling, the focus, the reveal order, the stable reading window and the handoff to the next shot. Camera movement must serve revelation, relationship or emotion; there is no quota of camera moves to fill. Use a style's native motion by its semantics; the story, the opening, the ending and the duration are decided by this film.
 
-上游的色彩逻辑、材质关系、运动气质和媒介特有动作可作为风格不变量；用户品牌或内容要求覆盖它们时，将变更与代价记在本片。需要长期复用的变化另存派生包。
+The upstream colour logic, material relationships, movement character and medium-specific moves can serve as style invariants; when the user's brand or content requirements override them, record the change and its cost in this film. A change that must be reused long-term gets its own derived pack.
 
-## 声音共同设计
+## Design sound together
 
-确定主声、动机、能量起落与静默。音乐、旁白或任务都可以领拍；事实与阅读时间决定必要内容，重要事件选拍点，不把所有变化锁到每拍。原声锁定、指定曲目和无配乐要求优先，不默认生成另一首配乐。
+Fix the lead sound, the motif, the rise and fall of energy, and the silence. Music, narration or the task itself can all lead the beat; facts and reading time decide the required content, important events pick the beat points, and not every change is locked to a beat. A locked original sound, a specified track and a no-score requirement take precedence; do not generate another score by default.
 
-旁白和歌词使用真实音频量时。首次声音参考按需要做小样；明确 direct 时在同轮内部完成检查与返修。不要把 ASR、包络分析或音频流存在当成听感通过。
+Narration and lyrics use the real audio when measuring. Make a small sample for the first sound reference as needed; with an explicit "direct", complete the checks and the rework inside the same run. Do not treat ASR, envelope analysis or the mere existence of an audio stream as a passed listening test.
 
-## 审片与交付
+## Review and delivery
 
-按 [审片与修改](references/review-and-revision.md) 检查首帧、最密帧、关系落定、转场边界与连续播放。画面、声音、事实与观众理解分别验收；流程检查不能替代作品质量。
+Per [review and revision](references/review-and-revision.md) check the first frame, the densest frame, the moment relationships land, the transition boundaries and continuous playback. Accept picture, sound, facts and audience comprehension separately; a process check cannot replace the quality of the work.
 
-完整执行见 [制作流程](references/production-workflow.md)；具体片型见 [任务路由](references/task-routing.md)。
+For the full execution see the [production workflow](references/production-workflow.md); for specific film types see [task routing](references/task-routing.md).

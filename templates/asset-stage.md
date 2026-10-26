@@ -1,30 +1,30 @@
-# 本镜素材舞台笔记
+# Asset stage notes for this shot
 
-适用镜头／版本：填写现有scene ID和当前计划版本。简单任务可省略本表，直接写已有方向或镜头笔记。
+Applies to shot / version: fill in the existing scene ID and the current plan version. A simple task can skip this sheet and write the existing direction or shot notes directly.
 
-## 动作与依据
+## Action and grounds
 
-- 观众需要看到的变化；真实依据与必须保持的内容
-- 已有素材／可编辑对象；需要准备的完整单元及处理路线
-- 触发 → 主动作 → 响应 → 落定 → 接力；关联现有element／beat／audio_cue ID
+- The change the audience has to see; the real grounds and what must stay unchanged
+- Existing assets / editable objects; the complete units that have to be prepared and the processing route
+- Trigger → main action → response → settle → handoff; link the existing element / beat / audio_cue IDs
 
-## 部件与坐标
+## Parts and coordinates
 
-| 现有asset／element ID | 部件职责与分组 | 源文件／版本及派生文件 | 坐标空间／单位／工作尺寸 | 裁剪框／局部原点／锚点 | 场景变换与显示镜头 |
+| Existing asset / element ID | Part job and grouping | Source file / version and derived files | Coordinate space / unit / working size | Crop box / local origin / anchor | Scene transform and display shot |
 | --- | --- | --- | --- | --- | --- |
-| 按实际填写 | 完整单元，不默认拆到最细 | 路径沿项目约定，必要时记录哈希 | 原始、工作源、局部、场景或屏幕须说清 | 明确相对于哪一空间 | 沿已有计划引用 |
+| Fill in per actual | The complete unit; do not split to the finest level by default | Paths follow the project conventions; record a hash where needed | State plainly: original, working source, local, scene or screen | Be explicit about which space it is relative to | Reference it along the existing plan |
 
-## 遮挡与动作范围
+## Occlusion and range of motion
 
-| 部件 | 前后关系／关联遮罩 | 移走后露出的区域与依据 | 已检查的移动／放大／旋转范围 | 内容保护与替代方案 |
+| Part | Depth order / linked masks | Area revealed when it moves away, and the grounds | Checked range of move / scale-up / rotation | Content protection and fallback |
 | --- | --- | --- | --- | --- |
-| 按实际填写 | 区分遮挡关系与估计景深 | 真实背景、创作补画或未知区域 | 未检查就写待验 | 保留必要文字、状态、身份和数据 |
+| Fill in per actual | Separate true occlusion from estimated depth | Real background, painted-in fill or unknown area | Write unchecked if it was not checked | Keep the necessary text, state, identity and data |
 
-## 验证与复用
+## Verification and reuse
 
-- 源状态复原：实际查看范围、差异和处理
-- 运动极值／接缝：时刻、样片版本、观察与问题
-- 声音／标注：实际关联与复验，未听／未看明确记录
-- 更换源、裁切、遮罩、字体、时间或画幅后，哪些镜头和缓存需要更新
+- Restoring the source state: the range actually inspected, the differences and how they were handled
+- Motion extremes / seams: time, sample-clip version, observation and problem
+- Sound / annotations: the actual linkage and re-check; record explicitly what was not heard or not seen
+- After changing the source, crop, mask, type, timing or aspect ratio, which shots and caches have to be updated
 
-详见 [素材表演与调度](../references/asset-motion-direction.md)。这是可选设计笔记，不是新的JSON结构、自动执行轨道或已验证状态。
+See [asset performance and routing](../references/asset-motion-direction.md). This is an optional design note, not a new JSON structure, an automatic execution track or a verified state.

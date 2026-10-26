@@ -1,40 +1,40 @@
-# 成片案例
+# Case notes
 
-两段从实际作品中剪出的高亮，分别展示产品功能与音乐叙事的表达方式。点击播放器即可观看，点击音量按钮开启原声。
+Two highlights cut from actual works, showing how product function and music narrative are each expressed. Click the player to watch; click the volume button to turn the original sound on.
 
-## 小圆角
+## Small Rounded Corners
 
 https://github.com/user-attachments/assets/d87f8264-0a95-40d6-adbb-4e7e0afa32d3
 
 
-同一组九张小卡先随滑块变圆，再进入批量处理界面，最后组成环形展示。歌词、字幕和画面动作围绕“边角变温柔”推进，让功能变化有明确的视觉结果。
+The same set of nine small cards rounds off with the slider first, then enters the batch-processing screen, and finally arranges into a ring. Lyrics, subtitles and on-screen action all push on one idea, “the corners turn gentle”, so the feature change lands as a clear visual result.
 
-片段长 22 秒，取自原片约 `00:22.033–00:44.033`。竖屏 720 × 1280，30 fps，保留原声；起止处做短淡入淡出。
+The clip runs 22 seconds, taken from the original at about `00:22.033–00:44.033`. Vertical 720 × 1280, 30 fps, original sound kept; short fades in and out at both ends.
 
-可对照 [产品任务证明](../../references/product-expression.md)、[素材表演与调度](../../references/asset-motion-direction.md) 和 [音乐导演](../../references/music-direction.md) 阅读。
+Read it alongside [product task proof](../../references/product-expression.md), [asset performance and routing](../../references/asset-motion-direction.md) and [music direction](../../references/music-direction.md).
 
-## AI 闯关记
+## AI Level-Up Log
 
 https://github.com/user-attachments/assets/bced29b5-a55a-4f92-85a5-865c6730752a
 
 
-从开机、倒数和标题落点，切到“升级闯关”的副歌。进度条、阶梯、逐字字幕与节拍共同推进，用同一个闯关母题连接开场和段落转折。
+From the power-on, the countdown and where the title lands, it cuts to the “level-up” chorus. The progress bar, the staircase, word-by-word subtitles and the beat all push at once, and one level-clearing motif ties the opening to the turn into the next section.
 
-这是两段原片的高亮拼接，约 18.63 秒。依次取自 `00:00.500–00:09.500` 与 `00:29.533–00:39.167`，中间省略第一关正文。横屏 1280 × 720，30 fps，保留原声；拼接与结尾处做短声音淡化。
+This is a splice of two highlights from the original, about 18.63 seconds, taken in order from `00:00.500–00:09.500` and `00:29.533–00:39.167`, with the body of the first level left out between them. Landscape 1280 × 720, 30 fps, original sound kept; short audio fades at the splice and at the end.
 
-可对照 [声音与节奏](../../references/sound-and-rhythm.md)、[创意导演](../../references/creative-direction.md) 和 [发布片语法](../../references/launch-film-grammar.md) 阅读。
+Read it alongside [sound and rhythm](../../references/sound-and-rhythm.md), [creative direction](../../references/creative-direction.md) and [launch-film grammar](../../references/launch-film-grammar.md).
 
-## 创作背景与溯源
+## Creative background and provenance
 
-两部作品由作者在 Cursor 中协作制作。下面的会话 ID 用于对应创作来源，不包含聊天内容，也不是公开分享链接。
+Both pieces were made by the author working collaboratively in Cursor. The session IDs below identify where each piece came from; they hold no chat content and are not public share links.
 
-| 作品 | Cursor 会话 ID |
+| Piece | Cursor session ID |
 | --- | --- |
-| 小圆角 | `3d62c03f-7ded-4f0d-8806-169697b0ffbb` |
-| AI 闯关记 | `ea170c35-525b-4fbe-8d27-e1d5e81c2f0e` |
+| Small Rounded Corners | `3d62c03f-7ded-4f0d-8806-169697b0ffbb` |
+| AI Level-Up Log | `ea170c35-525b-4fbe-8d27-e1d5e81c2f0e` |
 
-原片文件名、选段时间与文件校验值见 [案例清单](manifest.json)。仓库收录高亮视频，页面使用 GitHub 原生视频播放器。
+Source file names, segment times and file checksums are in the [case manifest](manifest.json). The repository holds the highlight videos; the page uses GitHub's native video player.
 
-## 使用范围
+## Scope of use
 
-本目录的视频用于作者作品展示，不纳入仓库代码和方法文档的 MIT 许可。需要转载、改编或提取素材时，请先取得作者及相关权利人的许可。
+The videos in this directory are for showing the author's work and are not covered by the MIT licence that applies to the repository's code and method documentation. To repost, adapt or extract material from them, get the author's and the relevant rights holders' permission first.

@@ -1,37 +1,37 @@
-# 物即解释：把抽象知识做成看得见的东西
+# The object as explanation: making abstract knowledge something you can see
 
-讲解算法、协议、机制、流程、经济或科学原理，以及把一件资讯讲清楚时读取。目标是让观众看到的不是“写着字的方块”，而是一个其运作本身就是概念的东西。逐层讲法见 [逐层递进](layered-reveal.md)，术语与口径见 [行业规范先行](domain-standards.md)，字段与检查见 [知识包合同](knowledge-pack.md)。
+Read this when explaining an algorithm, a protocol, a mechanism, a process, an economy or a scientific principle, and when making a single news item clear. The goal is that the audience sees not "blocks with words on them" but a thing whose operation is itself the concept. For the layered telling see [Layered reveal](layered-reveal.md), for terminology and definitions see [Domain standards first](domain-standards.md), for fields and checks see [Knowledge-pack contract](knowledge-pack.md).
 
-方法来自开源 Skill [Anatomy](https://github.com/wheresryan22/anatomy/tree/1482e8469b0a9e0d8cc18ea2740a01423d29ae80)（MIT，口号 *The object is the explanation*）的核心思路。本文为视频、口播和资讯场景独立改写，不复制其代码、示例或图；其交互式等距图的零件数、毫秒数等只当起点，需按本片帧率与阅读时间重新实测。
+The method comes from the core idea of the open-source Skill [Anatomy](https://github.com/wheresryan22/anatomy/tree/1482e8469b0a9e0d8cc18ea2740a01423d29ae80) (MIT, slogan *The object is the explanation*). This text is an independent rewrite for video, to-camera narration and news briefs; it copies none of that project's code, examples or diagrams. The part counts and millisecond timings of its interactive isometric diagrams are starting points only — re-measure them against this film's frame rate and reading time.
 
-## 一句话方法
+## The method in one sentence
 
-先找一个真实、做工讲究的东西，让它的运作就是概念本身；再用真实数字驱动它，让每个部件只讲一件事、每个数字有出处。
+First find a real, well-made thing whose operation is the concept itself; then drive it with real numbers, so that every part tells exactly one thing and every number has a source.
 
-两种常见失败：
+Two common failures:
 
-- 太抽象：堆叠的板、悬空的标签方块，看不出是什么。
-- 太平：一整块板加几条线，没有部件，也没有可发现的东西。
+- Too abstract: stacked plates, floating label boxes — you cannot tell what it is.
+- Too flat: one big plate plus a few lines, no parts and nothing to discover.
 
-还有一种更隐蔽的失败：漂亮但错。画面像样，机制却和事实不符。所以先立事实，再造画面。
+There is a subtler failure: beautiful but wrong. The image looks right while the mechanism contradicts the facts. So establish the facts first, then build the image.
 
-## 工序
+## Workflow
 
 ```text
  ① 一句话关系 → ② 行业规范 → ③ 真值账本 → ④ 载体 → ⑤ 部件映射 → ⑥ 分层讲 → ⑦ 画面工艺 → ⑧ 核查
    topic/claim    domain.*      truth.*     carrier.*   mappings     layers      expression_ids  checks
 ```
 
-1. 写一句话关系：观众结束时能说出哪一个关系，属于哪种 relation_type。
-2. 先找行业规范与共识，定下术语、符号、单位和读音，见 [行业规范先行](domain-standards.md)。
-3. 建真值账本：每个数字和事实先有来源或推导，画面读数、字幕、旁白都从它取值。
-4. 选载体：按下面的载体阶梯，从真实机构开始问。
-5. 列部件并做一一映射，每个部件回答四问，每个比喻写断点。
-6. 按 [逐层递进](layered-reveal.md) 安排出场顺序，一层只加一个新负荷。
-7. 做画面工艺：落地标签、一个亮点、分解与装回、运动落定。
-8. 核查：三类读者、事实对账、逐帧检查。未做的保持 `not_run`。
+1. Write the one-sentence relationship: which relationship the audience can state at the end, and which relation_type it belongs to.
+2. Find the domain standards and consensus first, and fix terminology, symbols, units and pronunciation; see [Domain standards first](domain-standards.md).
+3. Build the truth ledger (真值账本): every number and fact gets a source or a derivation first; on-screen readouts, captions and voiceover all take their values from it.
+4. Choose the carrier: work down the carrier ladder below, starting the questioning from real mechanisms.
+5. List the parts and do the one-to-one mapping; every part answers the four questions, and every metaphor gets its break points (断点) written down.
+6. Order the entrances per [Layered reveal](layered-reveal.md); each layer adds only one new load.
+7. Do the image craft: landed labels, one highlight, take-apart and put-back, motion settle.
+8. Check: three kinds of reader, fact reconciliation, frame-by-frame inspection. Whatever was not done stays `not_run`.
 
-## 载体阶梯
+## Carrier ladder
 
 ```text
  T1 真实机构   一台机器、工具、仪器或家具，其运作就是概念
@@ -41,130 +41,130 @@
  T5 图表或文字 没有诚实载体时的回退：关系图、时序表、对照表
 ```
 
-从 T1 往下问三件事，三问都通过才用这一级：
+Starting at T1 and moving down, ask three things; use a tier only if all three pass:
 
-1. 能用一句话说出“什么在动，动的含义是什么”吗？
-2. 概念的每个要素都能落到一个部件，反过来每个部件都对应一个要素吗？
-3. 它在哪里会骗人？能写出断点吗？
+1. Can you say in one sentence what is moving, and what its movement means?
+2. Does every element of the concept land on exactly one part, and does every part map back to an element?
+3. Where would it lie to you? Can you write the break points down?
 
-任一问答不出来，就退到下一级。不要为了有载体而造载体：没有机制可建的观点、情绪和纯审美判断，直接用 T5，并在知识包里写 `carrier.kind=none` 与理由。载体失败时的回退写进 `carrier.fallback`。
+If any question has no answer, drop one tier. Do not build a carrier just to have one: an opinion, a mood or a purely aesthetic judgement with no mechanism to build goes straight to T5, with `carrier.kind=none` and the reason recorded in the knowledge pack. Write the fallback for a failed carrier into `carrier.fallback`.
 
-| 级 | 概念长什么样 | 例子 |
+| Tier | What the concept looks like | Example |
 | --- | --- | --- |
-| T1 | 有一个会动的东西，动的含义就是概念 | 门锁的销全部对齐才转动，对应“缓存键全部匹配才跳过重算”；龙门绘图机的一个打印头依次访问多个孔，对应“一个共享 GPU 上下文服务多块画布” |
-| T2 | 概念是包含、层级、邻接、路径 | 文件系统画成楼层与房间；网络画成地铁线路与换乘站 |
-| T3 | 概念是先后与转换 | 编译画成流水线，每站一道工序 |
-| T4 | 概念是大小与比较 | 抽屉深度等于数据字节数；尺度阶梯 |
-| T5 | 没有诚实的机构可用 | 关系图、时序表、对照表，逐段高亮 |
+| T1 | There is a thing that moves, and the meaning of the movement is the concept | A door lock turns only when all its pins line up, mapping to "recomputation is skipped only when every cache key matches"; a gantry plotter's single print head visits hole after hole, mapping to "one shared GPU context serves several canvases" |
+| T2 | The concept is containment, hierarchy, adjacency, path | A file system drawn as floors and rooms; a network drawn as metro lines and transfer stations |
+| T3 | The concept is sequence and conversion | Compilation drawn as an assembly line, one operation per station |
+| T4 | The concept is size and comparison | Drawer depth equals a byte count; a scale ladder |
+| T5 | No honest mechanism is available | Relationship diagram, timeline table, comparison table, highlighted section by section |
 
-示例（T1）：TCP 三次握手画成“对账台”，左右两站各有序号盘、确认号盘和状态灯，信封载着标志拨片在轨道上滑行。完整结构见 [示例计划](../examples/tcp-handshake.plan.json)。
+Example (T1): the TCP three-way handshake drawn as a reconciliation desk, with a sequence-number dial, an acknowledgement-number dial and a status lamp at each of the two stations, and an envelope carrying a flag tab sliding along the rail. Full structure in [Example plan](../examples/tcp-handshake.plan.json).
 
-## 关系类型对应的载体原型
+## Carrier archetypes by relation type
 
-先判断要讲的关系属于哪一类，再取最近的载体原型。每个原型都有断点，必须在 L6 或画面角标里说出主要的一个。
+Decide which class the relationship belongs to first, then take the nearest carrier archetype. Every archetype has break points; the main one must be stated at L6 or in an on-screen corner tag.
 
-| relation_type | 抽象关系 | 载体原型 | 画面里看得见的动作 | 主要断点 |
+| relation_type | Abstract relationship | Carrier archetype | Action visible in frame | Main break point |
 | --- | --- | --- | --- | --- |
-| process | 顺序与流程 | 传送带、多站轨道，载着信封或工件 | 工件按站依次加工 | 真实流程常有分支和并发 |
-| condition | 条件与匹配 | 锁与钥匙、分拣闸、配对销 | 全部销对齐才放行 | 容易误导成“唯一匹配” |
-| capacity | 容量与排队 | 漏斗、水槽、停车场、抽屉 | 水位或抽屉深度就是量 | 离散与连续的差别 |
-| hierarchy | 层级与包含 | 套娃、楼层、抽屉柜 | 打开一层看到下一层 | 套娃暗示严格嵌套 |
-| comparison | 对比与权衡 | 天平、并排量具 | 两边同刻度、同单位 | 口径不同就不能放同一把尺 |
-| feedback | 反馈与调节 | 恒温器、调速器、浮球 | 偏差触发校正，回到目标 | 真实系统有延迟和振荡 |
-| transform | 变换与映射 | 磨坊、压模、滤网 | 同一输入经装置变成新形态 | 信息损失要另外演示 |
-| concurrency | 并发与竞争 | 多轨道加道岔、共享闸口 | 两条轨道争一个资源 | 真实时序不确定 |
-| probability | 概率与不确定 | 弹珠钉板、抽样盒 | 大量弹珠堆出分布 | 单次结果不可预测 |
-| growth | 增长与累积 | 阶梯、螺旋、储蓄罐 | 刻度随量变化 | 线性与指数刻度要写明 |
-| causal | 因果 | 多米诺、杠杆链、传动 | 推一下引起连锁 | 相关不是因果，候选原因标“候选” |
-| event | 事件与资讯 | 证据板 | 卡片、来源标签、时间轨、空槽 | 版式不是核实 |
-| definition | 定义与分类 | 标本盒、分类柜、铭牌 | 每个条件对应一个隔间 | 边界案例要单独示出 |
-| other | 其他 | 先把关系写成一句话，再找最近原型 | 登记为新原型 | 写出它特有的断点 |
+| process | Sequence and flow | Conveyor, multi-station track carrying envelopes or workpieces | The workpiece is processed station by station | Real processes often branch and run concurrently |
+| condition | Condition and matching | Lock and key, sorting gate, mating pins | Released only when every pin lines up | Easily misread as "one unique match" |
+| capacity | Capacity and queueing | Funnel, sink, parking lot, drawer | The water level or the drawer depth is the quantity | The difference between discrete and continuous |
+| hierarchy | Hierarchy and containment | Nesting dolls, floors, drawer cabinet | Open one layer and see the next | Nesting dolls imply strict nesting |
+| comparison | Contrast and trade-off | Balance, side-by-side gauges | Same scale and same unit on both sides | Different definitions cannot share one ruler |
+| feedback | Feedback and regulation | Thermostat, governor, float valve | A deviation triggers a correction back to target | Real systems have delay and oscillation |
+| transform | Transformation and mapping | Mill, press mould, filter mesh | The same input becomes a new form through the device | Information loss must be shown separately |
+| concurrency | Concurrency and contention | Multiple tracks with points, a shared gate | Two tracks contend for one resource | Real timing is non-deterministic |
+| probability | Probability and uncertainty | Galton board, sampling box | Many marbles pile up into a distribution | A single outcome is unpredictable |
+| growth | Growth and accumulation | Stairs, spiral, piggy bank | The scale changes with the quantity | Linear and exponential scaling must be labelled |
+| causal | Cause and effect | Dominoes, lever chain, drivetrain | One push starts the chain | Correlation is not causation; label candidate causes "candidate" |
+| event | Event and news | Evidence board | Cards, source tags, timeline, empty slots | Layout is not verification |
+| definition | Definition and classification | Specimen box, sorting cabinet, nameplate | Each condition gets one compartment | Edge cases must be shown separately |
+| other | Other | First write the relationship as one sentence, then find the nearest archetype | Register it as a new archetype | Write down the break points it has of its own |
 
-## 一一映射、四问与断点
+## One-to-one mapping, the four questions, break points
 
-- 一一映射：每个概念要素对应恰好一个部件，反过来也一样。多出来的部件是装饰，删掉或降为底座；缺的要素说明概念还没被呈现，补部件。知识包校验会拒绝重复的概念或部件。
-- 四问：每个部件回答“它是什么 / 现在在发生什么 / 为什么在这里 / 有什么用”。知识包里 `what` 与 `why` 必填，`happening` 与 `use` 按需写。新手最缺的就是这四问，缺哪一问就会在评论区被追问哪一问。
-- 断点：每个映射写 `breaks_at`，说明比喻在哪里会骗人。主要断点在 L6 说出，次要的放进画面角标。
-- 忠实度 `fidelity`：`exact` 是几何或数值严格对应；`structural` 是关系对应、数值示意；`illustrative` 只为好懂。写低一级比写高一级安全。
+- One-to-one mapping: each element of the concept gets exactly one part, and the reverse holds as well. A part with no element is decoration — delete it or demote it to the base; an element with no part means the concept is not yet on screen — add the part. Knowledge-pack validation rejects duplicated concepts or parts.
+- The four questions: every part answers "what is it / what is happening now / why is it here / what is it for". In the knowledge pack `what` and `why` are required, `happening` and `use` are written as needed. These four are exactly what beginners leave out; whichever one you skip is the one the comments will ask about.
+- Break points: write `breaks_at` for every mapping, stating where the metaphor would lie to you. State the main one at L6, put the minor ones in an on-screen corner tag.
+- Fidelity `fidelity`: `exact` is strict geometric or numerical correspondence; `structural` is corresponding relations with indicative numbers; `illustrative` exists only to aid understanding. Claiming one level lower is safer than one level higher.
 
-## 真值账本
+## Truth ledger
 
-先有模型，再有画面。画面读数、字幕、旁白里的每个数字和事实，都登记在知识包的 `truth.claims`，分三类：
+The model comes before the picture. Every number and fact in an on-screen readout, a caption or the voiceover is registered in the knowledge pack's `truth.claims`, in one of three classes:
 
-| kind | 含义 | 必须有 | 画面处理 |
+| kind | Meaning | Requires | How it is handled on screen |
 | --- | --- | --- | --- |
-| sourced | 来自来源，如标准条款、官方文档、原始报道 | `standard_ref` 或 `source`，长来源写位置 | 可直接显示，必要时标出处 |
-| derived | 由已登记的 claim 计算或推出 | `derivation` 与 `from`，且不能成环 | 显示结果，保留推导可查 |
-| illustrative | 只为示意，如滑行速度、示意颜色 | `disclosure` | 在内部记录用途、可支持的关系及不能支持的结论；不渲染“仅为示意”等制作标签 |
+| sourced | Comes from a source: a clause of a standard, official documentation, original reporting | `standard_ref` or `source`; for a long source, the location | May be shown directly, with attribution where needed |
+| derived | Computed or derived from an already registered claim | `derivation` and `from`, and the chain must not be circular | Show the result, keep the derivation auditable |
+| illustrative | Illustrative only: a sliding speed, an indicative colour | `disclosure` | Record internally the purpose, the relationships it can support and the conclusions it cannot; do not render production labels such as "illustrative only" |
 
-- 用户2026-10-21确认：制作来源和示意性质保留内部；对外不添加“演示、示意、重建”等身份标签。关系与数值不成立时改载体、换真实证据或删去主张，不以标签免责；实质模型边界与操作条件仍准确表达。
-- 带数值的 claim 必须有 `unit`。个数写“个”“次”“倍”，不省略。
-- 读数里的阶段词和数字取自同一时刻、同一来源。例：信封到位之后，序号盘和状态灯一起改变，不让灯先亮、数字后到。
-- 先量再看：数值、时长、位置先用脚本或计算核对，再看画面。画面好看不能替代对账。
-- 画面或字幕出现账本里没有的数字，校验给 `number_not_in_ledger`；先补账本，再显示。
+- Confirmed by the user on 2026-10-21: keep production provenance and the illustrative nature internal; add no identity labels such as "demo", "illustrative" or "reconstruction" to the outward-facing film. When a relationship or a value does not hold, change the carrier, swap in real evidence or drop the claim — do not disclaim it with a label; the substantive model boundaries and operating conditions are still stated accurately.
+- A claim carrying a value must have a `unit`. For counts, say what is counted — items, times, a multiple — do not leave it bare.
+- The stage word and the number in a readout come from the same instant and the same source. Example: once the envelope lands, the sequence-number dial and the status lamp change together; the lamp does not light first with the number arriving later.
+- Measure before you watch: check values, durations and positions with a script or a calculation first, then look at the image. A good-looking frame does not replace reconciliation.
+- If a number appears in frame or in a caption that is not in the ledger, validation returns `number_not_in_ledger`; add it to the ledger first, then show it.
 
-## 落地标签与一个亮点
+## Landed labels and one highlight
 
-Anatomy 的画面里不放文字，图注放在画外。视频观众不能暂停反复对照，所以本 Skill 折中：
+Anatomy puts no text in the frame; its captions sit outside the image. A video viewer cannot pause and cross-check, so this Skill compromises:
 
-- 允许“铭牌”（贴在部件上的小标签）和“图例芯片”，标签落在部件上。
-- 仍然禁止引线、气球、悬空标签和尺寸箭头。
-- 术语第一次出现时点亮它的部件，定义说完再降调。同一时刻只有一个亮点，其余降一级。
-- 字幕、铭牌和旁白用同一个词，一词一义。
+- Nameplates (small labels stuck onto a part) and legend chips are allowed; the label lands on the part.
+- Leader lines, balloons, floating labels and dimension arrows stay forbidden.
+- When a term first appears, light up the part it belongs to, then drop it back once the definition is done. One highlight at a time only; everything else steps down a level.
+- Caption, nameplate and voiceover use the same word, one word one meaning.
 
-色调层级：底座低、结构中、主体高，恰好一个“亮点”。除非颜色本身就是主体（如红绿蓝通道），否则用单色。每条线都要落在某个东西上，不留悬空线头。整体保持平静，不靠闪烁和粒子证明“有设计感”。
+Tonal hierarchy: base low, structure mid, subject high, with exactly one highlight. Use a single hue unless the colour is itself the subject (RGB channels, say). Every line has to land on something; leave no dangling ends. Keep the whole thing calm — do not prove "designed" with flicker and particles.
 
-## 分解与装回
+## Take-apart and put-back
 
-对应 `visual.structure-separate`。结构要靠来源或实物，不能用爆炸图伪造不存在的装配。
+Corresponds to `visual.structure-separate`. Structure must come from a source or a real object; do not fake an assembly that does not exist with an exploded view.
 
-- 沿真实拆解方向分开；外层先出，收回时反序。
-- 每个部件拆开后仍有“家”：能看出它属于哪一组，连接件跟随它实际固定的那一端。
-- 选中的部件点亮，其余降一级；说明文字同步写出它做什么。
-- 检查中途和反向：拆到一半又收回时，部件不能穿过别的部件。
-- 视频里每次只拆一层，用 beat 标出每组出场，不让所有部件同时飞出。
+- Separate along the real disassembly direction; the outer layer leaves first, and the return runs in reverse.
+- Every part still has a home once it is off: you can see which group it belongs to, and a fastener follows the end it is actually fixed to.
+- The selected part lights up and the rest step down a level; the caption states in sync what that part does.
+- Check the mid-state and the reverse: when a half-finished take-apart goes back, no part may pass through another.
+- In video, take off one layer at a time and mark each group's entrance with a beat; do not let every part fly out at once.
 
-## 运动落定
+## Motion settle
 
-对应 `animation.spring-settle`。以下为 Anatomy 动效指南里的做法，作为起点：
+Corresponds to `animation.spring-settle`. The following are practices from the Anatomy motion guide, as a starting point:
 
-- 事件包络：起音约 40–120 毫秒，一帧内把值设成 1 是“弹出”，不是动作。
-- 无过冲的量（色调、亮度、灯、读数）用临界阻尼落定；只有有重量的机械件才允许一次轻微过冲。
-- 淡出只会变暗：停止开始时冻结当前亮度，只乘以会下降的量。
-- 一个量同时驱动颜色、形状和亮度时，给颜色单独的慢速落定，避免三者同帧跳变。
-- 先就位再动作：动作需要特定状态时，先把机器带回该状态，到位后才开始计时；不在半拆开的状态上执行动作。
+- Event envelope: attack around 40–120 ms; setting a value to 1 within a single frame is a pop, not a motion.
+- Quantities that should not overshoot (tone, brightness, lamps, readouts) settle with critical damping; only a mechanical part with weight may overshoot slightly, once.
+- A fade-out only darkens: freeze the current brightness when the stop begins and multiply only by something that decreases.
+- When one quantity drives colour, shape and brightness at once, give colour its own slower settle so the three do not jump on the same frame.
+- Home first, then move: when an action needs a particular state, bring the machine back to that state first and start the clock only once it is there; never run an action from a half-taken-apart state.
 
-## 资讯类：证据板
+## News briefs: the evidence board
 
-资讯不是机制，却有结构：谁、做了什么、依据是什么、哪些还没确认。载体用“证据板”。
+A news brief is not a mechanism, but it has structure: who, did what, on what basis, and what is still unconfirmed. The carrier is the evidence board.
 
-| 部件 | 对应 | 规则 |
+| Part | Corresponds to | Rule |
 | --- | --- | --- |
-| 事件卡 | 谁、做了什么、何时、何地 | 一卡一事实 |
-| 来源标签 | 原始来源、日期、类型 | 事实卡必须挂来源标签 |
-| 时间轨 | 事件顺序 | 刻度单位一致 |
-| 数据量具 | 数字与口径 | 同口径同刻度，不同口径不放同一把尺 |
-| 空槽 | 未核实、争议、未知 | 虚线空框，写明为什么空 |
-| 版本戳 | 截至日期 `as_of` | 每条已核实事实都有日期 |
+| Event card | Who, did what, when, where | One card, one fact |
+| Source tag | Original source, date, type | A fact card must carry a source tag |
+| Timeline | Order of events | One scale unit throughout |
+| Data gauge | Numbers and definitions | Same definition, same scale; different definitions never share one ruler |
+| Empty slot | Unverified, disputed, unknown | Dashed empty box stating why it is empty |
+| Version stamp | Cut-off date `as_of` | Every verified fact carries a date |
 
-资讯包额外要求：每条 sourced claim 有 `as_of`；`truth.unknown` 列出未确认、有争议、未知的内容，没有就写 `unknown_none_reason`。事实、评论和推测分开；候选原因标“候选”，不画成因果。证据板配方见 `evidence-board-brief`，逐层讲法见 [逐层递进](layered-reveal.md)。
+A news pack has additional requirements: every sourced claim carries an `as_of`; `truth.unknown` lists what is unconfirmed, disputed or unknown, or `unknown_none_reason` if there is nothing. Keep fact, comment and speculation apart; label candidate causes "candidate" and do not draw them as causation. For the evidence-board recipe see `evidence-board-brief`, for the layered telling see [Layered reveal](layered-reveal.md).
 
-## 画面核查
+## Frame check
 
-像评论家一样看，不只看是否好看：
+Watch like a critic, not only for whether it looks good:
 
-1. 遮住映射表，只看画面，能说出每个部件在做什么吗？
-2. 关掉声音，只看画面和字幕，跟得上吗？
-3. 放大看：有没有没有任何部件的平白区？
-4. 每条线的两端是否都落在东西上？
-5. 画面、字幕、旁白里的每个数字都能在账本里找到吗？
-6. 逐帧看首帧、最密帧、关系落定帧和反向帧。
-7. 请懂行的人读一遍：漂亮但错的地方最容易在这里暴露。
+1. Cover the mapping table and look only at the frame: can you say what each part is doing?
+2. Cut the sound and watch only the image and the captions: can you follow it?
+3. Zoom in: is there any vacant area with no part in it?
+4. Does every line land on something at both ends?
+5. Can every number in the frame, in the captions and in the voiceover be found in the ledger?
+6. Go frame by frame through the first frame, the densest frame, the frame where the relationship lands and the reverse frame.
+7. Have someone who knows the domain read it: this is where beautiful-but-wrong shows up fastest.
 
-这些问题的结果写进知识包 `checks`；没有真做过的保持 `not_run`，凭印象觉得“看起来对”不算 passed。
+Write the results of these questions into the knowledge pack's `checks`; whatever was not actually done stays `not_run`, and an impression that it "looks right" is not a pass.
 
-## 与目录的关系
+## Relation to the catalog
 
-- 表达：`knowledge.object-is-explanation`、`knowledge.part-cast`、`knowledge.landed-label`、`knowledge.truth-ledger`、`knowledge.evidence-board`，配合 `visual.structure-separate`、`animation.spring-settle`、`visual.target-callout`、`narrative.follow-unit`。
-- 配方：`object-explainer`（机制类）、`evidence-board-brief`（资讯类）、`layered-concept-reveal`（整体分层结构）。
-- 所有条目都是设计指导，不是已安装特效，也不证明观众理解。来源与采用边界见 [来源与边界](sources.md)。
+- Expressions: `knowledge.object-is-explanation`, `knowledge.part-cast`, `knowledge.landed-label`, `knowledge.truth-ledger`, `knowledge.evidence-board`, together with `visual.structure-separate`, `animation.spring-settle`, `visual.target-callout`, `narrative.follow-unit`.
+- Recipes: `object-explainer` (mechanisms), `evidence-board-brief` (news), `layered-concept-reveal` (the overall layered structure).
+- Every entry is design guidance, not an installed effect, and does not prove the audience understood. Sources and the boundaries of adoption in [Sources and boundaries](sources.md).

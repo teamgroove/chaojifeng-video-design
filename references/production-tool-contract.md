@@ -1,10 +1,10 @@
-# 制作工具与项目工件合同
+# Production tools and project-artifact contract
 
-本合同将资产优先、工具选择、HDRI对照和日语旁白落到可复用工具。复用现有plan的scene／asset／beat身份与时间，不新增主计划必填字段。工具不安装软件、不启动渲染器、不下载模型或更改场景；实际制作仍由宿主已授权的能力完成。
+This contract turns asset-first, tool choice, HDRI comparison and Japanese narration into reusable tools. Reuse the existing plan's scene/asset/beat identity and time; do not add required fields to the main plan. The tools do not install software, do not start renderers, do not download models and do not change scenes; actual production is still carried out by capabilities the host has already authorised.
 
-## 先按任务查职责，再探测能力
+## Look up responsibility by task first, then probe capability
 
-工具表为 [production-tools.json](../catalog/production-tools.json)，`tasks`说明适合的职责，`adapter`说明本脚本提供的动作。`candidate`仅为待核候选，`guidance`仅给选择指导；`verification=not_run`不是永久不可用，也不能改成“已安装”。具体状态写本次项目回执，不把本机状态写死进工具表。
+The tool table is [production-tools.json](../catalog/production-tools.json); `tasks` states the fitting responsibility, `adapter` states the action this script provides. `candidate` is only a candidate pending verification, `guidance` only gives selection guidance; `verification=not_run` is not permanently unavailable and must not be changed to "installed". Write the concrete status into this project's receipt; do not hard-code local machine state into the tool table.
 
 ```text
 python3 SKILL_ROOT/scripts/production_tools.py list --task environment
@@ -16,58 +16,58 @@ python3 SKILL_ROOT/scripts/production_tools.py check /project/video/production-j
 python3 SKILL_ROOT/scripts/production_tools.py check /project/video/production-job.json --require-reviewed
 ```
 
-JSON输出保存到项目，不能用终端打印代替项目留证。`list`返回职责候选，不自动创建固定流水线；Agent按本镜意图选单个或多个工具，记录理由。Mixamo／Unreal是候选，当前许可、资源与接入用前核对；已有Blender／Three.js能完成时不强制切换。日语旁白与BGM分流，ACE-Step保留音乐职责，Aivis不承诺歌唱或Rap。
+Save the JSON output into the project; terminal printing cannot stand in for project evidence. `list` returns responsibility candidates and does not automatically create a fixed pipeline; the Agent picks one or several tools per this shot's intent and records the reason. Mixamo/Unreal are candidates; verify current licence, resources and integration before use; when the existing Blender/Three.js can do the job, do not force a switch. Japanese narration and BGM are separated; ACE-Step keeps the music responsibility, Aivis does not promise singing or rap.
 
-`probe`仅检查常见本机入口与默认端口；TCP接通不代表协议、插件、模型、权限或音色已经可用，其他配置端口未覆盖时补记范围。它不连接用户场景执行命令，不启动重复服务。`aivis-speakers`仅访问本地引擎的`/speakers`，取得实际speaker/style信息，不硬编码某个style ID，不生成或试听音频。
+`probe` only checks the common local entry points and default ports; a TCP connection does not mean the protocol, plugin, model, permission or voice is actually usable, so note the scope when other configured ports are not covered. It does not connect into user scenes to execute commands and does not start duplicate services. `aivis-speakers` only accesses the local engine's `/speakers` to obtain actual speaker/style information; it does not hard-code a particular style ID and does not generate or audition audio.
 
-`polyhaven-search`只取公开API的元信息，返回少量排序候选与原始页，保持来源顺序，不把排名分数当美术质量。使用项目自有缓存，默认本地缓存1小时以减少重复请求；这是本工具的节流策略，不代表服务端配额。响应限制2MB，429／503等错误原样报告，不自动重试，遵从Retry-After和任务预算。元信息成功不标为MCP检索、下载、导入、使用权复核或画面通过。
+`polyhaven-search` only takes metadata from the public API, returning a few ranked candidates with the original page and keeping source order; do not treat ranking scores as art quality. Use a project-owned cache, by default caching locally for 1 hour to reduce repeated requests; this is this tool's throttling policy and does not represent server quota. Responses are limited to 2MB; 429/503 and other errors are reported as they are, not retried automatically, respecting Retry-After and the task budget. Metadata success is not marked as MCP retrieval, download, import, usage-rights review or picture approval.
 
-网站操作仍按宿主浏览器路线；适用的API／MCP走当前有证据的接口。资产下载和MCP导入按实际工具与授权另执行，不从只读探测推导修改场景或安装的授权。
+Website operation still follows the host browser route; an applicable API/MCP goes through the interface that currently has evidence. Asset download and MCP import are executed separately per the actual tool and authorisation; do not derive authorisation to modify scenes or to install from a read-only probe.
 
-## 用一个项目工件关联决定与证据
+## Use one project artifact to link decisions and evidence
 
-复制 [production-job.json](../templates/production-job.json)到项目，沿本次需要填写。空模板只是一份草稿，校验会提示无生产证据；未使用的数组可留空。需要绑定主计划时添加`plan_path`与`plan_sha256`，前者相对于工件目录，后者绑定主计划当前原始字节。主计划改变后重新核关联，不复制一份竞争时钟。
+Copy [production-job.json](../templates/production-job.json) into the project and fill it in along what this run needs. An empty template is only a draft; validation will warn that there is no production evidence; unused arrays may stay empty. When you need to bind the main plan, add `plan_path` and `plan_sha256`; the former is relative to the artifact directory, the latter binds the main plan's current raw bytes. Re-check the link after the main plan changes; do not copy a competing clock.
 
-### 工具选择 `tool_choices[]`
+### Tool choice `tool_choices[]`
 
-每项含`id`、工具表中的`tool_id`、对应`task`、本镜`reason`；按需附`scene_ids`与实际能力回执路径。工具文档、当前接入、实际执行、产物与质量验收分别留证，不用一个“可用”状态合并。
+Each item contains `id`, the `tool_id` from the tool table, the corresponding `task`, and this shot's `reason`; attach `scene_ids` and the actual-capability receipt path as needed. Tool documentation, current integration, actual execution, artifacts and quality acceptance are each evidenced separately; do not merge them into one "available" status.
 
-### 素材 `assets[]`
+### Assets `assets[]`
 
-| 字段 | 约定 |
+| Field | Convention |
 | --- | --- |
-| id | 沿plan资产ID；纯内部候选用独立ID，录用后建立映射 |
-| role | event-proof／illustration／model／motion／environment／material／audio |
-| action | reuse／library／adapt／generate／scratch |
-| origin | project／user／library／generated／procedural；与实际来源一致 |
-| status | planned／ready／unavailable；ready只表示文件就绪 |
-| source、rights | 原始入口／资产ID与实际使用依据，不用“公开可见”代替许可 |
-| path、sha256 | ready时必需，路径相对本工件目录；校验流式核哈希 |
-| search | generate／scratch前记status=completed或blocked，以及实际查过的sources数组 |
-| gap_reason | 为何已有资产不适用、为何需制作缺口；生成／从零时必填 |
+| id | follow the plan asset ID; purely internal candidates use a standalone ID, and a mapping is established once chosen |
+| role | event-proof/illustration/model/motion/environment/material/audio |
+| action | reuse/library/adapt/generate/scratch |
+| origin | project/user/library/generated/procedural; consistent with the actual source |
+| status | planned/ready/unavailable; ready only means the file is ready |
+| source, rights | original entry point / asset ID and the basis for actual use; do not substitute "publicly visible" for a licence |
+| path, sha256 | required when ready, with the path relative to this artifact's directory; validation checks the hash by streaming |
+| search | before generate/scratch, record status=completed or blocked, plus the sources array actually checked |
+| gap_reason | why existing assets do not fit and why the gap needs production; required when generating / from scratch |
 
-模型、角色、动作、HDRI和纹理先查项目／缓存，再查许可合适的资产库，优先适配，最后只补缺失部分。检索受阻时如实记阻塞与替代表达，不伪造“查完”。角色按比例、骨架、蒙皮、面部控制检查；动作按重定向、脚底、手部接触和节奏检查。适配记录、源到派生关系与导入scene ID可以放在同一素材行，不再新建重复素材台账。
+For models, characters, motion, HDRIs and textures check the project/cache first, then licence-appropriate asset libraries, prefer adaptation, and only fill the missing part last. When retrieval is blocked, record the blockage and the alternative expression truthfully; do not fake "checked". Check characters by proportions, rig, skinning and facial control; check motion by retargeting, foot contact, hand contact and timing. Adaptation records, source-to-derivative relations and imported scene IDs can sit in the same asset row; do not create another duplicate asset ledger.
 
-event-proof必须保留原始证据；生成或程序搭出的现场不能证明事件发生。关系图、创作模型与环境按其真实角色登记，不能用更漂亮的资产扩大事实主张。
+event-proof must keep the original evidence; a staged or procedurally built scene cannot prove that an event happened. Relationship diagrams, created models and environments are registered by their real role; do not use prettier assets to expand a factual claim.
 
-### HDRI与画面 `lighting_reviews[]`
+### HDRI and picture `lighting_reviews[]`
 
-每项含`id`、`scene_id`、环境`asset_id`、`status`（not_run／passed／partial／failed）、实际`scope`（still／clip）和`finding`。通过时提供不同的`baseline_evidence[]`、`candidate_evidence[]`本地证据文件，改名的相同内容会被拒绝；证据应来自同一镜头、相同构图和相当的输出条件，明确只改变了什么。若同时更换光、材质和曝光，就记录多变量修改，不能归因于HDRI一项。
+Each item contains `id`, `scene_id`, environment `asset_id`, `status` (not_run/passed/partial/failed), the actual `scope` (still/clip) and `finding`. When passing, provide different local evidence files `baseline_evidence[]` and `candidate_evidence[]`; identical content under a new name is rejected; the evidence should come from the same shot, the same composition and comparable output conditions, and should state explicitly what alone was changed. If light, material and exposure are changed together, record a multi-variable change and do not attribute it to the HDRI alone.
 
-在finding或随附记录中分别描述：光向／色彩、曝光、轮廓与主体分离、材质反射、接地阴影、空间感、连续运动中的高光与接缝，以及下载／加载／渲染成本。可以保留原方案或判新方案更差，不要求每镜一定更换HDRI。背景与照明分开核，资产存在不等于合理使用；只有静帧时不能把`motion_continuity`写成passed。
+Describe separately in the finding or an attached record: light direction/colour, exposure, silhouette and subject separation, material reflection, contact shadow, sense of space, highlights and seams in continuous motion, plus download/load/render cost. You may keep the original option or judge the new one worse; not every shot has to change HDRI. Check background and lighting separately; an asset existing does not mean it is used reasonably; with stills only you cannot write `motion_continuity` as passed.
 
-先用够用规格做对照，再为镜头需要提升规格。用户截图中“20MB压到约500KB UltraHDR JPEG”只作为案例线索，不成为默认压缩比、格式或效果承诺；使用前另核当前执行器、解码、亮度范围与实际导出结果。
+Compare at sufficient specification first, then raise the specification where the shot needs it. The user screenshot's "20MB compressed to about 500KB UltraHDR JPEG" serves only as a case clue; it does not become a default compression ratio, format or effect promise; before use, verify the current executor, decoding, brightness range and actual export result separately.
 
-### 日语旁白 `voice_jobs[]`
+### Japanese narration `voice_jobs[]`
 
-每项含`id`、`language`、`mode`、`tool_id`、`status`、显式`listening`记录。Aivis分支为`language=ja`、`mode=narration`，模型／音色的使用依据写`model_rights`；ready时给实际`path`和`sha256`。选中候选、软件存在、style发现、生成成功和听感认可各自记录。
+Each item contains `id`, `language`, `mode`, `tool_id`, `status` and an explicit `listening` record. The Aivis branch is `language=ja`, `mode=narration`; write the basis for using the model/voice in `model_rights`; when ready, give the actual `path` and `sha256`. Candidate selected, software present, style discovered, generation succeeded and listening approved are each recorded separately.
 
-用完整语义句／段生成，统一音色和风格，真实音频先量时再排字幕。Aivis引擎可连接WAV，但拼接不自动改善停顿、呼吸、音量与声线；已有音频仅需拼接时可复用FFmpeg或既有工程。听审通过先要求音频ready且哈希匹配，再需`listening.status=passed`、`method=listened`或`user-feedback`及`evidence[]`实际记录路径；ASR／波形／拼接退出码不能代替。字幕与音轨变更仍按既有声音合同重验。
+Generate from complete semantic sentences/paragraphs, keep one voice and one style, and measure the real audio before laying out subtitles. The Aivis engine can join WAV, but concatenation does not automatically improve pauses, breathing, volume or voice line; when existing audio only needs joining you can reuse FFmpeg or the existing project. Listening approval first requires the audio to be ready with a matching hash, then `listening.status=passed`, `method=listened` or `user-feedback` and the actual record paths in `evidence[]`; ASR/waveform/concatenation exit codes cannot substitute. Subtitle and audio-track changes are still re-verified per the existing sound contract.
 
-Aivis程序许可与声音模型条件分别核实，不能由免费软件推定任意声音用途。未接入、没有合适模型或不支持的歌唱任务准确报告缺口；候选不自动切付费服务或下载模型。来源见 [场景与工具组合](scene-tool-composition.md#日语旁白与其他工具候选)。
+Verify the Aivis program licence and the voice-model conditions separately; free software does not imply any use of a voice. Report gaps accurately when something is not integrated, no suitable model exists, or the singing task is unsupported; candidates do not automatically switch to a paid service or download a model. For sources see [Scene and tool composition](scene-tool-composition.md#japanese-voiceover-and-other-tool-candidates).
 
-## 校验边界与实际交付
+## Validation boundary and actual delivery
 
-`check`返回valid、errors、warnings与`scope=declared-production-evidence-only`，检查工具／任务匹配、素材优先记录、事实画面来源边界、文件哈希、计划漂移、对照证据与声音验收声明。它不联网核许可证、不理解像素、不听声音、不证明记录真实；即使声明有passed，它自己的`media_review`仍为not_run。
+`check` returns valid, errors, warnings and `scope=declared-production-evidence-only`, checking tool/task matching, asset-first records, factual-picture source boundaries, file hashes, plan drift, comparison evidence and sound acceptance declarations. It does not go online to verify licences, does not understand pixels, does not listen to sound and does not prove the records are true; even when a declaration has passed, its own `media_review` remains not_run.
 
-默认允许带未审项的草稿并给warning；`--require-reviewed`将已登记灯光／听审的未完成项判为错误，空工件也失败。只覆盖本工件登记的范围，不能替代整片知识、阅读、声画、连续播放与交付检查。实际录用、审片与返修沿 [审片与修改](review-and-revision.md) 执行，最终仍交真实MP4、必要可编辑源与产物一致性记录。
+By default it allows a draft with un-reviewed items and gives a warning; `--require-reviewed` turns unfinished items among registered lighting/listening into errors, and an empty artifact also fails. It covers only the scope registered in this artifact and cannot replace whole-film knowledge, reading, sound-image, continuous-playback and delivery checks. Actual adoption, film review and rework follow [Review and revision](review-and-revision.md); the end still delivers a real MP4, the necessary editable sources and an artifact-consistency record.

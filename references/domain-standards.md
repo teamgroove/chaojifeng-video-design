@@ -1,110 +1,110 @@
-# 行业规范先行：先找共识，再开口
+# Industry standards first: find the consensus before you speak
 
-讲解涉及专业领域时读取。先找这个领域最合适的标准、术语规范和行业共识，再用它们写稿和画图，让表达更简短、准确，也让 Agent 不凭印象改写行业术语。适用于口播、字幕、铭牌和图注；不是文案风格指南，创意文案可按末节例外处理。
+Read this when an explainer touches a professional domain. First find the standards, terminology norms and industry consensus that fit the domain best, then use them to write the script and draw the diagrams, so the expression is shorter and more accurate and the agent does not rewrite industry terms from memory. It applies to narration, subtitles, nameplates and captions; it is not a copy style guide — creative copy may use the exception in the last section.
 
-## 为什么
+## Why
 
-飞机维修手册靠 ASD-STE100（简化技术英语）这套受控语言，让不同母语的人读到同样的意思。它的做法是：用有限的规则和一份受控词表，把信息写准。公开讨论里常把同一思路概括为“受控语言 → 图 → 网页 → 视频”的升级阶梯（只读到二手转述，未取得原帖，不作一手来源）。本 Skill 借的是这条思路：每升一级媒介，都复用同一套术语、数字和规则，而不是每一级重新措辞。
+Aircraft maintenance manuals rely on ASD-STE100 (Simplified Technical English), a controlled language, so that readers with different native languages read the same meaning. The approach: write information precisely with a limited rule set and a controlled dictionary. Public discussion often sums up the same idea as a ladder of upgrades — controlled language → diagram → web page → video (only second-hand accounts were read, the original post was not obtained, so it is not used as a primary source). This skill borrows that line of thought: every step up in medium reuses the same terminology, numbers and rules, instead of rephrasing at each level.
 
-边界必须守住（官方 Issue 9，2025-01-15，核对于 2026-10-19）：
+The boundary has to hold (official Issue 9, 2025-01-15, checked 2026-10-19):
 
-- STE 不能单独使用，需配合技术出版规范、风格指南和官方指令。
-- STE 不规定缩写、计量单位和排版，这些由项目或行业规范决定。
-- STE 只为技术文档开发；官方只说它的规则和受控词表“可以帮助”会议与演示中的口头交流，并不是口播规范。
-- 本 Skill 的 STE-zh 是自行改编的中文规则集，不是 ASD 官方标准，数字阈值也不是 ASD 数字，不得声称“符合 ASD-STE100”。
+- STE cannot be used on its own; it needs technical publication specifications, style guides and official directives alongside it.
+- STE does not govern abbreviations, units of measurement or typography; the project or the industry standard decides those.
+- STE was developed for technical documentation only; the official text says only that its rules and controlled dictionary "can help" spoken communication in meetings and presentations — it is not a narration standard.
+- STE-zh in this skill is a self-made Chinese rule set, not an official ASD standard, and the numeric thresholds are not ASD numbers; do not claim that anything "complies with ASD-STE100".
 
-## 四步
+## The four steps
 
 ```text
  ① 识别领域 → ② 找规范与共识 → ③ 写成术语卡与表达规则 → ④ 全片遵守并核对
   domain.field   domain.standards     domain.terms / expression     controlled_lint.py
 ```
 
-1. 识别领域：写进 `domain.field`。跨领域时分开登记。
-2. 找规范与共识，按优先级读：国际标准或 IETF RFC > 国家标准 > 行业协会、官方文档 > 权威教材与术语库 > 历史行业共识。读现行版本，记下版本、位置和核对日期。
-3. 写成术语卡：每个术语写首选写法、定义、禁用别名、缩写、读音。写成表达规则：选 `expression.profile`，需要时放宽或收紧句长，补读音表。
-4. 全片遵守：口播、字幕、铭牌、图注都用同一个词；用 `controlled_lint.py` 查机械问题；定稿前再核一次现行版本。
+1. Identify the domain: write it into `domain.field`. Register each domain separately when work crosses domains.
+2. Find the standards and consensus, reading in priority order: international standards or IETF RFCs > national standards > industry associations and official documentation > authoritative textbooks and term databases > historical industry consensus. Read the current version and note the version, the locator and the check date.
+3. Write term cards: for each term the preferred form, definition, forbidden aliases, abbreviation and pronunciation. Write expression rules: choose `expression.profile`, loosen or tighten sentence length as needed, and add a pronunciation list.
+4. Follow it across the film: the same word in narration, subtitles, nameplates and captions; run `controlled_lint.py` for mechanical problems; check the current version once more before the final cut.
 
-找不到合适标准时，如实写 `kind: none` 与理由，只做本片的术语卡；不要编一个标准名字出来。
+When you cannot find a suitable standard, write `kind: none` and the reason truthfully, make term cards for this film only, and do not invent a standard's name.
 
-## 来源状态
+## Source status
 
-| status | 含义 | 要求 |
+| status | Meaning | Requirement |
 | --- | --- | --- |
-| verified | 本次已读原文，核对过版本与位置 | 必须有 `version`、`locator`、`checked_on`；超过一年提示重查 |
-| seed | 只是起点，没读过原文或只读过摘要 | 使用前必须核实版本、条款与现行状态；基于 seed 的 claim 会被提示 |
-| not_found | 找过，没有合适来源 | 必须写 `reason` |
-| none | 此领域没有适用标准 | 与 `kind: none` 一起出现，必须写 `reason` |
+| verified | the original text was read for this task, version and locator checked | must have `version`, `locator`, `checked_on`; older than a year prompts a re-check |
+| seed | only a starting point, the original was not read or only a summary was read | verify version, clause and current status before use; a claim built on a seed is flagged |
+| not_found | searched, no suitable source | must write `reason` |
+| none | no applicable standard in this domain | appears together with `kind: none`, must write `reason` |
 
-`kind` 可选 standard、terminology、style-guide、convention、official-doc、consensus、none。选 consensus（历史行业共识）时，至少列两个相互独立的权威来源。不复制标准的长篇原文，只记位置和必要的短语。
+`kind` may be standard, terminology, style-guide, convention, official-doc, consensus, none. When choosing consensus (historical industry consensus), list at least two mutually independent authoritative sources. Do not copy long passages of a standard; record only the locator and the necessary phrases.
 
-## 领域起点表
+## Domain starting points
 
-只是起点。标“已核对”的在 2026-10-19 研究时读过；“种子”没有读过原文。两类在使用时都要按现行版本再核一次，国家标准尤其如此（例如量和单位的 GB 3100/3101/3102 系列正在修订更替，现行编号与版本使用前必须核实）。
+Starting points only. Items marked "checked" were read during research on 2026-10-19; the "seed" items were not read in the original. Both kinds must be checked again against the current version before use, national standards above all (the GB 3100/3101/3102 series on quantities and units, for example, is being revised and replaced, so the current number and version must be verified before use).
 
-| 领域 | 起点来源 | 状态 |
+| Domain | Starting source | Status |
 | --- | --- | --- |
-| 网络协议 | IETF RFC，以 rfc-editor.org 现行版本为准；例：RFC 9293（STD 7，2022 年 8 月，取代 RFC 793） | 已核对 RFC 9293 的 §3.5、图 6、图 8 |
-| 技术写作与受控语言 | ASD-STE100 Issue 9（2025-01-15） | 已核对规则号与适用边界 |
-| 通用清晰表达 | ISO 24495-1:2023 Plain language，第 1 部分：指导原则与指南 | 已核对存在与主题，条款用前读原文 |
-| 多媒体学习 | Mayer 多媒体学习原则（第 2 版 12 条，第 3 版 2020 年 15 条） | 已核对条数，用前注明采用哪一版 |
-| 汉语标点与数字用法 | GB/T 15834-2011、GB/T 15835-2011 | 已核对编号，用前确认现行有效 |
-| 汉语科技术语 | 全国科学技术名词审定委员会“术语在线” | 已核对入口，具体术语逐条查 |
-| 解剖学 | Terminologia Anatomica 第 2 版（FIPAT，2019） | 已核对 |
-| 电气图形符号 | IEC 60617 | 已核对 |
-| 安全标志与颜色 | ISO 7010:2019、ISO 3864-1 | 已核对 |
-| 齿轮与轴测制图 | ISO 1122-1:1998、ISO 701:1998、ISO 5456-3:1996 | 已核对 |
-| 量与单位 | BIPM《SI 手册》、ISO 80000 系列、国际计量学词汇 VIM | 种子 |
-| 化学 | IUPAC Gold Book | 种子 |
-| 软件与系统工程术语 | ISO/IEC/IEEE 24765 | 种子 |
-| 建模符号 | UML、BPMN（OMG） | 种子 |
-| 航空通话 | ICAO 标准用语 | 种子 |
-| 新闻写作与核查 | AP Stylebook、路透社手册、新华社新闻信息报道中的禁用词和慎用词；IFCN 原则守则 | 种子 |
-| 数据可视化 | Cleveland–McGill 感知排序、FT Visual Vocabulary | 种子 |
-| 可访问性与配色 | WCAG、Okabe–Ito 色盲友好配色 | 种子 |
-| 类比与认知负荷 | Gentner 结构映射、Lakoff–Johnson 概念隐喻、Sweller 认知负荷、预测—观察—解释 | 种子 |
+| Network protocols | IETF RFCs, current version at rfc-editor.org; e.g. RFC 9293 (STD 7, August 2022, obsoletes RFC 793) | checked §3.5, figure 6 and figure 8 of RFC 9293 |
+| Technical writing and controlled language | ASD-STE100 Issue 9 (2025-01-15) | checked the rule numbers and the applicability boundary |
+| General clear expression | ISO 24495-1:2023 Plain language, Part 1: Governing principles and guidelines | checked that it exists and what it covers; read the original before using a clause |
+| Multimedia learning | Mayer's multimedia learning principles (12 in the 2nd edition, 15 in the 3rd edition, 2020) | checked the counts; state which edition you use |
+| Chinese punctuation and number usage | GB/T 15834-2011, GB/T 15835-2011 | checked the numbers; confirm they are currently in force before use |
+| Chinese scientific and technical terms | China National Committee for Terms in Sciences and Technologies, "术语在线" (Termonline) | checked the entry point; look each term up one by one |
+| Anatomy | Terminologia Anatomica, 2nd edition (FIPAT, 2019) | checked |
+| Electrical graphical symbols | IEC 60617 | checked |
+| Safety signs and colours | ISO 7010:2019, ISO 3864-1 | checked |
+| Gears and axonometric drawing | ISO 1122-1:1998, ISO 701:1998, ISO 5456-3:1996 | checked |
+| Quantities and units | BIPM SI Brochure, ISO 80000 series, International Vocabulary of Metrology (VIM) | seed |
+| Chemistry | IUPAC Gold Book | seed |
+| Software and systems engineering terms | ISO/IEC/IEEE 24765 | seed |
+| Modelling notation | UML, BPMN (OMG) | seed |
+| Aviation radio phraseology | ICAO standard phraseology | seed |
+| News writing and verification | AP Stylebook, Reuters Handbook, Xinhua's banned and cautious words in news reporting; IFCN code of principles | seed |
+| Data visualisation | Cleveland–McGill perceptual ranking, FT Visual Vocabulary | seed |
+| Accessibility and colour | WCAG, Okabe–Ito colour-blind-safe palette | seed |
+| Analogy and cognitive load | Gentner's structure mapping, Lakoff–Johnson conceptual metaphor, Sweller's cognitive load, predict–observe–explain | seed |
 
-## STE-zh：受控表达
+## STE-zh: controlled expression
 
-`controlled_lint.py` 只查机械问题：句长、分号、被动、含糊词、首次出现的术语是否定义、禁用别名、口播读音。它不判断事实是否正确、比喻是否贴切，也不判断观众是否看懂。
+`controlled_lint.py` checks mechanical problems only: sentence length, semicolons, passive voice, vague words, whether a term is defined at first use, forbidden aliases, and pronunciation for narration. It does not judge whether a fact is correct, whether a metaphor fits, or whether the audience understood.
 
-| 检查码 | 来自 STE 的哪一条 | 中文改编 | 默认级别 |
+| Check code | Which STE rule it comes from | Chinese adaptation | Default level |
 | --- | --- | --- | --- |
-| sentence_over_target / sentence_too_long | 5.1 程序句 ≤20 词；6.3 描述句 ≤25 词 | 按字数：描述与注释 22/30，程序与警告 18/24（目标/硬上限） | 超目标为提示，超硬上限为警告 |
-| too_many_sentences | 6.6 段落 ≤6 句 | 每段 ≤6 句 | 警告 |
-| semicolon | 8.1 不用分号 | 同 | 警告 |
-| passive_marker | 3.6 用主动语态 | 检测“被”字句 | 警告；口播档为提示 |
-| multiple_instructions | 5.2 一句一个指令 | 程序句、警告句里含并列动作的连接词 | 警告 |
-| forbidden_alias | 1.11 不用不同的技术名词指同一事物 | 术语卡的 `aliases_forbidden` | 错误 |
-| undefined_on_first_use | 1.8 用本领域认可的技术名词 | 首次出现要有定义（本 Skill 补充） | 警告 |
-| vague_word、unclear_reference | 精神相近，无直接条文 | 含糊词表、句首代词 | 警告、提示 |
-| colloquial | 1.10 不用俚语和行话 | 口语词表 | 技术文字档警告；口播档关闭 |
-| missing_pronunciation、symbol_in_speech | STE 不管口头表达 | 口播档补充：没有读音的外文词、口播里的符号 | 警告、提示 |
-| placeholder_text | 无 | TODO、待填写、待补充、TBD | 错误 |
+| sentence_over_target / sentence_too_long | 5.1 procedural sentences ≤20 words; 6.3 descriptive sentences ≤25 words | by character count: description and notes 22/30, procedure and warning 18/24 (target / hard ceiling) | over target is a hint, over the hard ceiling a warning |
+| too_many_sentences | 6.6 paragraphs ≤6 sentences | ≤6 sentences per paragraph | warning |
+| semicolon | 8.1 no semicolons | same | warning |
+| passive_marker | 3.6 use the active voice | detects "被" sentences | warning; a hint in the spoken profile |
+| multiple_instructions | 5.2 one instruction per sentence | conjunctions joining parallel actions in procedure and warning sentences | warning |
+| forbidden_alias | 1.11 do not use different technical names for the same thing | the term card's `aliases_forbidden` | error |
+| undefined_on_first_use | 1.8 use technical names accepted in the field | define it at first use (an addition by this skill) | warning |
+| vague_word, unclear_reference | similar in spirit, no direct clause | vague-word list, pronouns at the start of a sentence | warning, hint |
+| colloquial | 1.10 no slang and no jargon | colloquial word list | warning in the technical-text profile; off in the spoken profile |
+| missing_pronunciation, symbol_in_speech | STE does not cover spoken delivery | spoken-profile addition: foreign words with no pronunciation, symbols in narration | warning, hint |
+| placeholder_text | none | TODO, 待填写, 待补充, TBD | error |
 
-句长数字为听感推算：每秒约 4–5 个字，硬上限 30 字约 6–7 秒。项目可在 `expression.limits` 覆盖。STE 的受控词表（第二部分）这里不复制，用术语卡代替：只管本片用到的词。
+The sentence-length numbers are a listening estimate: about 4–5 characters per second, so a hard ceiling of 30 characters is about 6–7 seconds. A project may override them in `expression.limits`. The STE controlled dictionary (part 2) is not copied here; term cards replace it — they cover only the words this film uses.
 
-两个档位：
+Two profiles:
 
-- `ste-zh-v1`：技术文字、字幕、铭牌、图注。
-- `ste-zh-spoken`：口播与旁白。允许亲切口语，但术语、句长和读音仍受控。
+- `ste-zh-v1`: technical text, subtitles, nameplates, captions.
+- `ste-zh-spoken`: narration and voiceover. Friendly colloquial speech is allowed, but terms, sentence length and pronunciation stay controlled.
 
 ```text
 python3 SKILL_ROOT/scripts/controlled_lint.py --text-file script.md --profile ste-zh-spoken --glossary pack.json
 python3 SKILL_ROOT/scripts/controlled_lint.py --text-file script.md --glossary pack.json --emit-speech speech.txt
 ```
 
-`--glossary` 可以是知识包，也可以是内嵌 `knowledge` 的计划。`--emit-speech 文件` 在检查通过后，把读音表应用到稿件，写出可交给语音合成的文字；目标文件已存在时拒绝覆盖，也不判断读对了没有。稿件里可用单独一行的 `<!-- kind=procedure layer=L2 id=seg-03 defines=term-a lint=off speak=off -->` 给下一段标注类型、层级和已定义的术语，或关闭检查与朗读。
+`--glossary` may be a knowledge pack or a plan with an inline `knowledge`. After the check passes, `--emit-speech file` applies the pronunciation list to the script and writes out text you can hand to speech synthesis; it refuses to overwrite an existing target file, and it does not judge whether the reading is right. In the script, a line of its own, `<!-- kind=procedure layer=L2 id=seg-03 defines=term-a lint=off speak=off -->`, annotates the next paragraph with its type, layer and already-defined terms, or turns off the check and the reading.
 
-## 读音词典
+## Pronunciation dictionary
 
-语音合成常把英文缩写读错。口播里出现的外文词、缩写，要在 `expression.pronunciations` 或术语卡的 `spoken_as` 里写明读法，例如“SYN”写成“S Y N”。`plan.scenes[].narration[].spoken` 写读音表处理后的最终读法，`display` 写字幕的规范写法，两者不同是正常的。数字里像编号的（如标准号）也单独写读法。
+Speech synthesis often misreads English abbreviations. Foreign words and abbreviations that appear in narration must have their reading written in `expression.pronunciations` or in the term card's `spoken_as`, for example write "SYN" as "S Y N". `plan.scenes[].narration[].spoken` holds the final reading after the pronunciation list has been applied, `display` holds the canonical subtitle form; it is normal for the two to differ. Numbers that look like identifiers (a standard number, say) also get a reading of their own.
 
-## 例外
+## Exceptions
 
-创意文案、诗化旁白、品牌口号可以把 `expression.profile` 设为 `none`，并写下 `reason`。规范让位于观众理解：不要为了通过检查，把自然的话改成别扭的话。通过检查不证明讲得好；是否讲得好，靠新手读者和懂行读者的检查（见 [知识包合同](knowledge-pack.md)）。
+Creative copy, poetic voiceover and brand slogans may set `expression.profile` to `none` and write a `reason`. The standard gives way to audience comprehension: do not turn natural speech into awkward speech just to pass the check. Passing the check does not prove it is well told; whether it is well told is checked by novice readers and by readers who know the field (see the [knowledge pack contract](knowledge-pack.md)).
 
-## 最小术语卡
+## Minimum term card
 
 ```json
 {
@@ -114,4 +114,4 @@ python3 SKILL_ROOT/scripts/controlled_lint.py --text-file script.md --glossary p
 }
 ```
 
-首选写法、禁用别名与缩写在整片内统一；定义要短，要写成观众能直接说出口的话。
+The preferred form, forbidden aliases and abbreviation are unified across the film; the definition stays short and is written the way a viewer could say it out loud.

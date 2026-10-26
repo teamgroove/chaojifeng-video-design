@@ -1,86 +1,86 @@
-# 发布片节拍表（设计笔记，不是必填流程）
+# Launch-film beat sheet (a design note, not a required process)
 
-用在30秒级的产品发布片、宣传片或多功能串联上；单个功能的8–15秒片只填第0、3、5节。方法依据见 [发布片语法](../references/launch-film-grammar.md)，数值一律从自己的内容推算，不照抄参考片。没有依据的格子写“无”，不要编。
+Use it for a 30-second launch film, a promo, or several features chained together; for a single-feature 8–15 second film fill only sections 0, 3 and 5. The method is in [launch film grammar](../references/launch-film-grammar.md); derive every number from your own content, never copy it from a reference film. In a cell with no grounds write "none" — do not make it up.
 
-## 0. 一句话
+## 0. In one sentence
 
-- 观众是谁，此前怎样做这件事：
-- 看完后能做或想做什么：
-- 贯穿线（一句话，片里每段都能回扣）：
-- 风险：这条片最可能被误解成什么：
+- Who the audience is, and how they do this thing today:
+- What they can do or want to do after watching:
+- Through-line (one sentence, one that every section of the film can point back to):
+- Risk: what this film is most likely to be misread as:
 
-## 1. 证据盘点
+## 1. Evidence inventory
 
-| 项 | 真实依据（界面、文案、数字、成品） | 来源与日期 | 能否放进成片 |
+| Item | Real grounds (interface, copy, numbers, finished output) | Source and date | Usable in the finished film |
 | --- | --- | --- | --- |
-| 旧办法的困难 | | | |
-| 最自然的替代办法及其产出 | | | |
-| 产品的真实输入 | | | |
-| 产品的真实成品 | | | |
-| 观众的第一步 | | | |
+| The difficulty of the old way | | | |
+| The most natural alternative and what it produces | | | |
+| The product's real input | | | |
+| The product's real finished output | | | |
+| The audience's first step | | | |
 
-没有“旧办法的困难”就别硬造痛点段；没有“真实成品”就不能做自证章节，先补依据或改成示意并标明。
+Without "the difficulty of the old way" do not force a pain-point section; without a "real finished output" there is no proof section — add the grounds first, or turn it into a labelled illustration.
 
-## 2. 弧线取舍（每段都可以删）
+## 2. Choosing the arc (every section can be cut)
 
-| 段 | 做／删 | 为什么 | 目标秒 | 最短窗的依据（字数、证据复杂度） |
+| Section | Keep / cut | Why | Target seconds | Grounds for the minimum window (word count, evidence complexity) |
 | --- | --- | --- | --- | --- |
-| 钩子（一条真实输入） | | | | |
-| 痛点（量级与数字） | | | | |
-| 判决阶梯（0到2层） | | | | |
-| 转折（一次） | | | | |
-| 调用（一句话启动产品） | | | | |
-| 自证（章节，3到4个以内） | | | | |
-| 行动（观众的第一步） | | | | |
-| 落款 | | | | |
+| Hook (one real input) | | | | |
+| Pain point (magnitude and numbers) | | | | |
+| Verdict ladder (0 to 2 levels) | | | | |
+| Turn (once) | | | | |
+| Invocation (one sentence that starts the product) | | | | |
+| Proof (sections, no more than 3 to 4) | | | | |
+| Action (the audience's first step) | | | | |
+| Sign-off | | | | |
 
-总长 = 各段最短窗相加 + 接缝与落定；超过目标时先删镜或减字，不加速。
+Total length = the minimum windows added up + seams and settles; when it exceeds the target, cut shots or cut words first, never speed up.
 
-## 3. 逐镜表
+## 3. Shot-by-shot table
 
-| beat_id | 起止（整片绝对秒） | 观众所得 | 画面动作与可见触发 | 真实／重建／示意 | 声音职责 | 阅读窗 |
+| beat_id | Start–end (absolute seconds of the whole film) | What the audience gains | Picture action and visible trigger | Real / rebuilt / illustrated | Sound's job | Reading window |
 | --- | --- | --- | --- | --- | --- | --- |
 | | | | | | | |
 
-每次场景变化写出触发它的动作；写不出就改成快速淡化。
+For every scene change write the action that triggers it; if you cannot, change it to a fast dissolve.
 
-## 4. 打字稿
+## 4. Typing script
 
-| 句子 | 意图（表达／引用／命令） | 字数 | 字符速率 | 打完后的阅读窗 |
+| Sentence | Intent (state / quote / command) | Word count | Character rate | Reading window after the last character |
 | --- | --- | --- | --- | --- |
 | | | | | |
 
-长串引用物改用粘贴并高亮；速度是节奏参数，不是可读性保证。
+For long quoted material switch to paste-and-highlight; speed is a rhythm parameter, not a guarantee of legibility.
 
-## 5. 声音
+## 5. Sound
 
-- 声音事件表：`audio-event-map.json`（结构见 [模板](audio-event-map.json)），画面动作与声音排程由同一份数据生成。
-- 转折：铺垫多长、断拍多长、落拍领先画面多少（整片只一次）：
-- 接缝：浅谷的深度与长度，哪些接缝不加声：
-- 音乐来源与许可：
-- 渲染后审计：对不含音乐的音效分轨运行 `audio_event_audit.py`，记录容差与结果。
-- 听审：已听／未听（没有回听就写未听）：
+- Audio event map: `audio-event-map.json` (structure in the [template](audio-event-map.json)); picture action and the sound schedule are generated from the same data.
+- The turn: how long the setup runs, how long the beat drops out, how far the landing beat leads the picture (once in the whole film):
+- Seams: the depth and length of the shallow trough, and which seams get no sound:
+- Music source and licence:
+- Post-render audit: run `audio_event_audit.py` on the SFX stem without music, and record the tolerance and the result.
+- Listening pass: heard / not heard (write not heard if you have not listened back):
 
-## 6. 界面复刻清单
+## 6. Interface rebuild checklist
 
-| 界面 | 取自哪份真实截图或源码 | 保留的可识别特征 | 重建标注位置 | 最小字号（成片尺寸） |
+| Interface | Which real screenshot or source it comes from | Recognisable features kept | Where the rebuild label sits | Minimum type size (at delivery size) |
 | --- | --- | --- | --- | --- |
 | | | | | |
 
-## 7. 开拍前自查
+## 7. Self-check before you shoot
 
-逐条回答 [成片自查](../references/launch-film-grammar.md#六成片自查逐条回答答不上就返修)，答不上的先返修。重点三条：
+Answer the [finished-film self-check](../references/launch-film-grammar.md#6-finished-film-self-check-answer-each-line-if-you-cannot-rework) item by item; rework anything you cannot answer. Three that matter most:
 
-1. 静音看，每次场景变化都能说出触发动作吗？
-2. 删掉第二层判决或任意一章，是否更清楚？
-3. 缩到手机屏，主证据和最小的字还能辨认吗？
+1. Watch it muted: can you name the triggering action at every scene change?
+2. Cut the second verdict level or any one section — is it clearer?
+3. Shrink it to a phone screen: are the main evidence and the smallest text still legible?
 
-## 8. 登记（诚实）
+## 8. Register (honestly)
 
-| 项 | 状态 | 证据路径或说明 |
+| Item | Status | Evidence path or note |
 | --- | --- | --- |
-| 设计 | authored／reviewed | |
-| 预览（逐段看帧） | not_run／partial／passed | |
-| 导出与实测（切点、响度、事件审计） | not_run／partial／passed | |
-| 听审 | not_run／partial／passed | |
-| 观众理解 | not_run | 没有观众实验就保持 not_run |
+| Design | authored / reviewed | |
+| Preview (frame check per section) | not_run / partial / passed | |
+| Export and measurement (cuts, loudness, event audit) | not_run / partial / passed | |
+| Listening pass | not_run / partial / passed | |
+| Audience comprehension | not_run | Keep it at not_run unless you ran an audience test |

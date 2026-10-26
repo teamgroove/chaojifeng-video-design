@@ -1,24 +1,24 @@
-# 本次视频方向
+# Direction for this film
 
-- 观众与看完所得
-- 观众起点／终点、核心感受与一条贯穿线
-- 准确主张、事实与证据
-- 结构选择与理由；关键人物／产品／物体／概念的使命与稳定身份
-- 内容关系、视觉焦点与选取理由
-- 参考卡：实际观察范围、表达目的、可迁移关系、本片差距与验收办法
-- 一到三个关键瞬间：之前 → 事件 → 之后 → 观众所得；先不用特效名称
-- 研究问题、备选方向的实质差异、选定理由与停止研究的依据
-- 审美边界：目标感受 → 可观察选择 → 失败信号 → 修正动作
-- 风格token与主题专属手法
-- 每镜信息变化、揭示顺序、视点／运动目的与下一镜接力
-- 主运动、次级响应、落定阅读与退场；同属性控制者与跨镜接力
-- 主声、视觉母题、声音动机、能量起伏与静默／释放；本次由旁白、乐段或任务因果领拍
-- 保持的品牌/事实/素材
-- 参考职责与连续性：参考ID／版本、负责什么、固定项、可变项、使用镜头
-- 关键帧、风险与执行路线；能力证据／待验、小样判据、资源上限与替代方案
-- 最难关系的小样、替代镜头、探索上限与停止条件
-- 关键表达兑现：意图与已有镜头／节拍 → 实际声画依据 → 未兑现处或克制理由
-- 六项审片证据：声音、画面、审美、节奏、叙事、科技感
-- 返修：问题时间点、严重度、证据与影响、修改、复验范围／结果及停止条件
+- The audience and what they gain by the end
+- Where the audience starts / ends, the core feeling and one through-line
+- The precise claim, the facts and the evidence
+- The structural choice and why; the mission and stable identity of the key person / product / object / concept
+- Content relationships, the visual focus and why it was chosen
+- Reference card: the range actually observed, the expressive purpose, the transferable relationship, this film's gap and how it will be checked
+- One to three key moments: before → event → after → what the audience gains; no effect names yet
+- The research question, the substantive difference between the alternative directions, why one was chosen and what ends the research
+- Aesthetic boundary: target feeling → observable choice → failure signal → corrective action
+- Style token and the subject's own device
+- Per shot: the change in information, the reveal order, the purpose of the viewpoint / motion and the handoff to the next shot
+- Main motion, secondary response, settle and read, exit; who else controls the same property and the cross-shot handoff
+- Lead sound, visual motif, sound motif, the rise and fall of energy and silence / release; here the beat is led by narration, a musical section or the task's own causality
+- The brand / facts / assets to keep
+- Reference job and continuity: reference ID / version, what it is responsible for, fixed items, variable items, the shots that use it
+- Keyframes, risks and the execution route; capability evidence / unchecked, the sample's pass criteria, the resource cap and the fallback
+- A sample of the hardest relationship, the alternative shot, the exploration cap and the stop condition
+- Key expression delivered: intent and the existing shot / beat → the actual sound-and-image grounds → what was not delivered, or why restraint was right
+- The six review evidence items: sound, picture, aesthetics, rhythm, narrative, sense of technology
+- Rework: the time point of the problem, severity, evidence and impact, the change, the re-check scope / result and the stop condition
 
-参考 [创意导演与编排](../references/creative-direction.md) 与 [镜头生产统筹](../references/shot-production.md)，适用于全部场景。这些是方向记录项，不新增JSON字段或必交文件。复杂任务按需展开，简单任务写plan.design；用户未要求先评方向时不固定停等。
+See [creative direction and arrangement](../references/creative-direction.md) and [shot production planning](../references/shot-production.md); they apply to every scenario. These are direction record items; they add no JSON fields and no mandatory files. Expand them as needed on complex tasks and write plan.design on simple ones; when the user has not asked to review the direction first, do not stop and wait by default.

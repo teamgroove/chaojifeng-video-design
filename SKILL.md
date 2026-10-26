@@ -1,30 +1,30 @@
 ---
 name: chaojifeng-video-design
-description: 设计和制作产品演示、知识讲解（含 Rap／说唱）、资讯、图片成片、故事、功能动效、品牌短片与音乐视觉视频。支持选择或扩展视频风格、组合动效、强化前三秒、素材调度、音乐编排、参考片研究和局部修改；从导演意图到可编辑计划、制作、审片及可播放成片，也可只交方案或分镜。模型与引擎中立，按任务加载风格包和技术能力。
+description: Design and produce product demos, knowledge explainers (including rap), news briefs, image-driven films, stories, feature motion, brand films and music visuals. Supports choosing or extending video styles, combining motion effects, strengthening the first three seconds, asset routing, music arrangement, reference-film study and local revision; from directorial intent to an editable plan, production, review and a playable film — or delivery of just the plan or the storyboard. Model- and engine-neutral; loads style packs and technical capabilities per task.
 ---
 
-# 超级峰的视频设计方法论
+# Chaojifeng's video design methodology
 
-先决定观众要理解或感受到什么，再组织镜头、素材、文字与声音。故事属于当前题材，风格提供材质和表达语法，实现由实际可用工具完成。
+Decide first what the audience must understand or feel, then organise shots, assets, text and sound. The story belongs to the subject at hand; the style supplies material and a grammar of expression; realisation is done with the tools actually available.
 
-## 先确定范围
+## Fix the scope first
 
-1. 读 [已确认经验](data/memory.md)、用户输入和项目适用说明。复用已有工程、素材、进程与渲染器，核实资源归属。
-2. “做视频、宣传片、生成成片”交付可播放视频、必要编辑源和验证摘要。只要方案、分镜或单个动效时按明确范围完成。已有作品局部修改保留其他内容和稳定 ID。
-3. 从上下文补齐受众、观众变化、事实、品牌、素材、画幅、时长、声音和用途。自行决定低影响选择；事实、必要素材或费用授权真正阻断结果时再问。
-4. 明确 direct 时连续完成整片、内部检查和必要返修，不增加试片或方向确认门禁。只有用户要求 staged 才在约定节点等待。两种模式均检查事实、阅读、声音与实际导出。
+1. Read the [confirmed learnings](data/memory.md), the user's input and any project-specific notes. Reuse existing projects, assets, processes and renderers, and verify who owns each resource.
+2. "Make a video / a promo / generate the finished film" delivers a playable video, the necessary editing sources and a verification summary. When only a plan, a storyboard or a single motion effect is asked for, deliver exactly that scope. A local revision of an existing piece keeps the rest of the content and the stable IDs.
+3. Fill in audience, viewer change, facts, brand, assets, aspect ratio, duration, sound and purpose from context. Decide low-impact choices yourself; ask only when facts, required assets or cost authorisation genuinely block the result.
+4. With an explicit "direct", complete the whole film, the internal checks and any necessary rework in one continuous run, without adding test cuts or direction sign-off gates. Wait at the agreed checkpoints only when the user asks for "staged". In both modes, check facts, reading, sound and the actual export.
 
-## 按职责加载
+## Load by responsibility
 
-| 要解决的问题 | 读取与动作 |
+| Problem to solve | Read and do |
 | --- | --- |
-| 故事、镜头、声音、观众变化 | [DIRECTOR.md](DIRECTOR.md)，再按 [任务路由](references/task-routing.md) 加载相关方法 |
-| 选择、变体、借用或新增风格 | 用 [风格画廊](assets/gallery/index.html) 看画面、来源样片与并排对比；按 [风格包合同](references/style-pack-contract.md) 精确查询 ID／中文名／英文名，只读选中包的 STYLE.md 与其引用 |
-| 工具、引擎、素材、实际制作 | [TECHNIQUE.md](TECHNIQUE.md)，能力探测后沿已有工程制作 |
-| 首次扩展、维护、导入与目录生成 | [MAINTAINING.md](MAINTAINING.md)，维护库与制作当前作品分别处理 |
-| 从计划走到成片 | [制作流程](references/production-workflow.md)、[计划合同](references/plan-contract.md)和[审片与修改](references/review-and-revision.md) |
+| Story, shots, sound, viewer change | [DIRECTOR.md](DIRECTOR.md), then load the relevant methods per [task routing](references/task-routing.md) |
+| Choosing, varying, borrowing or adding a style | Use the [style gallery](assets/gallery/index.html) to see the frames, source samples and side-by-side comparisons; look up the exact ID / Chinese name / English name per the [style pack contract](references/style-pack-contract.md), and read only the chosen pack's STYLE.md and what it references |
+| Tools, engines, assets, actual production | [TECHNIQUE.md](TECHNIQUE.md); probe the capabilities, then produce along the existing project |
+| First extension, maintenance, import and catalog generation | [MAINTAINING.md](MAINTAINING.md); keep maintaining the library separate from producing the current piece |
+| From plan to finished film | [production workflow](references/production-workflow.md), [plan contract](references/plan-contract.md) and [review and revision](references/review-and-revision.md) |
 
-三种入口继续可用：recipe 选择场景配方，compose 组合局部布局和动作，free 自由设计。场景、风格、动效、表达与配方通过 [目录工具](references/commands.md) 按需查询；数量以生成目录为准。表达是指导，源码是实现参考；各自不代表某个宿主已经安装或渲染通过。
+Three entry points stay available: `recipe` picks a scene recipe, `compose` combines local layouts and motion, `free` is open design. Scenarios, styles, motion, expressions and recipes are queried on demand through the [catalog tools](references/commands.md); the counts follow the generated catalog. An expression is guidance, the source code is the implementation reference; neither means that a given host has installed or rendered it successfully.
 
 ```sh
 python3 SKILL_ROOT/scripts/catalog.py --kind style list --scenario knowledge-explainer
@@ -34,21 +34,21 @@ python3 SKILL_ROOT/scripts/validate_plan.py /project/video/plan.json
 python3 SKILL_ROOT/scripts/check_delivery.py /project/video/plan.json /project/video/delivery.json --probe --require-video
 ```
 
-## 制作中持续落实
+## Keep applying during production
 
-- 先写观众变化、贯穿线、元素使命和声音职责，再选择特效。关键镜头明确新增信息、焦点、揭示顺序、稳定停留与下一镜接力。简单任务保持轻量。
-- 事实镜头先找真实产品、原始照片、录像、档案与数据；先查项目缓存与授权资产，只补缺口。无法成立时换镜头或收缩主张。
-- 信息流科普与宣传默认检查首帧和前三秒；概念讲解先核事实、标准与术语，再逐层揭示；Rap 先核知识与可唱歌词，再按真实音轨编排。
-- 有旁白或歌词时取得真实音频，逐句关联画面与字幕；换音轨后重新测量、编排和核对。音乐选择遵循用户指定、项目已选、配方默认的顺序；候选池与默认分开维护，不将某首曲子升为全局默认。
-- 时间使用整片绝对秒与稳定 ID；画面、声音和字幕从同一排程派生。音效较多时使用 [声音事件表](templates/audio-event-map.json)，必要时用 film_probe.py 与 audio_event_audit.py 实测。统一时钟、随机 seek 或声音同步只有实测后才能登记通过。
-- 上游风格的完整规则和可复用源已纳入包中。先确定本片意图，再读案例实现；本片品牌、事实、指定音乐、语言、画幅与交付要求优先。素材、模型或工具许可不从代码许可推断。
-- 内部来源、重建与执行记录单独保存。正文、业务提示词、可见路径、字幕、口播及导出附件直接面向受众，不自动附加制作身份标签或创作自述；保留必要事实边界和授权检查。
-- 必要要求未过先返修。结构、源码可用、实际导出、观看、听审与观众理解分别记录；候选版本不能继承旧版或上游案例的通过状态。
+- Write the viewer change, the through-line, each element's mission and the job of the sound before choosing effects. For key shots state the new information, the focus, the reveal order, a stable dwell and the handoff to the next shot. Keep simple tasks light.
+- For factual shots look for the real product, the original photos, recordings, archives and data first; check the project cache and the licensed assets and fill only the gaps. If that cannot hold, change the shot or shrink the claim.
+- For information-flow explainers and promos, check the first frame and the first three seconds by default; for concept explainers verify facts, standards and terminology first, then reveal layer by layer; for rap verify the knowledge and the singable lyrics first, then arrange against the real audio track.
+- When there is narration or lyrics, get the real audio and tie every line to picture and subtitles; after replacing a track, re-measure, re-arrange and re-check. Music selection follows the order: user choice, already chosen in the project, recipe default; keep the candidate pool separate from the default and never promote one track to a global default.
+- Use absolute seconds of the whole film and stable IDs for timing; picture, sound and subtitles derive from the same schedule. With many sound effects use the [audio event map](templates/audio-event-map.json) and, where needed, measure with `film_probe.py` and `audio_event_audit.py`. A unified clock, a random seek or sound sync may only be logged as passed after measurement.
+- The full rules and the reusable sources of an upstream style are part of the pack. Fix the intent of this film first, then read the case implementation; this film's brand, facts, chosen music, language, aspect ratio and delivery requirements take precedence. Never infer asset, model or tool licences from the code licence.
+- Keep internal sources, reconstruction and execution records separately. Body copy, business prompts, visible paths, subtitles, voiceover and exported attachments face the audience directly — do not attach production identity labels or making-of notes automatically; keep the necessary factual boundaries and licence checks.
+- Rework until the required conditions pass. Record structure, source usability, the actual export, watching, listening and audience comprehension separately; a candidate version cannot inherit a pass status from an older version or from an upstream case.
 
-## 修改、交付与记忆
+## Revision, delivery and memory
 
-按镜头、对象或时间窗定位修改并复验依赖；改配音重新量时，改事实重核来源和图形语义，改色不无故重做声音。扩展读 [扩展合同](references/extension.md)，单片变体写项目，稳定个人风格用外置包与新 ID。
+Locate a revision by shot, object or time window and re-verify the dependencies; re-measure the timing when the voice changes, re-check sources and graphic semantics when facts change, and do not needlessly redo the sound when only the colour changes. For extension read the [extension contract](references/extension.md); a variant of one film belongs in the project, a stable personal style belongs in an external pack with a new ID.
 
-交付真实视频、必要编辑源、素材引用与验证摘要，说明实际工具、未完成项和保留资源。未经要求不上传或发布。清理本次归属明确且不再需要的资源。
+Deliver the actual video, the necessary editing sources, asset references and a verification summary; state the tools actually used, what is unfinished and which resources were retained. Do not upload or publish without a request. Clean up the resources clearly owned by this run that are no longer needed.
 
-运行记录留在项目内；仅将简短结果、明确偏好和可核验问题更新到 data/memory.md，最近 20 次，不存私密素材或长对话。修改 Skill、风格包规范和行为仍遵守宿主已授权的确认流程。来源及许可见 [sources.md](references/sources.md) 和 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+Run logs stay inside the project; only short results, explicit preferences and verifiable problems go into `data/memory.md`, the last 20 runs, with no private assets or long conversations. Changing the skill, the style-pack spec or the behaviour still follows the host's authorised confirmation flow. For sources and licences see [sources.md](references/sources.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

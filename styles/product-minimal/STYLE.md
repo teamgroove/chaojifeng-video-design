@@ -1,22 +1,22 @@
 # 清晰产品
 
-突出界面与操作。
+Make the interface and the operations stand out.
 
-## 风格规则
+## Style rules
 
-- 产品原tokens优先，包装不改写真实UI。
-- 关键文字保持清楚对比。
+- The product's real tokens come first; the packaging does not rewrite the real UI.
+- Key text keeps clear contrast.
 
-## 运动与节奏
+## Motion and rhythm
 
-- 克制动作后稳定呈现结果
-- 平稳减速
-- 每次突出一个语义焦点
+- Restrained moves, then the result held steady
+- Smooth deceleration
+- One semantic focus per beat
 
-## 调整与回退
+## Adjustments and fallbacks
 
-保留真实界面、高对比标题和静态焦点。
+Keep the real interface, high-contrast titles and a static focus.
 
-避免：装饰粒子抢焦点；全局文字反复缩放。
+Avoid: decorative particles stealing the focus; type that keeps rescaling everywhere.
 
-颜色、字形与尺寸见本包 style.json；按真实品牌、画幅与中文阅读检查后使用。
+Colour, typeface and size are in this pack's style.json; use them after checking against the real brand, the aspect ratio and Chinese reading.

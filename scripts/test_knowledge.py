@@ -652,10 +652,12 @@ class ExampleAndCatalogTests(unittest.TestCase):
     def test_counts_in_the_docs_match_the_catalog(self):
         expressions, recipes = len(catalog("expression")), len(catalog("recipe"))
         method = (ROOT / "references" / "expression-method.md").read_text(encoding="utf-8")
-        self.assertIn(f"expression 目录提供{expressions}项", method)
-        self.assertIn(f"recipe目录提供{recipes}类", method)
-        self.assertIn(f"{expressions}项不等于", method)
-        self.assertIn(f"{recipes}类配方", method)
+        # The documentation is English in this fork; the assertions check the same four counts
+        # against the catalog, only the phrasing they quote changed with the translation.
+        self.assertIn(f"the expression catalog offers {expressions} cross-layer expression entries", method)
+        self.assertIn(f"the recipe catalog offers {recipes} combination starting points", method)
+        self.assertIn(f"{expressions} entries are not {expressions} rendered effects", method)
+        self.assertIn(f"{recipes} recipe classes do not guarantee", method)
 
     def test_evals_are_well_formed_and_not_claimed_as_run(self):
         data = load_json(ROOT / "evals" / "knowledge-method-evals.json")

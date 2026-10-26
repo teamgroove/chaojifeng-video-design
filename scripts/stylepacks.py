@@ -56,12 +56,12 @@ def main():
                 raise ValueError("catalog/styles.json is stale; run stylepacks.py build")
             if not args.check:
                 target.write_text(content, encoding="utf-8")
-            lines = ['# 视频风格包', '', '由 style.json 自动生成。新增或修改包后运行 `python3 scripts/stylepacks.py build`。', '', '导航色板用于检索；完整材质、运动、镜头与声音规则在各包 STYLE.md。', '']
+            lines = ['# Video style packs', '', 'Generated from style.json. After adding or changing a pack, run `python3 scripts/stylepacks.py build`.', '', "The navigation palette is for lookup; the full material, motion, camera and sound rules are in each pack's STYLE.md.", '']
             groups = {}
             for ident, item in registry.items():
                 groups.setdefault(item.get('category','其他'), []).append((ident,item))
             for category, items in groups.items():
-                lines.extend(['## '+category, '', '| 风格 | ID | 实现状态 |', '| --- | --- | --- |'])
+                lines.extend(['## '+category, '', '| Style | ID | Status |', '| --- | --- | --- |'])
                 lines.extend(f"| [{v['name']}]({k}/STYLE.md) | `{k}` | {v.get('implementation',{}).get('status','guidance')} |" for k,v in items)
                 lines.append('')
             index = ROOT/'styles/README.md'

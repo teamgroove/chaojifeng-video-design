@@ -1,22 +1,22 @@
 # 单色图解
 
-用位置、线条和强调表达关系。
+Use position, line and emphasis to express relationships.
 
-## 风格规则
+## Style rules
 
-- 箭头定义含义，因果/时间/指向分开。
-- 类别另用文字或线型区分。
+- Arrows define meaning; cause/effect, time and pointing stay separate.
+- Categories are told apart by type or by line style instead.
 
-## 运动与节奏
+## Motion and rhythm
 
-- 先对象后关系，关系后停留
-- 直接轻减速
-- 每次突出一个语义焦点
+- Objects first, then relationships, then a dwell after the relationship
+- Direct, with a light deceleration
+- One semantic focus at a time
 
-## 调整与回退
+## Adjustment and fallback
 
-拆分关系或静态图逐段讲解。
+Split the relationship, or explain a static diagram section by section.
 
-避免：无含义连线；装饰箭头；多个焦点同时闪烁。
+Avoid: connections that mean nothing; decorative arrows; several foci blinking at once.
 
-颜色、字形与尺寸见本包 style.json；按真实品牌、画幅与中文阅读检查后使用。
+Colour, letterforms and sizes are in this pack's style.json; check them against the real brand, the aspect ratio and Chinese reading before use.

@@ -1,42 +1,42 @@
-# 前三秒：让观众认出对象、看见变化并愿意跟随
+# The first three seconds: make the viewer recognise the object, see the change and want to follow
 
-信息流科普与宣传默认启用本方法，不等用户再次提醒前三秒；其他媒介按受众、用途与用户约束选择。先写受众与观看后所得；三秒是内容进入的设计窗口，不能保证停留，也不自动适用于所有媒介和长片。
+Feed-based explainers and promos turn this method on by default, without waiting for the user to remind you about the first three seconds again; for other media, choose by audience, purpose and user constraints. Write the audience and what they get from watching first; the three seconds are a design window for content to enter, they cannot guarantee a stay, and they do not automatically apply to every medium or long film.
 
-## 首帧进入主题，前三秒已有所得
+## The first frame enters the subject; by three seconds something is gained
 
-首帧就有可辨对象或情境；前三秒用具体事实、动作、变化或后果给出观看价值，避免只有空泛问句、品牌落款或器乐等待。说唱科普首句就承载内容，并有相应画面；不能让字幕已讲第一句、演唱却仍在长前奏中。用实际导出核首个有效信息、首句人声及画面兑现时刻，未实查不记通过。
+The first frame already holds a recognisable object or situation; the first three seconds give viewing value through a concrete fact, action, change or consequence — avoid nothing but a vague question, a brand sign-off or instrumental waiting. A rap explainer carries content in its first line and shows the matching picture; subtitles must not have delivered line one while the vocal is still in a long intro. Verify the moment of the first valid piece of information, of the first sung line and of the picture paying off against an actual export; do not record a pass without having checked.
 
-可取后段钩子冷开场，或缩短无信息引子；剪辑前核原声是否锁定，剪后重算源到成片映射、字幕、动作和音效，再查起音、残词、呼吸、尾音与接回正文。只把音轨向前挪而保留旧字幕不算解决。用户明确保留前奏、完整原曲或其他媒介节奏时优先遵从并说明本片选择，不硬截三秒。
+You may cold-open on a hook pulled from a later section, or shorten an information-free lead-in; check whether the original track is locked before cutting, and after cutting recompute the source-to-film mapping, subtitles, action and SFX, then check onsets, leftover words, breaths, tails and the hand back to the body. Shifting the audio track earlier while keeping the old subtitles is not a fix. When the user explicitly keeps the intro, the complete original song or another medium's rhythm, follow that first and state the choice for this film — do not hard-cut at three seconds.
 
-## 写一个能看见的开场事件
+## Write an opening event you can see
 
-沿现有方向或 scene.intent 记录：首帧让谁认出什么、最先出现的变化、声音职责、第三秒仍想知道什么、正文在哪兑现。简单片几句话即可，不为填表增加文档。
+Record along the existing direction or scene.intent: who recognises what in the first frame, the first change to appear, sound's job, what the viewer still wants to know at second three, and where the body pays it off. A few sentences suffice for a simple film; do not add a document just to fill in a table.
 
-| 可选机制 | 适用条件 | 画面起点 | 失败信号 |
+| Optional mechanism | Applies when | Picture starting point | Failure signal |
 | --- | --- | --- | --- |
-| 共鸣动作 | 受众已有明确任务或摩擦 | 熟悉对象停在一个未完成动作上，随后看见原因或改变 | 只有泛泛问句，没有具体对象或处境 |
-| 结果反差 | 产品核心变化足够可见 | 同一对象、稳定构图中改变关键变量，结果落定 | 同时换光线、颜色和主体，无法分辨产品做了什么 |
-| 可读的意外 | 有与能力或主题相连的异常事件 | 一个违反日常预期的动作引出问题，再回到可信解释 | 为惊讶制造误解，后文无法兑现或与产品无关 |
+| Relatable action | The audience already has a clear task or friction | A familiar object stops in an unfinished action, then the cause or the change appears | Nothing but a vague question, with no concrete object or situation |
+| Result contrast | The product's core change is visible enough | Change one key variable on the same object in a stable composition and let the result settle | Light, colour and subject all change at once, so you cannot tell what the product did |
+| Readable surprise | There is an anomaly tied to the capability or the subject | One action that breaks everyday expectation raises the question, then returns to a credible explanation | A misunderstanding is manufactured for surprise and the body cannot pay it off, or it has nothing to do with the product |
 
-这些是选择起点，不要求每片做三案、每次先问句或固定制造反转。意外可由动作、尺度、声音与构图产生；文案直接说清事件或用途，不替观众编一个错误认知再推翻。
+These are starting points: they do not require three options per film, a question first every time, or a reversal manufactured on schedule. Surprise can come from action, scale, sound and composition; copy can state the event or the use plainly instead of planting a wrong belief in the viewer and then knocking it down.
 
-## 控制注意力与接缝
+## Control attention and the seams
 
-第一帧有可识别对象；核心变化发生时让标题、贴纸、粒子和背景让出注意力。动作前能找到对象，动作后能看清结果；小幅变化可用景别、并置或局部强调放大，不只增加特效。用实际观看尺寸检查，不设通用的动作数量或切镜频率。
+Frame one holds an identifiable object; when the core change happens, titles, stickers, particles and background step back. The object is findable before the action, and the result readable after it; a small change can be amplified with shot size, juxtaposition or local emphasis — not only with more effects. Check at the actual viewing size, and set no universal action count or cut rate.
 
-需要声音时，确定它在建立视角、确认动作、制造期待还是接回正文。可以提前取后段音乐的短片段作冷开场，但须记录源入出点和成片位置，核节拍、尾音与回到正片的连续性。静音也应保留必要观看理由，不让理解只依赖演唱。
+When sound is needed, decide whether it establishes the point of view, confirms the action, builds anticipation or hands back to the body. You can pull a short piece of later music forward as a cold open, but record the source in and out points and the position in the film, and check tempo, tails and continuity on the return to the main cut. Muted, the necessary reason to watch has to remain — do not let comprehension depend only on singing.
 
-提前给答案后，正文要继续增加操作、原因、结果或用途。回到时间较早的故事时有可辨桥接，避免把相同问题完整重讲。结尾承接品牌、价值或真实下一步，不默认附扫码、搜索或下载引导；按用户与实际渠道约束决定。
+After giving the answer early, the body has to keep adding operation, cause, result or use. When it returns to an earlier moment in the story, make the bridge recognisable, and avoid retelling the same problem in full. The ending carries the brand, the value or a real next step; do not append a QR code, search or download prompt by default — decide by user and actual channel constraints.
 
-## 用小样比较，再看实际效果
+## Compare with small tests, then look at the actual result
 
-普通任务自行选合适机制；开场选择会影响整片且收益明确时，可做少量低成本小样，共用正文和基础播放条件，只改变开场的主要机制。候选数量、时长和资源沿任务预算，不默认生成大量版本。
+For an ordinary task, pick the suitable mechanism yourself; when the opening choice affects the whole film and the gain is clear, you can make a small number of low-cost samples that share the body and the basic playback conditions and change only the opening's main mechanism. Candidate count, length and resources follow the task budget; do not default to generating many versions.
 
-1. **静音看**：能否认出主体、变化与用途；最重要的差异是否被装饰遮住。
-2. **有声连看**：声音与动作的主次、起音和接回正文是否自然；没回听就记未听审。
-3. **实际尺寸看**：目标画幅、手机尺寸、字幕及渠道UI遮挡区；没有真机/平台预览就保留缺口。
-4. **有观众或发布数据时**：核理解是否正确，再按同平台定义比较开场与后续留存、观看时长和业务动作；记录样本和条件，不能混用不同口径或声称单一开场造成变化。
+1. **Watch muted**: can you recognise the subject, the change and the use; is the most important difference hidden by decoration.
+2. **Watch with sound, continuously**: are the foreground-background of sound and action, the onsets and the hand back to the body natural; if you did not listen back, record no listening pass.
+3. **Watch at the actual size**: the target aspect ratio, phone size, subtitles and the areas the channel UI covers; without a real device / platform preview, keep the gap open.
+4. **With audience or publishing data**: check whether comprehension is correct, then compare opening versus later retention, watch time and business action under the same platform's definitions; record the sample and the conditions, and do not mix definitions or claim that a single opening caused the change.
 
-帧差、运动量和响度用于找候选问题，不能判断共鸣或沉浸。静止可能服务阅读；更多运动不自动更好。若停留提高但观众误认产品能力，回到主张和画面关系修改，不算完成表达目标。
+Frame difference, motion amount and loudness are for finding candidate problems — they cannot judge resonance or immersion. Stillness can serve reading; more motion is not automatically better. If the stay goes up but the viewer misreads the product's capability, go back and fix the claim and the picture relationship; that does not count as meeting the expression goal.
 
-方法是过程研究后的设计指导，暂无观众实验。官方平台建议及适用边界见 [sources.md](sources.md#产品音乐叙事与创作过程研究)，不能从平台广告建议推导任意产品或渠道的效果保证。
+The method is design guidance from process research, with no audience experiment yet. See [sources.md](sources.md#product-music-narrative-and-a-study-of-the-creative-process) for official platform advice and its boundaries of applicability; no effect guarantee for any product or channel can be derived from platform advertising advice.

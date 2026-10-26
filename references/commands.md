@@ -1,6 +1,6 @@
-# 常用查询与检查
+# Common queries and checks
 
-将 SKILL_ROOT 替换为本 Skill 根目录。选项以脚本 --help 为准；检查不代替实际制作、观看和试听。
+Replace SKILL_ROOT with this Skill's root directory. Options follow each script's --help; a check does not replace actual production, watching and listening.
 
 ```text
 python3 SKILL_ROOT/scripts/catalog.py --kind scenario list

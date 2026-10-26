@@ -1,66 +1,66 @@
-# 让观众看清当前重点
+# Let the viewer see what matters right now
 
-用于真实截图、录屏、图表、功能与结果证据的强调。先问这一时刻观众应该看哪里、知道什么或做什么，再选框、标签、引线、聚焦或局部放大。无需给每镜加框；图像故事、品牌意象和音乐表演没有操作教学点时可完全不用。
+Used for emphasis on real screenshots, screen recordings, charts, and feature and result evidence. Ask first where the viewer should look at this moment, what they should know or what they should do, then choose box, label, leader line, focus or local zoom. Not every shot needs a frame; image stories, brand imagery and music performance with no operational teaching point can do without entirely.
 
-本方法从 screenshot-annotator 的目标完整性、文字保护、动作标签和独立复核提炼；视频的坐标变换、时序和接力是本Skill的适配。不要求安装另一Skill，也不把静态标注脚本当视频跟踪器。
+This method is distilled from screenshot-annotator's target completeness, text protection, action labels and independent review; the coordinate transforms, timing and handoff on the video side are this Skill's adaptation. Do not require the other Skill to be installed, and do not mistake a static annotation script for a video tracker.
 
-## 按表达任务选强调
+## Choose the emphasis by the expressive task
 
-| 观众任务 | 可用表达 | 检查重点 |
+| Viewer task | Available expressions | What to check |
 | --- | --- | --- |
-| 找到当前入口 | 完整控件框 + 短动作标签，按需连接线 | 同时包括必要图标、文字和容器；排除相邻入口 |
-| 看清功能反馈 | 初态→触发→结果，重点随信息转移 | 不用标签替产品制造未发生的状态；结果留阅读时间 |
-| 看懂密集界面 | 保留全局语境→局部放大或独立详情→返回 | 聚焦的局部能追溯到原界面；必要背景不误裁 |
-| 看懂关系或关键数据 | 少量高亮、引线、命名与同尺度对照 | 数值、单位、条件与图例仍可读，线不穿关键内容 |
-| 分清步骤或选项 | 真实步骤用数字，互斥入口用字母 | 单独重点免多余1；一般信息对比无需强加A/B |
+| Find the current entry point | Full control box + short action label, leader line where needed | Include the necessary icon, text and container together; exclude the neighbouring entry point |
+| See the feature feedback clearly | Initial state → trigger → result, emphasis moving with the information | Do not let a label conjure a state the product never entered; leave reading time on the result |
+| Understand a dense interface | Keep the global context → zoom in or cut to a standalone detail → return | The focused area traces back to the original interface; necessary background is not cropped away |
+| Understand a relationship or key data | A few highlights, leader lines, naming and same-scale comparison | Numbers, units, conditions and legends stay readable; lines do not cross key content |
+| Tell steps or options apart | Numbers for real steps, letters for mutually exclusive entry points | A single emphasis needs no superfluous 1; a plain information comparison needs no forced A/B |
 
-标签说动作、可见结果或解释。例如“选择任务”“查看执行结果”；画面已经说明动作时，也可以短句解释收益。不要只贴内部对象名或制作页码，不把一段业务说明塞进标签。标注与旁白、字幕表达同一重点，避免观众同时读三处新信息。
+A label states the action, the visible result or an explanation. For example "Select a task", "Check the run result"; when the picture already shows the action, a short phrase on the payoff also works. Do not paste internal object names or production page numbers, and do not stuff a paragraph of business explanation into a label. Annotation, voiceover and subtitles carry the same point, so the viewer is never reading three pieces of new information at once.
 
-## 目标准确，标签避让
+## Accurate targets, labels that get out of the way
 
-目标边界是内容事实。定义 must_include 和 must_exclude，把它作为完整视觉单元；移动标签解决遮挡，不能移动真实目标来迁就排版。菜单包含图标与文字，下载不连带保存到云盘，结果行不连带表头或其他文件。
+The target boundary is a fact about the content. Define must_include and must_exclude and treat it as one complete visual unit; move the label to solve occlusion, never move the real target to suit the layout. A menu includes its icon and text, a download does not bring save-to-cloud along with it, a result row does not bring the table header or other files.
 
-保护界面文字、标题、星号、提示、关键数值，也保护成片字幕、品牌区与需要保留的图例。OCR可帮助定位，但要补漏检；没做文字识别/观察就保留未核验状态。标签、编号和引线不压字，框线不穿字形；框可以包围文字，框内空白放标签仍须检查。
+Protect interface text, headings, asterisks, hints and key values, and also the finished film's subtitles, the brand area and any legend that has to stay. OCR helps locate, but you must catch what it misses; without text recognition or observation, keep the state unverified. Labels, numbering and leader lines do not sit on text, box strokes do not cut through letterforms; a box may enclose text, and a label placed in empty space inside the box still has to be checked.
 
-先找目标附近的安全空白，按需加引线；右下只是候选。仍拥挤时缩短文案、错时强调、局部放大或拆镜。不要把标签堆在远处空白，也不要缩到实际观看尺寸无法阅读。同一时刻通常维持一个主要焦点，多重点须有明确比较或关系目的。
+Look first for safe empty space near the target and add a leader line where needed; bottom right is only a candidate. When it is still crowded, shorten the copy, offset the emphasis in time, zoom in or split the shot. Do not pile labels into far-off empty space, and do not shrink them below readability at the actual viewing size. Usually hold one primary focus at a time; several simultaneous emphases need a clear comparative or relational purpose.
 
-样式跟随品牌与当前画面，框、标签和音效使用一致气质。截图Skill的橙色、100px网格和44px字号均是可配置起点，不作为视频统一参数。保持清楚的功能框与连接，不以强光、连续闪烁和巨大文字遮住证据。
+Style follows the brand and the current picture; box, label and sound effect share one temperament. The screenshot Skill's orange, its 100px grid and its 44px font size are all configurable starting points, not uniform parameters for video. Keep the functional box and its connection clear; do not cover the evidence with glare, continuous flashing or giant type.
 
-## 在时间和空间中保持归属
+## Keep attribution across time and space
 
-先引导注意，再留阅读/理解窗口，随后退出或交给下一个重点。动作触发可以与短音效共用beat，但不要求每个标注都发声。相机运动时避免文字连续重排；可先完成聚焦再读，或让屏幕固定标签以引线连接运动后的目标。
+Guide attention first, leave a reading/understanding window, then exit or hand off to the next point. An action trigger can share a beat with a short sound effect, but not every annotation has to make a sound. Avoid continuous text reflow during camera moves; either finish the focus and then read, or keep the label fixed on screen and let a leader line connect the target that has moved.
 
-保留原素材与适合展示的副本；不得把真实截图重绘成未经证实的功能界面。涉及已处理的隐私时，标注、放大、抽帧、联系表和后续版本都继承同一已核验副本与传播边界，不能回到原图重新暴露。水印不因做宣传片自动消除。
+Keep the original asset and a copy suitable for showing; never redraw a real screenshot into a feature interface that has not been verified. Where redacted privacy is involved, annotations, zooms, frame grabs, contact sheets and later versions all inherit the same verified copy and distribution boundary, and must not go back to the original to expose it again. A watermark does not disappear because the clip is a promo.
 
-原图坐标、成片坐标和实际观看尺寸分别记录。裁切后重算映射；框与截图共用同一变换。固定标签和字幕用成片屏幕坐标，连接线指向变换后的目标。目标离屏、被遮挡或布局变化时，缩短当前轨道并重测新段，或隐藏/重新布局；不沿用旧位置、不猜跟踪结果。
+Record source-image coordinates, finished-film coordinates and the actual viewing size separately. Recompute the mapping after a crop; box and screenshot share one transform. Fixed labels and subtitles use finished-film screen coordinates, and the leader line points at the transformed target. When the target leaves the screen, is occluded or the layout changes, shorten the current track and re-measure the new segment, or hide it and re-lay it out; do not carry over the old position and do not guess a tracking result.
 
-## 可编辑标注轨道
+## An editable annotation track
 
-简单镜头可以直接在现有plan的elements/motions写框、文字与聚焦。存在截图裁切、运镜跟随或多段标注时，从 `templates/annotation-track.json` 生成项目内的独立 `annotation-track.json`，保留稳定ID；它是几何/时间合同，不是渲染器。无需每个视频都交一份额外文件。
+A simple shot can write its box, text and focus straight into the existing plan's elements/motions. Where there is screenshot cropping, follow-the-camera motion or annotation in several passes, generate a separate `annotation-track.json` inside the project from `templates/annotation-track.json` and keep the stable IDs; it is a geometry/time contract, not a renderer. Not every video has to ship an extra file.
 
 ```text
 python3 SKILL_ROOT/scripts/catalog.py --kind expression get visual.target-callout
 python3 SKILL_ROOT/scripts/validate_annotation_track.py /project/annotation-track.json --plan /project/plan.json --output /project/qa/annotation-check.json
 ```
 
-当前检查器约定如下，渲染工程须采用同一映射或输出符合实际的解析后几何再检查：
+The checker currently works to these conventions; the render pipeline must adopt the same mapping, or output resolved geometry that matches reality, before checking:
 
-- rect_format=xyxy。sources的width/height、crop_rect、target_rect、must_include/exclude与源保护区均用原图像素；矩形为 `[left,top,right,bottom]`，不混用宽高格式或浏览器预览坐标。
-- sources.source_to_screen只支持正的均匀scale和translate_x/y，显式linear关键帧覆盖整片。映射为 `screen_x=source_x*scale+translate_x`，y同理。crop不自动重基准；若crop左边为c且希望放在画面x处，应将translate_x设为x-c*scale。不能既减crop又把平移再减一次。
-- target_geometry=static_source，目标本身在此源图内固定。框按source变换投影。它适合静态截图被相机平移缩放；录屏里控件重排、滚动或弹层变化要拆成重新量过目标的轨道。自动检测、目标跟踪、旋转、透视、非线性easing与复杂遮罩不在此检查器的能力范围。
-- tracks的start/end、reading_window以及所有关键帧时间均为整片绝对秒；可见区间左闭右开。轨道不能超过目标仍成立的时间。label.space=screen，标签关键帧使用成片像素，必须覆盖轨道区间；label.rect应取实际文字排版后的外包框，脚本不做字体整形。
-- source默认整片可见，可用visible_start/visible_end声明实际区间；标注不得超过素材可见时间。所有可见素材的保护区都会参与避让，即使该素材此刻没有标注；crop外已不可见的保护区不参与。
-- semantic_role为single/sequence/alternative。single免编号；其他两种给group_id/index及对应marker，组内连续编号，真实步骤不违背时间顺序。marker.rect是成片像素的保守外包框，不等于圆形字形蒙版。
-- target_contract声明完整单元；source.protected_regions与screen_protected_regions声明保护区，可加start/end。source.text_regions_status=reviewed只记录实际完成的观察，不是让自动QA通过的占位值。
-- connector.enabled显式说明有无线；max_gap_px是本片可接受的标签/目标间距。启用后给stroke_width_px，引线端点由当前目标与标签矩形计算；复杂折线需要工程另验。readability.view_width_px与minimum_label_px由实际用途选择，用来估算缩放字号，不是通用阅读阈值。
-- 可给source补path/sha256并在项目内核验素材；`--plan`另核project_id、画幅、时长与各track的scene_id/element_id引用。轨道路径和hash应写进交付源清单，旧检查不代表修改后版本。
+- rect_format=xyxy. The width/height of sources, crop_rect, target_rect, must_include/exclude and the source protected regions are all in source-image pixels; a rectangle is `[left,top,right,bottom]`, never mixed with a width/height format or with browser preview coordinates.
+- sources.source_to_screen supports only a positive uniform scale and translate_x/y, with explicit linear keyframes spanning the whole film. The mapping is `screen_x=source_x*scale+translate_x`, and the same for y. A crop does not re-base automatically; if the crop's left edge is c and you want it at frame position x, set translate_x to x-c*scale. Do not subtract the crop and then subtract the translation a second time.
+- target_geometry=static_source, meaning the target itself is fixed within that source image. The box is projected through the source transform. This suits a static screenshot that the camera pans and scales over; in a screen recording, control reflow, scrolling or a changing popover must be split into tracks whose targets were measured again. Automatic detection, target tracking, rotation, perspective, non-linear easing and complex masks are outside this checker's scope.
+- The start/end of tracks, reading_window and all keyframe times are absolute seconds of the whole film; visible intervals are left-closed, right-open. A track must not run past the point where its target still holds. label.space=screen means label keyframes use finished-film pixels and must cover the track interval; label.rect should be the bounding box after the actual text has been laid out — the script does no font shaping.
+- A source is visible for the whole film by default; declare the actual interval with visible_start/visible_end. An annotation must not outlast the asset's visible time. The protected regions of every visible asset take part in avoidance even when that asset carries no annotation at this moment; protected regions that are cropped out of view do not.
+- semantic_role is single/sequence/alternative. single needs no numbering; the other two get group_id/index and the matching marker, numbered consecutively within the group, and real steps do not contradict the time order. marker.rect is a conservative bounding box in finished-film pixels, not the same thing as a round glyph mask.
+- target_contract declares the complete unit; source.protected_regions and screen_protected_regions declare protected regions, optionally with start/end. source.text_regions_status=reviewed records only observation that was actually carried out — it is not a placeholder value for getting past automated QA.
+- connector.enabled states explicitly whether there is a leader line; max_gap_px is the label-to-target distance this film accepts. When enabled, give stroke_width_px; the leader endpoints are computed from the current target and the label rectangle, and complex polylines need separate verification in the pipeline. readability.view_width_px and minimum_label_px are chosen for the actual use and serve to estimate scaled font size; they are not general reading thresholds.
+- You may add path/sha256 to a source and verify the asset inside the project; `--plan` separately checks project_id, aspect ratio, duration and each track's scene_id/element_id references. Track paths and hashes belong in the delivery source manifest; an old check does not vouch for a revised version.
 
-## 检查与真实观看
+## Checks and actually watching
 
-脚本检查目标包含/排除、裁切与画布边界、标签/标记/框线/引线和声明保护区的碰撞、编号语义、字幕冲突、映射与时钟。报告保存输入hash和解析后的关键时刻位置，支持按ID最小返修。默认每0.1秒加关键帧、可见边界和阅读边界检查，提供采样预算；超预算应分段或明确调整检查范围，不能静默漏检。
+The script checks target include/exclude, crop and canvas bounds, collisions of label/marker/box stroke/leader line with the declared protected regions, numbering semantics, subtitle conflicts, mapping and clock. The report keeps the input hashes and the resolved key-moment positions and supports minimal rework by ID. By default it adds keyframes every 0.1 s and checks visible boundaries and reading boundaries, with a sampling budget; over budget you split the range or change the checked scope explicitly, never let checks drop out silently.
 
-检查的是已声明的线性几何与保护区。保守矩形可能把圆角空白报为碰撞，缺失保护区也可能漏报；采样无碰撞不等于所有帧零碰撞，字号估算不等于实际字形可读。工具没有OCR、自动跟踪、视频渲染或视觉理解，成功状态最多为awaiting_visual_review，不写passed。
+What gets checked is the declared linear geometry and protected regions. A conservative rectangle can report rounded-corner whitespace as a collision, and a missing protected region can let one through; no collision at the sampled times does not mean zero collisions on every frame, and an estimated font size is not proof that the glyphs read. The tool has no OCR, no auto-tracking, no video rendering and no visual understanding; the best success state is awaiting_visual_review, never passed.
 
-实际查看完整镜头、目标局部、关键帧联系表和连续片段，覆盖最密时刻、相机极值、标注进退场、字幕变化和转场边界；在最终观看尺寸核目标完整、归属、字形、旁白/文字关系和停留。联系表不能替代连续播放。未观看则visual/playback保持not_run；若需要人工签核，另留审片者、时间、范围和证据，不由脚本生成通过结论。
+Actually look at the whole shot, the target area, keyframe contact sheets and continuous segments, covering the densest moment, the camera extremes, annotation entry and exit, subtitle changes and transition boundaries; at the final viewing size verify target completeness, attribution, letterforms, the voiceover/text relationship and the dwell. A contact sheet does not replace continuous playback. If it was not watched, visual/playback stays not_run; where human sign-off is needed, record reviewer, time, scope and evidence separately — a script does not produce a pass verdict.
 
-组合时复用 `camera.focus-frame`、`text.semantic-emphasis`、`text.read-then-move` 及highlight/trace/reveal/exit/hold；只新增 `visual.target-callout`，不为相同聚焦重建一套效果。先试最难的跟随与接缝，再整合到现有工程。
+When composing, reuse `camera.focus-frame`, `text.semantic-emphasis`, `text.read-then-move` and highlight/trace/reveal/exit/hold; only `visual.target-callout` is new — do not rebuild a second set of effects for the same focus. Try the hardest follow and the seams first, then integrate into the existing project.

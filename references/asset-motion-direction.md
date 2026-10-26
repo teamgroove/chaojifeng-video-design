@@ -1,67 +1,67 @@
-# 素材表演与调度
+# Asset performance and routing
 
-已有图片、界面、图表、标志或媒体片段需要独立移动、装回、接力或跨镜复用时读取。先沿 [镜头生产统筹](shot-production.md) 明确要表达的变化，再判断哪些素材能安全操作；按实际准备结果调整镜头。方法适用于全部场景，不要求每张图片都分层或每镜都做大动作。
+Read this when an existing image, interface, chart, logo, or media clip has to move on its own, be put back, hand off (接力), or be reused across shots. First pin down the change you want to express along [Shot production planning](shot-production.md), then judge which assets can be operated on safely; adjust the shot by what was actually prepared. The method applies to every scene; it does not require layering every image or a big move in every shot.
 
-## 先确定动作的完整单元
+## First define the complete unit of motion
 
-识别真正需要承担动作的主体、证据、标签和背景。优先使用已有可编辑组件、向量、独立图片或可靠原像素；工具不足时可以人工选择完整区域。抠图、补底、景深或生成工具按当前授权与实际能力使用，本Skill不自带这些执行器，也不默认下载模型。
+Identify the subject, evidence, label, and background that genuinely have to carry the motion. Prefer existing editable components, vectors, separate images, or reliable original pixels; where the tools fall short you can select the complete region by hand. Use matting, background fill, depth, or generative tools within current authorisation and actual capability — this skill ships none of those executors and downloads no model by default.
 
-- 按功能与语义分组：操作控件连同必要状态，数值连同单位，人物与必须保持的外观，物体与应一起移动的附属部分。
-- 只有动作确实需要时才继续拆小；关系不明的部分保持一组。像素图层不代表真实工程结构，不能从遮挡处推导内部装配。
-- 标出必须保护的文字、数据、身份和产品状态。刚性单元优先整体移动或明确分层，避免无意拉伸字形、面孔和产品比例。
-- 给每个主动作一个目的地或可见后果。相机、环境变化或局部微动也可服务内容，不以移动数量或位移大小评价质量。
+- Group by function and semantics: a control together with its necessary states, a value together with its unit, a person together with the appearance that must hold, an object together with the attached parts that must move with it.
+- Split smaller only where the motion truly needs it; keep parts whose relationship is unclear in one group. A pixel layer is not a real engineering structure, and you may not infer internal assembly from an occluded area.
+- Mark the text, data, identity, and product states that must be protected. Move a rigid unit as a whole or split it explicitly; avoid accidentally stretching letterforms, faces, and product proportions.
+- Give every main action a destination or a visible consequence. A camera move, a change of environment, or small local motion can also serve the content; do not judge quality by the number of moves or the size of a displacement.
 
-## 建立可复用的部件记录
+## Build a reusable part record
 
-复杂素材可沿 [素材舞台笔记](../templates/asset-stage.md) 记录；简单任务几句说明即可。记录关联现有asset／scene／element／beat ID，不新增计划必填字段或独立执行协议。
+A complex asset can be recorded along [Asset stage notes](../templates/asset-stage.md); a simple task needs only a few sentences. Records link to the existing asset / scene / element / beat IDs and add no required plan fields and no separate execution protocol.
 
-| 记录 | 用途 |
+| Record | Purpose |
 | --- | --- |
-| 原始依据与派生 | 原文件、使用范围、版本／哈希；规范化工作源、处理方式和派生部件路径 |
-| 完整单元 | 对象职责、一起移动的部分、不得改变的事实与保护区域 |
-| 坐标与锚点 | 所属坐标空间、画布尺寸、裁剪框、局部原点、旋转／缩放锚点、源到场景映射 |
-| 遮挡与露底 | 前后顺序、关联遮罩、被遮住或未观察到的区域、移动后会露出的背景及可信范围 |
-| 动作与绑定 | 使用镜头、元素、主动作、响应事件、有效时间范围、落定状态与下一镜接力 |
-| 证据与限制 | 实际检查的源状态、运动范围和样片；缺失部分、替代方案、缓存依赖与待验项 |
+| Original basis and derivation | Original file, scope of use, version / hash; normalised working source, processing method, and paths of derived parts |
+| Complete unit | Object's job, the parts that move together, facts that must not change, and protected regions |
+| Coordinates and anchors | Coordinate space it belongs to, canvas size, crop box, local origin, rotation / scale anchor, source-to-scene mapping |
+| Occlusion and exposed backing (露底) | Front-to-back order, related masks, occluded or unobserved regions, the background exposed after the move, and the credible range |
+| Motion and binding | Shots used, elements, main action, responding events, valid time range, landing state, and handoff to the next shot |
+| Evidence and limits | Source states actually checked, motion range, and sample clips; missing parts, substitutes, cache dependencies, and open items |
 
-文件存在不代表可用；部件能静态叠回，也不代表可以任意旋转、放大或离开原位。记录足以支持当前动作即可，不扫描或复制整个素材库。
+A file existing does not mean it is usable; a part that stacks back statically does not mean it can be rotated, scaled up, or leave its position freely. Record only enough to support the current action, and do not scan or copy the whole asset library.
 
-## 把空间关系说清楚
+## State the spatial relationships clearly
 
-沿“原始文件 → 规范化工作源 → 裁剪部件的局部坐标 → 场景 → 输出屏幕”注明变换和单位。原图方向、重采样、裁切、缩放或画幅改变后重新核映射，不能把局部坐标直接当屏幕坐标。
+Note the transform and the unit along “original file → normalised working source → local coordinates of the cropped part → scene → output screen”. After a change of original orientation, resampling, crop, scale, or aspect ratio, re-check the mapping; you may not treat local coordinates as screen coordinates directly.
 
-场景中的主体随相机变化；屏幕字幕和固定说明按用途保持在屏幕层。相机、容器和对象分别负责哪些属性要明确，避免重复平移／缩放。已有 [动态标注](visual-emphasis.md) 继续使用同一映射、目标和保护区，不另造竞争坐标合同。
+The subject in the scene moves with the camera; on-screen subtitles and fixed labels stay on the screen layer as their use requires. Say which properties the camera, the container, and the object each own, and avoid duplicate pan / scale. Existing [Motion annotation](visual-emphasis.md) keeps using the same mapping, targets, and protected regions instead of inventing a competing coordinate contract.
 
-深度估计只是一种空间线索。排序以实际遮挡关系为准，交叉遮挡可能需要分组、遮罩或改变机位；不能仅按一个平均景深数值推断完整前后关系，更不能据单图承诺任意角度的真实三维。
+Depth estimation is only a spatial hint. Order by the actual occlusion relationships; a crossing occlusion may need grouping, masking, or a different camera position; you may not infer the full front-to-back relationship from a single average depth value, and certainly may not promise real 3D from any angle on the strength of one image.
 
-## 由露底条件决定动作范围
+## Let the exposed-backing condition set the range of motion
 
-先看主体移走之后会出现什么。区分真实已有背景、简单图形延续、明确的创作补画与未知隐藏内容；背景修补或生成内容不能冒充原照片、产品界面或数据证据。
+Look first at what appears once the subject moves away. Distinguish a real existing background, a simple graphic continuation, an explicit creative fill, and unknown hidden content; a patched or generated background may not pass as the original photo, product interface, or data evidence.
 
-不可靠区域会进入画面时，选择缩小位移、维持遮挡、让整体移动、改变景别、调整镜头关系或补充真实素材。保留所选理由，不能用烟雾、亮光或装饰长期遮住必需信息。透明物、反射、细边、发丝、孔洞和大面积露底按实际尺寸检查，不以遮罩文件存在判通过。
+When an unreliable region would enter frame, choose a smaller displacement, keep the occlusion, move the whole thing, change the shot size, adjust the camera relationship, or add real footage. Keep the reason for the choice; you may not hide necessary information long-term behind smoke, glow, or decoration. Check transparent objects, reflections, thin edges, hair, holes, and large exposed areas at actual size, and do not pass them because a mask file exists.
 
-## 用同一事件组织动作
+## Organise motion around one event
 
-先写“触发 → 主对象行动 → 到达／接触 → 相关对象响应 → 结果落定 → 接力”。按内容删减，允许无碰撞、静默或阅读停留；不要让各层各自播放没有关系的循环。
+First write “trigger → main object acts → arrives / contacts → related objects respond → result lands → handoff”. Cut by content; a collision-free, silent, or reading-dwell passage is allowed; do not let each layer play its own unrelated loop.
 
-路径、距离、段落或真实操作可以决定响应顺序，具体时间沿已有镜头、beat与audio_cue落实。声音与画面绑定同一事件，估时和实测分开。对象跨容器交接时明确何时转移显示与控制，避免同时出现两份主体或丢失阴影／标签。
+A path, a distance, a section, or a real operation can set the response order; concrete times land along the existing shot, beat, and audio_cue. Sound and picture bind to the same event, with estimate and measurement kept apart. When an object hands over between containers, state when display and control transfer, so that two copies of the subject never appear and no shadow / label is lost.
 
-现有表达按目标复用：结构有依据时用visual.structure-separate；对象接力用transition.frame-breakout或narrative.follow-unit；遮挡揭示用transition.occlusion-reveal；路径与响应可用animation.path-reveal、stagger和sound.event-collision；空间层次用parallax，落定用animation.spring-settle。它们是表达选择，不会自动准备素材或提供执行能力。
+Reuse existing expressions by goal: visual.structure-separate where the structure has a basis; transition.frame-breakout or narrative.follow-unit for an object handoff; transition.occlusion-reveal for an occlusion reveal; animation.path-reveal, stagger, and sound.event-collision for paths and responses; parallax for spatial layering; animation.spring-settle for the landing. They are expression choices and do not prepare assets or give you execution capability on their own.
 
-## 先复原，再验最大运动
+## Restore first, then test maximum motion
 
-1. 将部件放回约定源状态，核对缺边、错位、重影、层序、必要文字和保护区。差异需要判断：是错误，还是已说明的新构图／创作改变。
-2. 检查实际动作的最大位移、放大、旋转、遮挡变化、相机边界和新露背景；先看最可能出问题的短段，再完成相应范围。
-3. 在真实观看尺寸检查连续片段及镜头接缝，必要时试听关联声音。自动几何、像素或帧差检查只定位候选问题，不证明完整性、审美或理解效果。
+1. Put the parts back into the agreed source state and check for missing edges, misalignment, ghosting, layer order, necessary text, and protected regions. A difference needs a judgement: is it an error, or a new composition / creative change you already stated.
+2. Check the actual motion's maximum displacement, scale-up, rotation, occlusion change, camera bounds, and newly exposed background; look at the short passage most likely to break first, then complete the corresponding range.
+3. Check the continuous passage and the shot seams at real viewing size, and listen to the related sound where needed. Automatic geometry, pixel, or frame-difference checks only locate candidate problems; they do not prove completeness, aesthetics, or comprehension.
 
-沿 [审片方法](review-and-revision.md) 保存范围、问题、修改与复验。局部通过不扩为整个素材、所有参数或所有镜头通过；未看、未听或未实测保持相应缺口。
+Save range, problem, change, and re-check along [Review method](review-and-revision.md). A local pass does not extend to the whole asset, all parameters, or all shots; unseen, unheard, or unmeasured stays a gap.
 
-## 跨镜复用与输出
+## Reuse across shots and output
 
-同一部件复用准备结果，镜头分别绑定动作，不反复处理同一源图。源文件、工作尺寸、裁切、遮罩、背景或字体变化后，重验依赖它的镜头与标注。保留原始依据和必要可编辑源；清理只处理本任务归属明确且不再需要的中间文件。
+One part reuses its prepared result; each shot binds its own motion and does not reprocess the same source image. After a change of source file, working size, crop, mask, background, or type, re-check the shots and annotations that depend on it. Keep the original basis and the necessary editable source; cleanup touches only intermediate files clearly owned by this task and no longer needed.
 
-帧缓存按素材、布局、时间、帧率、种子和渲染环境的有效版本复用；新增格式只有在画面序列仍适用且满足输出规格时才复用。更换画幅需要重查构图，不自动裁切旧片。
+Reuse frame caches by valid version of asset, layout, time, frame rate, seed, and render environment; reuse a new format only when the picture sequence still applies and the output spec is met. Changing the aspect ratio requires re-checking the composition; do not auto-crop an old cut.
 
-单次揭示、持续环境、跨镜接力和循环都可选择。需要循环时沿production.loop-seam检查首尾位置、速度、遮挡和声音；额外重置帧也计入整片时长，不能悄悄延长镜头。静音视觉片段进入有声主片时，继续沿原声音合同合成与验收。
+A single reveal, a continuous environment, a cross-shot handoff, and a loop are all options. When you need a loop, check start and end position, speed, occlusion, and sound along production.loop-seam; extra reset frames also count into film duration, so you may not quietly lengthen the shot. When a silent visual passage enters a film with sound, continue to composite and accept it along the original sound contract.
 
-本参考为独立撰写的方法指导，借鉴来源与实际观察边界见 [sources.md](sources.md)。它不包含第三方实现、作品或模型，不把素材处理过程当作已安装引擎或已验证成片。
+This reference is independently written method guidance; the sources drawn on and the boundary of actual observation are in [sources.md](sources.md). It contains no third-party implementation, work, or model, and it does not treat the asset-processing pass as an installed engine or a verified finished film.

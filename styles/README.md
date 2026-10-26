@@ -1,12 +1,12 @@
-# 视频风格包
+# Video style packs
 
-由 style.json 自动生成。新增或修改包后运行 `python3 scripts/stylepacks.py build`。
+Generated from style.json. After adding or changing a pack, run `python3 scripts/stylepacks.py build`.
 
-导航色板用于检索；完整材质、运动、镜头与声音规则在各包 STYLE.md。
+The navigation palette is for lookup; the full material, motion, camera and sound rules are in each pack's STYLE.md.
 
 ## 超级峰原有风格
 
-| 风格 | ID | 实现状态 |
+| Style | ID | Status |
 | --- | --- | --- |
 | [影像叙事](cinematic-photo/STYLE.md) | `cinematic-photo` | guidance |
 | [暗色技术](dark-tech/STYLE.md) | `dark-tech` | guidance |
@@ -18,7 +18,7 @@
 
 ## 实证影像
 
-| 风格 | ID | 实现状态 |
+| Style | ID | Status |
 | --- | --- | --- |
 | [档案灯台](opuscar-archive-lighttable/STYLE.md) | `opuscar-archive-lighttable` | reference-source |
 | [工程简报板](opuscar-briefing-board/STYLE.md) | `opuscar-briefing-board` | reference-source |
@@ -31,7 +31,7 @@
 
 ## 图形与排版
 
-| 风格 | ID | 实现状态 |
+| Style | ID | Status |
 | --- | --- | --- |
 | [装饰艺术](opuscar-art-deco/STYLE.md) | `opuscar-art-deco` | reference-source |
 | [ASCII / CRT 终端](opuscar-ascii-crt/STYLE.md) | `opuscar-ascii-crt` | reference-source |
@@ -43,14 +43,14 @@
 
 ## 电影与时代
 
-| 风格 | ID | 实现状态 |
+| Style | ID | Status |
 | --- | --- | --- |
 | [后室 / 新怪谈](opuscar-backrooms/STYLE.md) | `opuscar-backrooms` | reference-source |
 | [1920s 默片](opuscar-silent-film/STYLE.md) | `opuscar-silent-film` | reference-source |
 
 ## 材质与 3D
 
-| 风格 | ID | 实现状态 |
+| Style | ID | Status |
 | --- | --- | --- |
 | [积木玩具](opuscar-brick-toy/STYLE.md) | `opuscar-brick-toy` | reference-source |
 | [玻璃质感产品](opuscar-glass-product/STYLE.md) | `opuscar-glass-product` | reference-source |
@@ -60,7 +60,7 @@
 
 ## 剪辑与纪实
 
-| 风格 | ID | 实现状态 |
+| Style | ID | Status |
 | --- | --- | --- |
 | [字幕新闻](opuscar-caption-news/STYLE.md) | `opuscar-caption-news` | reference-source |
 | [延时交响](opuscar-city-symphony/STYLE.md) | `opuscar-city-symphony` | reference-source |
@@ -73,7 +73,7 @@
 
 ## 卡通与动画
 
-| 风格 | ID | 实现状态 |
+| Style | ID | Status |
 | --- | --- | --- |
 | [80 年代赛璐璐动画](opuscar-cel-anime-80s/STYLE.md) | `opuscar-cel-anime-80s` | reference-source |
 | [50s 扁平卡通](opuscar-midcentury-toon/STYLE.md) | `opuscar-midcentury-toon` | reference-source |
@@ -82,7 +82,7 @@
 
 ## 手绘与绘画
 
-| 风格 | ID | 实现状态 |
+| Style | ID | Status |
 | --- | --- | --- |
 | [蜡笔儿童绘本](opuscar-crayon-book/STYLE.md) | `opuscar-crayon-book` | reference-source |
 | [油画厚涂](opuscar-impasto/STYLE.md) | `opuscar-impasto` | reference-source |
@@ -94,7 +94,7 @@
 
 ## 信息与发布
 
-| 风格 | ID | 实现状态 |
+| Style | ID | Status |
 | --- | --- | --- |
 | [暗色科技发布](opuscar-dark-keynote/STYLE.md) | `opuscar-dark-keynote` | reference-source |
 | [数据叙事](opuscar-dataviz/STYLE.md) | `opuscar-dataviz` | reference-source |
@@ -104,7 +104,7 @@
 
 ## 印刷与版画
 
-| 风格 | ID | 实现状态 |
+| Style | ID | Status |
 | --- | --- | --- |
 | [铜版画](opuscar-engraving/STYLE.md) | `opuscar-engraving` | reference-source |
 | [复古半调案卷](opuscar-halftone-dossier/STYLE.md) | `opuscar-halftone-dossier` | reference-source |
@@ -114,7 +114,7 @@
 
 ## 游戏
 
-| 风格 | ID | 实现状态 |
+| Style | ID | Status |
 | --- | --- | --- |
 | [综艺节奏扁平](opuscar-game-show/STYLE.md) | `opuscar-game-show` | reference-source |
 | [HD-2D](opuscar-hd-2d/STYLE.md) | `opuscar-hd-2d` | reference-source |
@@ -123,7 +123,7 @@
 
 ## 东方传统
 
-| 风格 | ID | 实现状态 |
+| Style | ID | Status |
 | --- | --- | --- |
 | [纸雕灯影](opuscar-paper-lantern/STYLE.md) | `opuscar-paper-lantern` | reference-source |
 | [红色窗花剪纸](opuscar-papercut-red/STYLE.md) | `opuscar-papercut-red` | reference-source |

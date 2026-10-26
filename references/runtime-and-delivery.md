@@ -1,43 +1,43 @@
-# 执行能力与真实交付
+# Execution capability and real delivery
 
-先读用户项目说明、源码、锁文件、既有导出命令与素材。核任务已有进程/端口/工具归属，复用环境；浏览器、构建、模型调用和编码默认串行。失败先查已有日志，不用重复起服务或清缓存绕过。
+Read the user's project notes, source, lock files, existing export commands and assets first. Check which process / port / tool already owns the task and reuse the environment; browser, build, model calls and encoding run serially by default. On failure, check the existing logs first; do not restart services repeatedly or clear caches to get around it.
 
-探测可编辑对象、时间、字体、资源加载、画幅、音轨、预览和编码能力。写runtime.status与已验证capabilities；未核实用unresolved。外部API/参数/版本不够清楚，先按宿主当前文档调研顺序查证，再实施。
+Probe editable objects, time, fonts, resource loading, aspect ratio, audio tracks, preview and encoding capability. Write runtime.status and verified capabilities; use unresolved for what you have not verified. If an external API / parameter / version is not clear enough, verify it in the host's current documentation research order, then implement.
 
-| 已有条件 | 执行方式 | 边界 |
+| Existing condition | How to execute | Boundary |
 | --- | --- | --- |
-| 用户视频工程/导出器 | 沿用工程、素材和原导出流程 | 单格式可用不证明全部规格可用 |
-| HTML/SVG/Canvas及浏览器渲染 | Agent写场景/时间入口，经实际渲染工具导出 | 本Skill不自带通用HTML→MP4引擎 |
-| 已装Remotion/HyperFrames等 | 读环境适用方法，按真实版本实现 | 未安装CLI/宿主API不能凭名字调用 |
-| 素材及媒体处理工具 | 按能力组合图、视频、声音与字幕 | 合成器不自动提供复杂交互动画 |
-| 能力不足 | 完成可做设计/源，列依赖和受影响输出 | 未导出的网页/分镜不是成片 |
+| The user's video project / exporter | Reuse the project, the assets and the original export flow | One working format does not prove every spec works |
+| HTML / SVG / Canvas and browser rendering | The agent writes the scene / time entry point and exports through the actual rendering tool | This Skill ships no general HTML→MP4 engine |
+| Remotion / HyperFrames etc. already installed | Read the environment's applicable method and implement against the real version | An uninstalled CLI / host API cannot be called by name |
+| Asset and media processing tools | Combine image, video, sound and subtitles by capability | A compositor does not automatically provide complex interactive animation |
+| Capability insufficient | Finish the design / source you can do, list dependencies and affected outputs | An unexported web page / storyboard is not a finished film |
 
-不强制个人Skill依赖。可按现有授权补齐必要普通依赖，先核官方来源、版本与资源；不擅自付费订阅或换生成模型。安全策略阻断时，不改协议、换表面或用底层命令绕过同一被拒操作。
+Do not make a personal Skill a hard dependency. You may add necessary ordinary dependencies within existing authorization — check official sources, versions and resources first; do not take out a paid subscription or switch generation models on your own. When a security policy blocks you, do not change the protocol, swap the surface, or use low-level commands to get around the same refused operation.
 
-确定性实现可将时间传给元素状态、主线和绘制，采集前等真实字体与布局。交互按目标状态保持幂等；顺序/倒序/随机seek同帧测试后才能称回放一致。第三方定时器、effect和状态未受控时记录局限。
+A deterministic implementation can pass time to element state, to the through-line (主线) and to drawing; wait for real fonts and layout before capture. Keep interaction idempotent against the target state; only after testing forward / reverse / random seek on the same frame can you call playback consistent. When third-party timers, effects and state are not under your control, record the limitation.
 
-产品镜头优先真实组件或授权录屏/截图。接入隔离数据、provider、样式、路由和IPC，维护来源与逐镜对应。导入不证明上镜；原生界面不等于React组件。不要为录演示触发真实支付、发送、删除等业务动作。
+Product shots prefer real components or cleared screen recording / screenshots. Wire in isolated data, providers, styles, routes and IPC, and maintain sources and the shot-by-shot mapping. An import does not prove it looks right on screen; a native interface is not a React component. Do not trigger real payment, send, delete or other business actions in order to record a demo.
 
-声音可用授权素材、实际生成器或程序化实现。用户限定单模型时不调用其他生成模型代做；普通编辑/编码工具依用户边界使用。用户必需声音时不能擅交静音。混音必须有限时长、控制峰值、保留cue并实际试听；有音频流不等于听感通过。
+Sound can use cleared material, an actual generator or a programmatic implementation. When the user restricts you to a single model, do not call another generation model to do the work; use ordinary editing / encoding tools within the user's boundary. When the user needs sound, you cannot quietly deliver silence. The mix must have a finite duration, controlled peaks, preserved cues and an actual listen; having an audio stream is not passing the ear.
 
-默认交可播视频、必要源、素材和验证摘要。沿用户输出位置，必要时在项目内建清楚命名任务目录，避免覆盖。中间帧/缓存/日志置归属清楚的临时或忽略目录。
+Deliver a playable video, the necessary source, assets and a verification summary by default. Follow the user's output location and, if needed, create a clearly named task directory inside the project — avoid overwriting. Put intermediate frames / caches / logs in a temp or ignored directory with clear ownership.
 
-按plan-contract保存delivery，plan_sha256取计划原始字节。源包含场景实现、必要配置、素材路径和实际导出命令；不交空工程、占位片或一张图冒充完整视频。分开记录设计、源、预览观看、完整导出、完整播放、试听和事实核验，不继承另一个示例的结果。
+Save delivery per plan-contract, taking plan_sha256 from the plan's original bytes. Source includes the scene implementation, necessary configuration, asset paths and the actual export command; do not deliver an empty project, a placeholder clip, or one image passed off as a full video. Record design, source, preview watching, full export, full playback, listening and fact verification separately — do not inherit another example's results.
 
-check_delivery默认核文件/哈希，--probe用已有ffprobe核媒体，--require-video要求视频。它不执行工程命令，不替代解码播放、视觉或听感。缺探测器/不能播放时明确未验证范围。
+check_delivery checks files / hashes by default, --probe uses an existing ffprobe to check media, --require-video requires video. It runs no project commands and does not stand in for decoded playback, visuals or listening. When the probe is missing / playback is impossible, state the unverified scope explicitly.
 
-## 内嵌媒体与模板替换
+## Embedded media and template substitution
 
-区分主片绝对时间与媒体源时间，保留源入出点、成片范围、倍率及重放映射；不要用内播放器进度条定位外片事件。当前根入口、真实素材和导出属性优先于陈旧分镜/注释；版本或时长冲突保留差异再核成片。
+Distinguish the main film's absolute time from media source time; keep source in / out points, the range used in the cut, rate and replay mapping; do not use an in-player progress bar to locate an event in the outer film. The current root entry point, real assets and export properties outrank a stale storyboard / comment; on a version or duration conflict, keep the difference and check the actual cut.
 
-套模板先映射真实产品的语义槽，再核文字几何、接缝和实际读取。只继承有效设计关系，不继承来源模型、宿主能力、素材许可或preview/exported状态；详见 [产品表达](product-expression.md)。
+For a template, map the real product's semantic slots first, then check text geometry, seams and actual reading. Inherit only the valid design relations — not the source model, host capability, asset license or preview / exported state; see [Product expression](product-expression.md).
 
-## 按内容选择制作规格
+## Choose production specs by content
 
-本次明确需求与适用宿主约束优先，其次核对选定套件的真实合同，最后才用本Skill的默认方法；套件不能覆盖事实或授权边界。代码、录屏、截图和生成素材按保真、修改需求与实际能力选择，不固定全代码、统一2倍采集、某个帧率或相机角度。
+This task's explicit requirements and the applicable host constraints come first, then the real contract of the chosen suite, and only then this Skill's default methods; a suite cannot override factual or authorization boundaries. Choose code, screen recording, screenshots and generated material by fidelity, need to modify and actual capability — do not fix everything to code, to uniform 2x capture, to one frame rate or to one camera angle.
 
-使用确定性代码路线时，将元素状态由同一时间入口驱动；随机过程按需要固定种子，字体、依赖及素材沿已有工程锁定可追溯版本，记录本次实际使用文件。既有工程能表达的关系直接复用，不另装相似渲染器。难点可先导出一段能检验真实风险的短样片，长度由目标决定；用户明确直接成片、一次性完成或无需试片时，直接制作整片并在同轮内部核查返修，不强制独立试片或中途确认。不要每次改动都重复做无关的完整测试片。
+On a deterministic code route, drive element state from one time entry point; fix seeds for random processes as needed; lock fonts, dependencies and assets to traceable versions along the existing project, and record the files actually used this time. Reuse relations an existing project can already express; do not install a similar renderer. For a hard part you may first export a short sample clip that tests the real risk, its length set by the goal; when the user explicitly wants direct (直接成片), a single pass or no test clip, make the whole film and check and rework internally in the same round — do not force a separate test clip or a mid-way confirmation. Do not repeat an unrelated full test clip on every change.
 
-画幅、尺寸、帧率、字幕与平台遮挡区按本次交付记录。多画幅逐一检查构图和阅读，必要时重新布局，不假设直接裁切安全；未请求的画幅不自动批量生产。只在空间关系或品牌表达需要时用3D，不额外引入无收益的重资源流程。
+Record aspect ratio, dimensions, frame rate, subtitles and platform safe areas for this delivery. Check composition and reading for each aspect ratio, re-layout when necessary, and do not assume a straight crop is safe; do not auto-produce aspect ratios nobody asked for. Use 3D only when spatial relations or brand expression need it, and do not drag in a heavy resource-hungry pipeline for no gain.
 
-方向卡、事实来源、风格选择、声音时间与返修证据可整合在已有计划和审片文件，不强制额外交八份文档。交付用户真正需要的成片、源与验证摘要，实际未播放／未听审的范围明确保留。
+The direction card, factual sources, style choice, sound timing and rework evidence can live in the existing plan and review files; do not force eight extra documents. Deliver the finished film, the source and the verification summary the user actually needs, and keep explicitly open the scope you have not played / not listened to.

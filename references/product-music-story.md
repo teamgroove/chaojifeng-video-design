@@ -1,70 +1,70 @@
-# 产品音乐叙事：让歌词、动作与证据共同讲述
+# Product music story: let lyrics, action and evidence tell it together
 
-用于操作简短、结果可见，并有生活场景或情绪价值的产品宣传。先沿 [产品表达](product-expression.md) 核任务与证据，再判断是否采用 `product-music-story` 配方。它是现有 product-demo、brand-film、music-visual 的组合指导，不新增场景，也不自动提供作曲、演唱或渲染能力。
+For product promotion where the operation is short, the result visible, and there is a slice of life or emotional value. Check the task and the evidence along [product expression](product-expression.md) first, then decide whether to use the `product-music-story` recipe. It is combination guidance over the existing product-demo, brand-film and music-visual scenes: it adds no new scene, and it does not by itself supply composing, singing or rendering capability.
 
-## 先选择谁领拍
+## First choose who leads the beat
 
-| 本片需要观众得到什么 | 优先领拍者 | 制作选择 |
+| What this film needs the viewer to get | Preferred beat leader | Production choice |
 | --- | --- | --- |
-| 看懂有条件、有顺序的操作 | 真实任务或旁白 | 先保证步骤、因果与阅读，音乐适应动作；可局部使用歌唱 |
-| 记住一个简单动作及其可见结果 | 歌词与乐段 | 把任务压成可信短句，用实际音轨安排动作和释放 |
-| 感受品牌或观看音乐表演 | 音乐与视觉母题 | 用段落、变奏与回收组织；需要证明功能时插入真实证据 |
+| Understand an operation that has conditions and an order | The real task or the voiceover | Secure steps, causality and readability first; music adapts to the action; singing may be used locally |
+| Remember one simple action and its visible result | The lyrics and the section | Compress the task into a credible short line and lay out action and release against the actual audio track |
+| Feel the brand or watch a musical performance | The music and the visual motif | Organise with sections, variation and recall; insert real evidence where function has to be proven |
 
-按目标、产品复杂度和品牌气质选择，可在片内切换。短功能片不套完整歌曲，复杂业务也不为押韵删掉成立条件。片长来自用户范围、必要内容和实际声音，不默认两分钟或固定副歌次数。
+Choose by objective, product complexity and brand character; you can switch within the film. A short feature film does not get a full song, and a complex business does not drop the conditions that make it valid for the sake of rhyme. Length comes from the user's scope, the necessary content and the actual sound — do not default to two minutes or a fixed number of choruses.
 
-## 从主张到可唱、可见的事件
+## From claim to a singable, visible event
 
-先写“真实能力 → 用户动作 → 可见变化 → 用户所得”。沿当前产品入口、行为和结果核对版本与限制；本地化字符串、旧稿和生成界面各自不足以证明功能仍存在。歌词涉及功能时按主张审查，隐喻另记，不让一句押韵扩大能力。
+Write "real capability → user action → visible change → user gain" first. Check version and limits along the current product entry point, behaviour and result; a localised string, an old draft and a generated interface are each insufficient on their own to prove a feature still exists. When lyrics touch function, review them as claims, log metaphor separately, and do not let one rhyming line widen the capability.
 
-例如，已核实支持批量处理时，可以让同一组对象随一个真实触发一起变化。数量来自实际上限和画面任务；不能为押韵编数量。选择一份持续变化的照片、记录或任务作为主线，每次重现增加状态、用途、归属或关系。沿现有 asset、element、continuity_key 记录身份。
+For example, when batch processing is verified as supported, one real trigger can change the same group of objects together. The count comes from the actual limit and the on-screen task; do not invent a number for rhyme. Choose one set of photos, records or tasks that keeps changing as the spine, and let each recurrence add state, use, ownership or relationship. Record identity along the existing asset, element and continuity_key.
 
-每个乐句按内容选择声画关系：
+Choose the sound-image relationship for each musical phrase by its content:
 
-- **说明**：唱出动作时让动作及可见后果成立，适合功能与步骤。
-- **放大感受**：用材质、尺度或比喻表达情绪；不冒充功能证据或真实事件。
-- **补充**：在间奏、人声空隙或少动处呈现歌词未说的证据，保留阅读窗。
+- **Explain**: when the action is sung, make the action and its visible consequence hold; suits function and steps.
+- **Amplify feeling**: carry emotion with material, scale or metaphor; do not pass it off as functional evidence or a real event.
+- **Supplement**: show evidence the lyrics do not say, in an interlude, a vocal gap or a low-motion stretch, and keep the reading window.
 
-不要求每个词都字面表演；同一时刻有人声、主运动、歌词和界面小字时，先确定焦点，再错开或删减。
+Not every word has to be performed literally; when vocals, main motion, lyrics and small interface text share one moment, settle the focus first, then offset or cut.
 
-## 乐段承担不同任务
+## Sections carry different jobs
 
-下表提供可删、可合并的职责，不规定曲式或顺序。已给定歌曲时按真实结构适配，不为填表重排被锁定的原声。
+The table below offers responsibilities you can delete or merge; it does not prescribe song form or order. When the song is given, adapt to its real structure — do not rearrange a locked original track to fill in a table.
 
-| 段落选择 | 观众变化 | 画面任务与声音职责 |
+| Section choice | Viewer change | On-screen job and sound responsibility |
 | --- | --- | --- |
-| 冷开场 | 认出对象与观看理由 | 先呈现可读动作、变化或结果；按 [开场设计](opening-design.md) 接回正文 |
-| 主歌 | 理解任务与具体摩擦 | 让主体进入场景、尝试或准备，避免堆功能名 |
-| 蓄力段 | 注意关键变量 | 将焦点收拢到一次触发；音乐和运动制造有理由的期待 |
-| 首次副歌／释放 | 看见核心承诺兑现 | 操作与结果有真实依据；重音、标题、粒子分主次，不遮变化 |
-| 后续主歌／间奏 | 获得次级证据 | 功能逐项展开，人声空隙可给细节留窗 |
-| 副歌变奏 | 看到同一结果的新用途 | 换场景、尺度或关系，保留主体与核心承诺；重复须增加意义 |
-| 桥段 | 获得新关系或转折 | 可进入分享、协作或代价；没有新内容就删掉 |
-| 回收与结尾 | 记住品牌、用途或下一步 | 回收发展过的母题；结尾按实际渠道和用户约束选择 |
+| Cold open | Recognise the object and a reason to watch | Show a readable action, change or result first; hand back to the body per [opening design](opening-design.md) |
+| Verse | Understand the task and the specific friction | Bring the subject into the scene to try or prepare; avoid piling up feature names |
+| Build | Notice the key variable | Draw focus onto one trigger; music and motion build justified anticipation |
+| First chorus / release | See the core promise delivered | Operation and result have a real basis; accent, title and particles keep a hierarchy and do not cover the change |
+| Later verse / interlude | Get secondary evidence | Unfold features item by item; vocal gaps can hold a window for detail |
+| Chorus variation | See a new use for the same result | Change setting, scale or relationship, keep the subject and the core promise; a repeat has to add meaning |
+| Bridge | Gain a new relationship or turn | May enter sharing, collaboration or cost; delete it if there is no new content |
+| Recall and ending | Remember the brand, the use or the next step | Bring back the motif that was developed; choose the ending by actual channel and user constraints |
 
-接缝先写“谁接住什么”：同一对象的位置、形状、运动方向、可见动作、遮挡物或声音都可接力。运镜、弹性、纸张擦拭和聚拢释放只在帮助这段表达时选择，沿已有 motion 与 expression 组合，不为每种转场再造底层特效。
+Write "who catches what" at the seam first: the same object's position, shape, motion direction, visible action, occluder or sound can all carry the handoff. Choose camera moves, elasticity, paper wipes and gather-and-release only where they help this passage's expression, compose them from the existing motion and expression, and do not build a base effect again for every kind of transition.
 
-## 从小样到正式音轨
+## From a demo to the final audio track
 
-1. 核准核心主张、品牌读法、歌词与渠道约束；把可改词句和不确定项留在项目笔记。需要采集或生成的素材按 [素材选择](asset-routing.md) 规划。
-2. 复用已有音轨或在实际授权、能力和资源内制作关键句小样，优先检验品牌名、功能句与最难声画关系。先比较清楚度、气质和表达，再扩展整曲；不规定候选数量，不无限生成。
-3. 用真实音频做粗剪。记实际乐段、短句、重音与停顿；区分实测、人工标记、识别和插值，详见 [声音与节奏](sound-and-rhythm.md#歌词量时与歌曲修改)。
-4. 画面动作、字幕和声音从项目唯一有效事件表派生，沿现有 plan 合同落地。可选 [声画镜头笔记](../templates/music-shot-score.md) 记录设计关系，不再手工维护竞争时钟。
-5. 审看静音理解，再听有声主次与连续播放。结构、同步、听感、理解和传播分别登记；没有听审或观众数据就保留对应缺口。
+1. Sign off the core claim, the brand reading, the lyrics and the channel constraints; keep rewritable lines and open items in the project notes. Plan assets that must be captured or generated per [asset routing](asset-routing.md).
+2. Reuse an existing audio track, or produce a demo of the key line within the actual licence, capability and resources, testing the brand name, the feature line and the hardest sound-image relationship first. Compare intelligibility, character and expression before extending to the whole song; no candidate count is prescribed, and do not generate endlessly.
+3. Rough-cut against real audio. Record the actual sections, phrases, accents and pauses; distinguish measured, hand-marked, recognised and interpolated values, see [sound and rhythm](sound-and-rhythm.md#lyric-timing-and-song-revisions).
+4. On-screen action, subtitles and sound derive from the project's single valid event map and land along the existing plan contract. Optionally use the [sound-image shot score](../templates/music-shot-score.md) to record the design relationships instead of maintaining a competing clock by hand.
+5. Review muted for comprehension, then listen with sound for foreground-background and continuous playback. Log structure, sync, listening feel, comprehension and spread separately; where there is no listening pass or audience data, keep the corresponding gap open.
 
-生成图负责身份、环境和材质；精确文字、界面、字幕与可编辑动作由实际可控层承担。人物、照片或卡片在多镜复用，不自动证明连续角色表演或真实三维已实现。
+Generated images own identity, environment and material; exact text, interface, subtitles and editable action belong to the layers you actually control. Reusing a person, photo or card across shots does not by itself prove continuous character performance or real 3D.
 
-## 改一句歌词会影响哪些地方
+## What one changed lyric line touches
 
-歌词或产品事实改变后，先检查受影响主张、演唱窗口、字幕、动作、音效、后续时间与接缝。优先利用真实存在的分轨、替换段或原工程；分轨不存在就记录限制。生成局部重绘与信号处理也需要核残留人声、音色、节拍和两端连续性；ASR没识别出词不能证明纯伴奏。
+After a lyric or product fact changes, check the affected claim, the singing window, subtitles, action, SFX, later timings and seams first. Prefer stems, replacement sections or the original project where they really exist; if the stems do not exist, record the limitation. Local generative repainting and signal processing also need checks for residual vocals, timbre, tempo and continuity at both ends; ASR failing to transcribe a word does not prove a pure instrumental.
 
-窗口外是否不变与窗口内是否自然分别检查。音乐重排、变速或新增片头后重新生成时间表；只改样式时不重做歌曲，保留未受影响素材。原声已锁定时先遵守 [镜头生产统筹](shot-production.md#按任务启用的音乐与生成分支)。
+Check whether everything outside the window stayed the same and whether the inside is natural, separately. Regenerate the timing sheet after a musical rearrangement, a tempo change or a new intro; when only style changes, do not redo the song, and keep the unaffected assets. When the original track is locked, follow [shot production coordination](shot-production.md#music-and-generation-branches-enabled-by-the-task) first.
 
-## 失败回退与边界
+## Fallbacks and boundaries
 
-- 歌词无法可信压缩功能：退回实测旁白或真实任务领拍，保留短音乐动机即可。
-- 音乐掩盖品牌词或操作：减少音效、拆开信息，按等响度片段实际听审；不以统一低通或ASR分数代替判断。
-- 每次副歌只是换背景：补用途与关系，或删一次重复；不以更高运动量补叙事。
-- 生成资产难以运动：复用已有单元，分层、换景别或简化动作，先复原后验极值。
-- 能力或资源不足：沿已选路线完成可做部分并说明缺口，不自动换付费服务或新增模型。
+- Lyrics cannot compress the function credibly: fall back to a measured voiceover or to a real task leading the beat, and keep only a short musical motif.
+- Music masks the brand word or the operation: reduce SFX, split the information apart, and run a real listening pass on equal-loudness excerpts; do not substitute a blanket low-pass or an ASR score for judgement.
+- Every chorus only swaps the background: add use and relationship, or cut one repeat; do not patch the story with more motion.
+- A generated asset is hard to move: reuse an existing unit, layer it, change shot size or simplify the action; restore first, then check the extremes.
+- Capability or resources fall short: finish what can be done along the chosen route and state the gap; do not silently switch to a paid service or add a model.
 
-方法来自一部产品音乐短片的过程研究，经用户于2026-10-20确认提炼。实际工程存在声音、平台调研与听审缺口；本配方保持 guidance，未用跨产品成片或观众实验验证。来源范围见 [sources.md](sources.md#产品音乐叙事与创作过程研究)。
+The method comes from a process study of one product music short, distilled and confirmed by the user on 2026-10-20. The actual project had gaps in sound, platform research and listening passes; this recipe stays guidance and has not been validated with a cross-product finished film or an audience experiment. See [sources.md](sources.md#product-music-narrative-and-a-study-of-the-creative-process) for the source scope.
