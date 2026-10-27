@@ -28,7 +28,7 @@ The library's original work is concentrated in the method synthesis, task arrang
 
 ## 8 kinds of video task
 
-![The chain of organisation and what the audience gains in eight video scenarios](assets/diagrams/scenario-routes.png)
+![The chain of organisation and what the audience gains in eight video scenarios](assets/diagrams/scenario-routes.en.png)
 
 | Scenario | How the content is organised | What the audience gets |
 | --- | --- | --- |

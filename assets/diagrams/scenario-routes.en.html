@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scenario routes</title>
+<style>
+  @page { size: 1536px 1024px; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1536px; height: 1024px; }
+  body {
+    background: #F3EDE0;
+    font-family: "Noto Sans", "DejaVu Sans", system-ui, sans-serif;
+    color: #1C2A38;
+    position: relative;
+    overflow: hidden;
+  }
+  .deco-clip { position: absolute; inset: 0; overflow: hidden; }
+  .deco { position: absolute; border-radius: 50%; opacity: .5; }
+  .d1 { width: 260px; height: 260px; left: -60px; top: -110px; background: #DEE8D6; }
+  .d2 { width: 200px; height: 200px; right: -50px; top: -70px; background: #F3DCBE; }
+  .d3 { width: 150px; height: 150px; right: 240px; top: 24px; background: #F0C9A8; opacity: .55; }
+  .d4 { width: 220px; height: 220px; left: 210px; top: -130px; background: #D9E3EF; }
+
+  header { position: absolute; left: 0; right: 0; top: 26px; text-align: center; }
+  h1 { font-size: 54px; font-weight: 800; letter-spacing: .5px; color: #1B3A63; }
+  header p { margin-top: 10px; font-size: 26px; color: #3C4E60; }
+
+  .concepts { position: absolute; top: 150px; left: 30px; right: 30px; display: flex; gap: 22px; }
+  .concept { flex: 1; border-radius: 18px; padding: 18px 22px; display: flex; gap: 16px; align-items: center; min-height: 122px; }
+  .c1 { background: #CFE0F2; } .c2 { background: #CFE7D2; }
+  .c3 { background: #F2E6C8; } .c4 { background: #DBD5E9; }
+  .concept .glyph { flex: 0 0 62px; height: 62px; }
+  .concept h2 { font-size: 33px; font-weight: 800; color: #16324F; line-height: 1.1; }
+  .concept span { display: block; margin-top: 6px; font-size: 17.5px; color: #2E4256; }
+
+  .grid { position: absolute; top: 292px; left: 30px; right: 30px;
+          display: grid; grid-template-columns: 1fr 1fr; gap: 15px 26px; }
+  .card { background: #FFFFFF; border-radius: 18px; padding: 12px 16px;
+          display: grid; grid-template-columns: minmax(0,1fr) 146px 138px; gap: 12px; align-items: center;
+          min-height: 131px; box-shadow: 0 2px 6px rgba(40,50,60,.07); }
+  .card h3 { font-size: 26px; margin-bottom: 10px; } .card h3 { font-weight: 800; color: #16324F; margin-bottom: 12px; }
+  .flow { display: flex; align-items: center; gap: 7px; flex-wrap: nowrap; }
+  .pill { background: #D8E7F6; border-radius: 8px; padding: 5px 9px; font-size: 14px; color: #17324C; white-space: nowrap; }
+  .arrow { color: #7C8B99; font-size: 15px; font-weight: 700; }
+  .art { display: flex; align-items: center; justify-content: center; height: 96px; }
+  .outcome { border-radius: 12px; padding: 10px 8px; text-align: center; font-size: 17.5px; font-weight: 800; color: #17324C; line-height: 1.25; }
+  .o-green { background: #DDEDD6; } .o-sand { background: #F6E4BE; }
+  .o-pink { background: #F8D8CF; } .o-blue { background: #D5E7F7; }
+
+  .bottom { position: absolute; left: 30px; right: 30px; bottom: 34px; display: flex; gap: 22px; }
+  .bar { background: #E7EDDC; border-radius: 16px; padding: 16px 22px; display: flex; gap: 16px; align-items: center; }
+  .bar.b2 { background: #E3E6F1; }
+  .bar .glyph { flex: 0 0 54px; height: 54px; }
+  .bar strong { font-size: 20.5px; font-weight: 800; color: #17324C; }
+  .bar em { display: block; font-style: normal; font-size: 16.5px; color: #3A4C5E; margin-top: 5px; }
+  .b1 { flex: 1.15; } .b2 { flex: 1; }
+  #diag { position: absolute; left: -9999px; }
+</style>
+</head>
+<body>
+<div class="deco-clip"><div class="deco d1"></div><div class="deco d2"></div><div class="deco d3"></div><div class="deco d4"></div></div>
+
+<header>
+  <h1>One method, a different route per scenario</h1>
+  <p>Decide what the audience must gain first — then how to express it</p>
+</header>
+
+<section class="concepts">
+  <div class="concept c1">
+    <svg class="glyph" viewBox="0 0 64 64" fill="none">
+      <rect x="6" y="22" width="26" height="26" rx="5" fill="#8FB6DE" stroke="#2B4A6B" stroke-width="2"/>
+      <rect x="20" y="8" width="26" height="26" rx="5" fill="#F5D08A" stroke="#2B4A6B" stroke-width="2"/>
+      <path d="M26 20h14M26 26h9" stroke="#2B4A6B" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M40 44l6 6 10-12" stroke="#2B4A6B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div><h2>Elements</h2><span>text · image · shot · sound</span></div>
+  </div>
+  <div class="concept c2">
+    <svg class="glyph" viewBox="0 0 64 64" fill="none">
+      <rect x="10" y="4" width="24" height="16" rx="4" fill="#F2B48A" stroke="#2B4A6B" stroke-width="2"/>
+      <rect x="8" y="24" width="48" height="36" rx="5" fill="#FFFFFF" stroke="#2B4A6B" stroke-width="2"/>
+      <path d="M15 33l4 4 7-8M15 45l4 4 7-8" stroke="#3E8E5A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M31 35h18M31 46h13" stroke="#7C8B99" stroke-width="2.4" stroke-linecap="round"/>
+    </svg>
+    <div><h2>Rules</h2><span>fact · readability · continuity · time</span></div>
+  </div>
+  <div class="concept c3">
+    <svg class="glyph" viewBox="0 0 64 64" fill="none">
+      <circle cx="24" cy="24" r="17" fill="#F7E7C6" stroke="#2B4A6B" stroke-width="2"/>
+      <circle cx="19" cy="19" r="4" fill="#E4785C"/><circle cx="30" cy="20" r="4" fill="#8FB6DE"/>
+      <circle cx="20" cy="30" r="4" fill="#9CCB9C"/><circle cx="31" cy="31" r="4" fill="#F2C46B"/>
+      <path d="M40 40l16 16" stroke="#2B4A6B" stroke-width="6" stroke-linecap="round"/>
+    </svg>
+    <div><h2>Recipe</h2><span>combine elements and rules per scenario</span></div>
+  </div>
+  <div class="concept c4">
+    <svg class="glyph" viewBox="0 0 64 64" fill="none">
+      <path d="M8 40V22l16-10 16 10v18" fill="#FBFAF4" stroke="#2B4A6B" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M32 40V14l20 12v14" fill="#F5D7C4" stroke="#2B4A6B" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="16" cy="31" r="4.5" fill="#5B9BD5" stroke="#2B4A6B" stroke-width="2"/>
+      <circle cx="41" cy="27" r="4.5" fill="#5B9BD5" stroke="#2B4A6B" stroke-width="2"/>
+      <path d="M20 29c6-4 13-4 17-2" stroke="#2B4A6B" stroke-width="2.2" stroke-dasharray="3 4"/>
+      <path d="M46 24l10 6-10 6z" fill="#2B4A6B"/>
+    </svg>
+    <div><h2>Flow</h2><span>plan → produce → review → deliver</span></div>
+  </div>
+</section>
+
+<section class="grid" id="grid"></section>
+
+<section class="bottom">
+  <div class="bar b1">
+    <svg class="glyph" viewBox="0 0 56 56" fill="none">
+      <path d="M22 42V12l20-4v30" stroke="#2B4A6B" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="16" cy="43" r="7" fill="#5B9BD5" stroke="#2B4A6B" stroke-width="3"/>
+      <circle cx="36" cy="39" r="7" fill="#5B9BD5" stroke="#2B4A6B" stroke-width="3"/>
+    </svg>
+    <div>
+      <strong>Track choice for the concept explainer: user choice › already chosen in the project › recipe default</strong>
+      <em>One recipe can hold several candidate tracks, with one of them set as the default.</em>
+    </div>
+  </div>
+  <div class="bar b2">
+    <svg class="glyph" viewBox="0 0 56 56" fill="none">
+      <rect x="6" y="6" width="26" height="34" rx="4" fill="#FFFFFF" stroke="#2B4A6B" stroke-width="2.6"/>
+      <path d="M12 16h14M12 23h10M12 30h12" stroke="#7C8B99" stroke-width="2.2" stroke-linecap="round"/>
+      <rect x="26" y="24" width="24" height="24" rx="6" fill="#F2B48A" stroke="#2B4A6B" stroke-width="2.6"/>
+      <path d="M36 31l9 5-9 5z" fill="#2B4A6B"/>
+    </svg>
+    <div>
+      <strong>Finish in one direct run, or review in stages</strong>
+      <em>→ playable video + the required editing sources + a verification record</em>
+    </div>
+  </div>
+</section>
+
+<pre id="diag"></pre>
+
+<script>
+const ROWS = [
+  { title: "Product demo",
+    pills: ["real task", "key operation", "result evidence"],
+    outcome: "Understand what the product can do", cls: "o-green",
+    art: `<svg viewBox="0 0 170 96" fill="none">
+      <rect x="8" y="14" width="86" height="62" rx="7" fill="#FFFFFF" stroke="#2B4A6B" stroke-width="2.2"/>
+      <path d="M8 26h86M20 20h4M28 20h4" stroke="#2B4A6B" stroke-width="2.2" stroke-linecap="round"/>
+      <rect x="18" y="34" width="30" height="9" rx="4" fill="#DCE7F2"/>
+      <rect x="18" y="48" width="44" height="9" rx="4" fill="#EDF1F5"/>
+      <path d="M52 44l10 10-4 1 3 7-3 1-3-7-3 3z" fill="#2B4A6B"/>
+      <circle cx="112" cy="44" r="24" fill="#EAF4E6" stroke="#3E8E5A" stroke-width="2.4"/>
+      <path d="M101 44l8 8 14-16" stroke="#3E8E5A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>` },
+  { title: "Concept explainer",
+    pills: ["pick track", "layer knowledge", "reveal by layer"],
+    outcome: "Understand one concept", cls: "o-sand",
+    art: `<svg viewBox="0 0 170 96" fill="none">
+      <path d="M34 30l40-14 40 14-40 14z" fill="#F5D08A" stroke="#2B4A6B" stroke-width="2.2"/>
+      <path d="M34 42l40-14 40 14" fill="none" stroke="#2B4A6B" stroke-width="2.2"/>
+      <path d="M34 54l40-14 40 14" fill="none" stroke="#2B4A6B" stroke-width="2.2"/>
+      <path d="M124 18v22" stroke="#2B4A6B" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M124 12l5 8h-10z" fill="#2B4A6B" transform="rotate(180 124 30)"/>
+      <path d="M10 78l8-12 7 8 8-14 8 14 8-8 7 12" stroke="#4F8FD6" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M62 66v12M70 60v18M78 70v8M86 62v16M94 68v10M102 72v6" stroke="#4F8FD6" stroke-width="2.2" stroke-linecap="round"/></svg>` },
+  { title: "News brief",
+    pills: ["verify source", "trace change", "state the unknown"],
+    outcome: "Know what happened", cls: "o-pink",
+    art: `<svg viewBox="0 0 170 96" fill="none">
+      <rect x="10" y="12" width="52" height="66" rx="5" fill="#FFFFFF" stroke="#2B4A6B" stroke-width="2.2"/>
+      <path d="M19 26h34M19 35h34M19 44h22" stroke="#9AA8B4" stroke-width="2.2" stroke-linecap="round"/>
+      <rect x="82" y="18" width="66" height="54" rx="6" fill="#F7E7C6" stroke="#2B4A6B" stroke-width="2.2"/>
+      <text x="88" y="34" font-family="Noto Sans, DejaVu Sans" font-size="12" font-weight="800" fill="#1B3A63">NEWS</text>
+      <rect x="88" y="42" width="38" height="20" rx="3" fill="#CFE0F2" stroke="#2B4A6B" stroke-width="1.8"/>
+      <circle cx="34" cy="70" r="4" fill="#E4785C"/><circle cx="66" cy="70" r="4" fill="#F2C46B"/>
+      <circle cx="98" cy="70" r="4" fill="#8FB6DE"/><circle cx="130" cy="70" r="4" fill="#9CCB9C"/>
+      <path d="M40 70h20M72 70h20M104 70h20" stroke="#7C8B99" stroke-width="2.2"/></svg>` },
+  { title: "Image film",
+    pills: ["order assets", "move focus", "transition handoff"],
+    outcome: "Images become one statement", cls: "o-blue",
+    art: `<svg viewBox="0 0 170 96" fill="none">
+      <rect x="6" y="24" width="44" height="46" rx="4" fill="#DCE8DA" stroke="#2B4A6B" stroke-width="2.2"/>
+      <path d="M6 58l14-14 10 10 8-7 12 12v3a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4z" fill="#9CCB9C"/>
+      <rect x="62" y="24" width="44" height="46" rx="4" fill="#DCE8DA" stroke="#2B4A6B" stroke-width="2.2"/>
+      <path d="M62 60l12-16 12 12 8-8 12 10v2a4 4 0 0 1-4 4H66a4 4 0 0 1-4-4z" fill="#9CCB9C"/>
+      <rect x="118" y="24" width="44" height="46" rx="4" fill="#DCE8DA" stroke="#2B4A6B" stroke-width="2.2"/>
+      <path d="M118 62l14-18 10 12 9-9 11 15v2a4 4 0 0 1-4 4h-36a4 4 0 0 1-4-4z" fill="#9CCB9C"/>
+      <path d="M52 47h8M108 47h8" stroke="#2B4A6B" stroke-width="2.4" stroke-linecap="round"/></svg>` },
+  { title: "Story video",
+    pills: ["character goal", "event progress", "turn, resolution"],
+    outcome: "Follow one story", cls: "o-green",
+    art: `<svg viewBox="0 0 170 96" fill="none">
+      <rect x="8" y="20" width="46" height="56" rx="4" fill="#E8EFF6" stroke="#2B4A6B" stroke-width="2.2"/>
+      <circle cx="31" cy="38" r="7" fill="#F2C46B" stroke="#2B4A6B" stroke-width="2"/>
+      <path d="M31 47v16M24 52h14M31 63l-7 10M31 63l7 10" stroke="#2B4A6B" stroke-width="2.4" stroke-linecap="round"/>
+      <rect x="62" y="20" width="46" height="56" rx="4" fill="#E8EFF6" stroke="#2B4A6B" stroke-width="2.2"/>
+      <circle cx="85" cy="38" r="7" fill="#F2C46B" stroke="#2B4A6B" stroke-width="2"/>
+      <path d="M85 47v16M78 52h14M85 63l-6 10M85 63l8 9" stroke="#2B4A6B" stroke-width="2.4" stroke-linecap="round"/>
+      <rect x="116" y="20" width="46" height="56" rx="4" fill="#F7E7C6" stroke="#2B4A6B" stroke-width="2.2"/>
+      <circle cx="139" cy="34" r="8" fill="#F2B48A" stroke="#2B4A6B" stroke-width="2"/>
+      <path d="M139 42v18M131 48h16M139 60l-7 11M139 60l8 11" stroke="#2B4A6B" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M56 48h4M110 48h4" stroke="#2B4A6B" stroke-width="2.4"/></svg>` },
+  { title: "Feature motion",
+    pills: ["initial state", "user action", "change & feedback"],
+    outcome: "See how the interaction happens", cls: "o-sand",
+    art: `<svg viewBox="0 0 170 96" fill="none">
+      <rect x="10" y="34" width="46" height="26" rx="13" fill="#E4E9EE" stroke="#2B4A6B" stroke-width="2.4"/>
+      <circle cx="23" cy="47" r="9" fill="#FFFFFF" stroke="#2B4A6B" stroke-width="2.2"/>
+      <path d="M66 47h26" stroke="#2B4A6B" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M92 41l8 6-8 6z" fill="#2B4A6B"/>
+      <rect x="104" y="34" width="54" height="26" rx="13" fill="#4F8FD6" stroke="#2B4A6B" stroke-width="2.4"/>
+      <circle cx="145" cy="47" r="9" fill="#FFFFFF" stroke="#2B4A6B" stroke-width="2.2"/>
+      <path d="M150 26l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#F2C46B" stroke="#2B4A6B" stroke-width="1.8"/></svg>` },
+  { title: "Brand film",
+    pills: ["brand claim", "visual motif", "memory anchor"],
+    outcome: "Remember how the brand feels", cls: "o-pink",
+    art: `<svg viewBox="0 0 170 96" fill="none">
+      <rect x="8" y="22" width="46" height="54" rx="4" fill="#EDE9F4" stroke="#2B4A6B" stroke-width="2.2"/>
+      <path d="M31 32l14 8v22l-14 8-14-8V40z" fill="#B9AEDA" stroke="#2B4A6B" stroke-width="2"/>
+      <rect x="62" y="22" width="46" height="54" rx="4" fill="#EDE9F4" stroke="#2B4A6B" stroke-width="2.2"/>
+      <path d="M85 30l16 10v20l-16 10-16-10V40z" fill="#B9AEDA" stroke="#2B4A6B" stroke-width="2"/>
+      <rect x="116" y="22" width="46" height="54" rx="4" fill="#F7E7C6" stroke="#2B4A6B" stroke-width="2.2"/>
+      <path d="M139 30l18 10v20l-18 10-18-10V40z" fill="#F2B48A" stroke="#2B4A6B" stroke-width="2"/>
+      <path d="M133 46l6 6 10-12" stroke="#2B4A6B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>` },
+  { title: "Music visual",
+    pills: ["section structure", "motif variation", "climax release"],
+    outcome: "Experience sound and image resonating", cls: "o-blue",
+    art: `<svg viewBox="0 0 170 96" fill="none">
+      <path d="M6 40v14M16 32v30M26 22v50M36 34v26M46 26v42M56 36v22M66 18v58M76 30v34M86 24v46M96 38v18M106 28v38M116 34v26M126 20v54M136 32v30M146 40v14M156 36v22"
+            stroke="#4F8FD6" stroke-width="3.4" stroke-linecap="round"/>
+      <rect x="6" y="66" width="34" height="22" rx="3" fill="#8FB6DE" stroke="#2B4A6B" stroke-width="2"/>
+      <rect x="44" y="56" width="34" height="32" rx="3" fill="#E4785C" stroke="#2B4A6B" stroke-width="2"/>
+      <rect x="82" y="46" width="34" height="42" rx="3" fill="#9CCB9C" stroke="#2B4A6B" stroke-width="2"/>
+      <rect x="120" y="58" width="34" height="30" rx="3" fill="#F2C46B" stroke="#2B4A6B" stroke-width="2"/></svg>` },
+];
+
+const grid = document.getElementById("grid");
+for (const r of ROWS) {
+  const el = document.createElement("div");
+  el.className = "card";
+  el.innerHTML = `
+    <div>
+      <h3>${r.title}</h3>
+      <div class="flow">${r.pills.map((p, i) =>
+        (i ? '<span class="arrow">→</span>' : '') + `<span class="pill">${p}</span>`).join("")}</div>
+    </div>
+    <div class="art">${r.art}</div>
+    <div class="outcome ${r.cls}">${r.outcome}</div>`;
+  grid.appendChild(el);
+}
+
+// measurement, not decoration: report any horizontal overflow so the render can be trusted
+window.addEventListener("load", () => {
+  const bad = [];
+  document.querySelectorAll("*").forEach(el => {
+    if (el.classList.contains("deco")) return;
+    const r = el.getBoundingClientRect();
+    if (r.right > 1536.5 || r.bottom > 1024.5 || r.left < -0.5) {
+      bad.push(`${el.tagName.toLowerCase()}.${el.className || "-"} right=${r.right.toFixed(0)} bottom=${r.bottom.toFixed(0)}`);
+    }
+  });
+  document.getElementById("diag").textContent =
+    `doc=${document.documentElement.scrollWidth}x${document.documentElement.scrollHeight}; overflow=${bad.length}` +
+    (bad.length ? " :: " + bad.slice(0, 8).join(" | ") : "");
+});
+</script>
+</body>
+</html>
